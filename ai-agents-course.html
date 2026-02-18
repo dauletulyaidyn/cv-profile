@@ -51,17 +51,15 @@
                                 <i class="bi bi-envelope"></i>
                                 <span>aidyn.daulet@gmail.com</span>
                             </a>
-                            <a class="navbar-top-contact-link" href="https://wa.me/77769889889" target="_blank" rel="noopener">
-                                <i class="bi bi-whatsapp"></i>
+                            <a class="navbar-top-contact-link" href="tel:+77769889889">
+                                <i class="bi bi-telephone"></i>
                                 <span>+7 776 988 9889</span>
                             </a>
                         </div>
                         <div class="navbar-top-tools">
-                            <div class="language-selector navbar-top-lang">
-                                <select id="lang-select" class="form-select form-select-sm" onchange="changeLanguage(this.value)">
-                                    <option value="ru">RU</option>
-                                    <option value="kk" selected>KK</option>
-                                </select>
+                                                        <div class="language-selector navbar-top-lang language-flags" role="group" aria-label="Language selector">
+                                <button type="button" class="lang-flag-btn" data-lang-option="ru" onclick="changeLanguage('ru')" aria-label="Russian" title="Russian">&#x1F1F7;&#x1F1FA;</button>
+                                <button type="button" class="lang-flag-btn" data-lang-option="kk" onclick="changeLanguage('kk')" aria-label="Kazakh" title="Kazakh">&#x1F1F0;&#x1F1FF;</button>
                             </div>
                             <a href="Aidyn_Kunikeyev_cv Official — rus.docx" download class="navbar-top-tool-btn">
                                 <i class="bi bi-download me-1"></i>
@@ -618,13 +616,15 @@
         <script>
             var languageStorageKey = 'site_lang';
             document.addEventListener('DOMContentLoaded', function() {
-                var langSelect = document.getElementById('lang-select');
                 var activeLang = localStorage.getItem(languageStorageKey) || 'kk';
-                if (!document.querySelector('#lang-select option[value="' + activeLang + '"]')) {
-                    activeLang = 'kk';
+                var availableLangs = Array.prototype.map.call(document.querySelectorAll('[data-lang-option]'), function(btn) {
+                    return btn.getAttribute('data-lang-option');
+                });
+                if (!availableLangs.length) {
+                    availableLangs = ['kk'];
                 }
-                if (langSelect) {
-                    langSelect.value = activeLang;
+                if (availableLangs.indexOf(activeLang) === -1) {
+                    activeLang = availableLangs.indexOf('kk') !== -1 ? 'kk' : availableLangs[0];
                 }
                 changeLanguage(activeLang);
             });
@@ -635,6 +635,12 @@
                 }
                 document.documentElement.lang = lang;
                 localStorage.setItem(languageStorageKey, lang);
+
+                document.querySelectorAll('[data-lang-option]').forEach(function(btn) {
+                    var isActive = btn.getAttribute('data-lang-option') === lang;
+                    btn.classList.toggle('active', isActive);
+                    btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+                });
 
                 document.querySelectorAll('[data-en][data-ru][data-kk]').forEach(function(el) {
                     var value = el.getAttribute('data-' + lang);
