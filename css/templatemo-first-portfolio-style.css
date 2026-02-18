@@ -1445,6 +1445,10 @@ strong {
   background: rgba(255, 255, 255, 0.14);
 }
 
+.course-launch-card-right-fixed {
+  max-width: 100%;
+}
+
 .course-launch-title {
   color: var(--white-color);
   font-weight: var(--font-weight-bold);
@@ -1706,6 +1710,28 @@ strong {
 
   .course-launch-card-floating .course-launch-contacts {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .course-launch-card-right-fixed {
+    position: fixed;
+    top: 112px;
+    right: 18px;
+    z-index: 12;
+    margin-top: 0 !important;
+    max-width: 360px;
+    width: calc(100vw - 36px);
+    background: #6fb99d;
+    border-color: rgba(255, 255, 255, 0.55);
+  }
+
+  .course-launch-card-right-fixed .course-launch-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .course-launch-card-right-fixed .course-launch-value {
+    font-size: 24px;
   }
 }
 
