@@ -130,6 +130,7 @@
                                 </div>
                             </div>
 
+                            <div data-content-lang="kk">
                             <ul class="nav nav-pills agreement-tabs mb-3" id="agreementTabs" role="tablist">
                                 <li class="nav-item" role="presentation"><button class="nav-link active" id="tab-teenager-tab" data-bs-toggle="pill" data-bs-target="#tab-teenager" type="button" role="tab" aria-controls="tab-teenager" aria-selected="true" data-en="For children 16-17 years old" data-ru="Для 16-17 лет" data-kk="16-17 жас үшін">For children 16-17 years old</button></li>
                                 <li class="nav-item" role="presentation"><button class="nav-link" id="tab-adult-tab" data-bs-toggle="pill" data-bs-target="#tab-adult" type="button" role="tab" aria-controls="tab-adult" aria-selected="false" data-en="For 18 and elders" data-ru="Для 18+" data-kk="18+ үшін">For 18 and elders</button></li>
@@ -558,8 +559,28 @@
                                     </article>
                                 </div>
                             </div>
+                            </div>
 
-                            <p class="agreement-source-note mt-3 mb-0"><strong>Source document:</strong> Applied_AI_Agents_Online_Course_Agreement_KK_2_versions_v11_marked_changes.docx</p>
+                            <div data-content-lang="ru" style="display:none;">
+                                <ul class="nav nav-pills agreement-tabs mb-3" id="agreementTabsRu" role="tablist">
+                                    <li class="nav-item" role="presentation"><button class="nav-link active" id="ru-tab-teenager-tab" data-bs-toggle="pill" data-bs-target="#ru-tab-teenager" type="button" role="tab" aria-controls="ru-tab-teenager" aria-selected="true">Для 16-17 лет</button></li>
+                                    <li class="nav-item" role="presentation"><button class="nav-link" id="ru-tab-adult-tab" data-bs-toggle="pill" data-bs-target="#ru-tab-adult" type="button" role="tab" aria-controls="ru-tab-adult" aria-selected="false">Для 18+</button></li>
+                                </ul>
+
+                                <div class="tab-content" id="agreementTabsRuContent">
+                                    <div class="tab-pane fade show active" id="ru-tab-teenager" role="tabpanel" aria-labelledby="ru-tab-teenager-tab">
+                                        <article class="agreement-panel agreement-fulltext">
+                                            <div id="agreement-ru-teenager"></div>
+                                        </article>
+                                    </div>
+                                    <div class="tab-pane fade" id="ru-tab-adult" role="tabpanel" aria-labelledby="ru-tab-adult-tab">
+                                        <article class="agreement-panel agreement-fulltext">
+                                            <div id="agreement-ru-adult"></div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -574,24 +595,74 @@
         <script src="js/jquery.sticky.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/custom.js"></script>
+        <script src="js/ru-agreement-content.js"></script>
         <script>
+            var languageStorageKey = 'site_lang';
+            function escapeHtml(text) {
+                return String(text)
+                    .replace(/&/g, '&amp;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;')
+                    .replace(/"/g, '&quot;')
+                    .replace(/'/g, '&#39;');
+            }
+
+            function renderRuAgreementLines(targetId, lines) {
+                var target = document.getElementById(targetId);
+                if (!target || !Array.isArray(lines)) return;
+
+                var html = '';
+                lines.forEach(function(line) {
+                    var text = (line || '').trim();
+                    if (!text) return;
+                    var safeText = escapeHtml(text);
+
+                    if (/^_{5,}$/.test(text)) {
+                        html += '<p class="agreement-blank">' + safeText + '</p>';
+                    } else if (/^\d+(\.\d+)?\)\s/.test(text)) {
+                        html += '<h4>' + safeText + '</h4>';
+                    } else if (/^Вариант\\s/.test(text)) {
+                        html += '<p class="agreement-doc-main-title">' + safeText + '</p>';
+                    } else {
+                        html += '<p>' + safeText + '</p>';
+                    }
+                });
+
+                target.innerHTML = html;
+            }
+
             document.addEventListener('DOMContentLoaded', function() {
+                if (window.RU_AGREEMENT) {
+                    renderRuAgreementLines('agreement-ru-teenager', window.RU_AGREEMENT.teenager);
+                    renderRuAgreementLines('agreement-ru-adult', window.RU_AGREEMENT.adult);
+                }
                 var langSelect = document.getElementById('lang-select');
-                if (langSelect) langSelect.value = 'kk';
-                changeLanguage('kk');
+                var activeLang = localStorage.getItem(languageStorageKey) || 'kk';
+                if (!document.querySelector('#lang-select option[value="' + activeLang + '"]')) {
+                    activeLang = 'kk';
+                }
+                if (langSelect) langSelect.value = activeLang;
+                changeLanguage(activeLang);
             });
             function changeLanguage(lang) {
-                if (lang === 'en') {
-                    lang = 'ru';
+                if (['ru', 'kk'].indexOf(lang) === -1) {
+                    lang = 'kk';
                 }
                 document.documentElement.lang = lang;
+                localStorage.setItem(languageStorageKey, lang);
                 document.querySelectorAll('[data-en][data-ru][data-kk]').forEach(function(el) {
                     var value = el.getAttribute('data-' + lang);
                     if (value && value.indexOf('<br>') !== -1) el.innerHTML = value; else el.textContent = value;
                 });
                 document.querySelectorAll('[data-doc-lang]').forEach(function(el) {
                     var docLang = el.getAttribute('data-doc-lang');
-                    el.style.display = (docLang === lang) ? '' : 'none';
+                    var visible = (docLang === lang);
+                    el.style.display = visible ? '' : 'none';
+                });
+                document.querySelectorAll('[data-content-lang]').forEach(function(el) {
+                    var contentLang = el.getAttribute('data-content-lang');
+                    var visible = (contentLang === lang);
+                    el.style.display = visible ? '' : 'none';
                 });
 
                 document.querySelectorAll('[data-show-langs]').forEach(function(el) {

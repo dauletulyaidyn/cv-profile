@@ -197,16 +197,25 @@
         <script src="js/bootstrap.min.js"></script>
 
         <script>
+            var languageStorageKey = 'site_lang';
             document.addEventListener('DOMContentLoaded', function() {
                 var langSelect = document.getElementById('lang-select');
-                if (langSelect) {
-                    langSelect.value = 'kk';
+                var activeLang = localStorage.getItem(languageStorageKey) || 'kk';
+                if (!document.querySelector('#lang-select option[value="' + activeLang + '"]')) {
+                    activeLang = 'kk';
                 }
-                changeLanguage('kk');
+                if (langSelect) {
+                    langSelect.value = activeLang;
+                }
+                changeLanguage(activeLang);
             });
 
             function changeLanguage(lang) {
+                if (['en', 'ru', 'kk'].indexOf(lang) === -1) {
+                    lang = 'kk';
+                }
                 document.documentElement.lang = lang;
+                localStorage.setItem(languageStorageKey, lang);
 
                 document.querySelectorAll('[data-en][data-ru][data-kk]').forEach(function(el) {
                     var value = el.getAttribute('data-' + lang);
