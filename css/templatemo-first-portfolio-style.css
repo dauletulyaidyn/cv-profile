@@ -1713,17 +1713,26 @@ strong {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 992px) {
   .course-launch-card-right-fixed {
     position: fixed;
-    top: 112px;
+    bottom: 18px;
     right: 18px;
     z-index: 12;
     margin-top: 0 !important;
-    max-width: 360px;
+    max-width: 290px;
     width: calc(100vw - 36px);
+    padding: 14px;
     background: #6fb99d;
     border-color: rgba(255, 255, 255, 0.55);
+  }
+
+  .course-launch-card-right-fixed .course-launch-title {
+    font-size: 22px;
+  }
+
+  .course-launch-card-right-fixed .course-launch-meta {
+    font-size: 14px;
   }
 
   .course-launch-card-right-fixed .course-launch-grid {
@@ -1732,6 +1741,10 @@ strong {
 
   .course-launch-card-right-fixed .course-launch-value {
     font-size: 24px;
+  }
+
+  .course-launch-card-right-fixed .course-launch-contacts {
+    display: none;
   }
 }
 
