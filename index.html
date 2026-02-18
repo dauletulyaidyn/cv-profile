@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -27,7 +27,7 @@
             </div>
         </section>
 
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg navbar-split">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,7 +45,36 @@
                 </div>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-lg-5">
+                    <div class="navbar-split-layout w-100">
+                    <div class="navbar-top-contact d-none d-lg-flex">
+                        <div class="navbar-top-contact-left">
+                            <a class="navbar-top-contact-link" href="mailto:aidyn.daulet@gmail.com">
+                                <i class="bi bi-envelope"></i>
+                                <span>aidyn.daulet@gmail.com</span>
+                            </a>
+                            <a class="navbar-top-contact-link" href="https://wa.me/77769889889" target="_blank" rel="noopener">
+                                <i class="bi bi-whatsapp"></i>
+                                <span>+7 776 988 9889</span>
+                            </a>
+                        </div>
+                        <div class="navbar-top-tools">
+                            <div class="language-selector navbar-top-lang">
+                                <select id="lang-select" class="form-select form-select-sm" onchange="changeLanguage(this.value)">
+                                    <option value="en">EN</option>
+                                    <option value="ru">RU</option>
+                                    <option value="kk" selected>KK</option>
+                                </select>
+                            </div>
+                            <a href="Aidyn_Kunikeyev_cv Official — rus.docx" download class="navbar-top-tool-btn">
+                                <i class="bi bi-download me-1"></i>
+                                <span data-en="Download CV" data-ru="Скачать CV" data-kk="CV жүктеу">Download CV</span>
+                            </a>
+                            <a class="navbar-top-tool-icon" href="https://wa.me/77769889889" target="_blank" rel="noopener" aria-label="WhatsApp">
+                                <i class="bi bi-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="navbar-nav ms-lg-0 nav-row-primary">
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="#section_1" data-en="Home" data-ru="Главная" data-kk="Басты">Home</a>
                         </li>
@@ -61,26 +90,17 @@
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="#section_5" data-en="Contact" data-ru="Контакты" data-kk="Байланыс">Contact</a>
                         </li>
+                        <li class="nav-item dropdown" data-show-langs="ru,kk">
+                            <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-en="Just Aidyn Courses" data-ru="Курсы Just Aidyn" data-kk="Just Aidyn курстары">Just Aidyn Courses</a>
+                            <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
+                                <li data-show-langs="ru,kk"><a class="dropdown-item" href="ai-agents-course.html" data-en="Applied AI agents" data-ru="AI-агенты" data-kk="AI агенттер">Applied AI agents</a></li>
+                                <li><a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true" data-en="Programming" data-ru="Программирование" data-kk="Бағдарламалау">Programming</a></li>
+                                <li><a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true" data-en="Non-standard math and logic" data-ru="Нестандартная математика и логика" data-kk="Стандарттан тыс математика және логика">Non-standard math and logic</a></li>
+                            </ul>
+                        </li>
                     </ul>
 
-                    <div class="d-lg-flex align-items-center d-none ms-auto">
-                        <div class="language-selector me-3">
-                            <select id="lang-select" class="form-select form-select-sm" onchange="changeLanguage(this.value)">
-                                <option value="en" selected>EN</option>
-                                <option value="ru">RU</option>
-                                <option value="kk">KK</option>
-                            </select>
-                        </div>
-
-                        <a href="#" id="download-cv" class="btn btn-outline-light btn-sm me-3">
-                            <i class="bi bi-download me-1"></i>
-                            <span data-en="Download CV" data-ru="Скачать CV" data-kk="CV жүктеу">Download CV</span>
-                        </a>
-
-                        <i class="navbar-icon bi-whatsapp me-3"></i>
-                        <a class="custom-btn btn" href="https://wa.me/77769889889" target="_blank">
-                            8-776-988-9889
-                        </a>
+                    <div class="nav-row-secondary d-none"></div>
                     </div>
                 </div>
             </div>
@@ -116,6 +136,68 @@
                                 <p class="mb-4">
                                     <a class="custom-btn btn custom-link" href="#section_2" data-en="Learn More" data-ru="Узнать больше" data-kk="Көбірек білу">Learn More</a>
                                 </p>
+
+                                <div class="course-launch-card course-launch-card-floating mt-4" data-course-launch data-target-date="2026-03-09T08:00:00">
+                                    <p class="course-launch-title mb-2"
+                                       data-en="Time left until Applied AI agents course starts:"
+                                       data-ru="До старта курса AI-агенты осталось:"
+                                       data-kk="AI агенттер курсы басталуына дейін қалды:">
+                                       Time left until Applied AI agents course starts:
+                                    </p>
+                                    <p class="course-launch-meta mb-2"
+                                       data-en="Course starts on March 9, 2026 at 08:00."
+                                       data-ru="Курс стартует 9 марта 2026 года в 08:00."
+                                       data-kk="Курс 2026 жылғы 9 наурызда сағат 08:00-де басталады.">
+                                       Course starts on March 9, 2026 at 08:00.
+                                    </p>
+                                    <p class="course-launch-meta mb-3"
+                                       data-en="Enrollment can be done in advance by contacting via email."
+                                       data-ru="Записаться можно заранее, написав на email."
+                                       data-kk="Жазылуды алдын ала email арқылы жасауға болады.">
+                                       Enrollment can be done in advance by contacting via email.
+                                    </p>
+                                    <div class="course-launch-actions mb-3" data-show-langs="ru,kk">
+                                        <a href="ai-agents-course.html"
+                                           class="custom-btn btn course-launch-action-btn"
+                                           data-en="Enroll"
+                                           data-ru="&#1047;&#1072;&#1087;&#1080;&#1089;&#1072;&#1090;&#1100;&#1089;&#1103;"
+                                           data-kk="&#1046;&#1072;&#1079;&#1099;&#1083;&#1091;">Enroll</a>
+                                    </div>
+                                    <div class="course-launch-grid" aria-live="polite">
+                                        <div class="course-launch-item">
+                                            <span class="course-launch-value" data-unit="days">0</span>
+                                            <span class="course-launch-label" data-en="Days" data-ru="Дней" data-kk="Күн">Days</span>
+                                        </div>
+                                        <div class="course-launch-item">
+                                            <span class="course-launch-value" data-unit="hours">00</span>
+                                            <span class="course-launch-label" data-en="Hours" data-ru="Часов" data-kk="Сағат">Hours</span>
+                                        </div>
+                                        <div class="course-launch-item">
+                                            <span class="course-launch-value" data-unit="minutes">00</span>
+                                            <span class="course-launch-label" data-en="Minutes" data-ru="Минут" data-kk="Минут">Minutes</span>
+                                        </div>
+                                        <div class="course-launch-item">
+                                            <span class="course-launch-value" data-unit="seconds">00</span>
+                                            <span class="course-launch-label" data-en="Seconds" data-ru="Секунд" data-kk="Секунд">Seconds</span>
+                                        </div>
+                                    </div>
+                                    <p class="course-launch-status mt-2 mb-0 d-none"
+                                       data-en="The course has already started."
+                                       data-ru="Курс уже начался."
+                                       data-kk="Курс басталып кетті.">
+                                       The course has already started.
+                                    </p>
+                                    <div class="course-launch-contacts mt-3">
+                                        <a href="https://wa.me/77769889889" target="_blank" rel="noopener" class="course-launch-contact-link">
+                                            <i class="bi bi-whatsapp"></i>
+                                            <span>+7 776 9889889</span>
+                                        </a>
+                                        <a href="mailto:aidyn.daulet@gmail.com" class="course-launch-contact-link">
+                                            <i class="bi bi-envelope"></i>
+                                            <span>aidyn.daulet@gmail.com</span>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -150,10 +232,10 @@
 
                                 <h3 class="pt-2 mb-3" data-en="About Me" data-ru="Обо мне" data-kk="Мен туралы">About Me</h3>
 
-                                <p data-en="I’m Dauletuly Aidyn — an AI Engineer, ML Researcher, and Lecturer with 13+ years of experience across software engineering, applied machine learning, and research leadership. I’m a PhD candidate at Satbayev University (KazNITU), focusing on personalized cell therapy for cardiovascular disease using machine learning and genetic analysis."
+                                <p data-en="I'm Dauletuly Aidyn — an AI Engineer, ML Researcher, and Lecturer with 13+ years of experience across software engineering, applied machine learning, and research leadership. I'm a PhD candidate at Satbayev University (KazNITU), focusing on personalized cell therapy for cardiovascular disease using machine learning and genetic analysis."
                                     data-ru="Я Дәулетұлы Айдын — AI инженер, ML исследователь и преподаватель с опытом 13+ лет в разработке, прикладном машинном обучении и управлении исследованиями. Я являюсь PhD кандидатом Сатбаев Университета (КазНИТУ) и занимаюсь персонализированной клеточной терапией сердечно‑сосудистых заболеваний на основе машинного обучения и генетического анализа."
                                     data-kk="Мен Дәулетұлы Айдын — AI инженер, ML зерттеуші және оқытушымын. Satbayev University (KazNITU) университетінде PhD кандидаты ретінде машиналық оқыту және генетикалық талдау негізінде жүрек‑қантамыр ауруларына арналған жекелендірілген жасушалық терапия тақырыбымен айналысамын.">
-                                    I’m Dauletuly Aidyn — an AI Engineer, ML Researcher, and Lecturer with 13+ years of experience across software engineering, applied machine learning, and research leadership. I’m a PhD candidate at Satbayev University (KazNITU), focusing on personalized cell therapy for cardiovascular disease using machine learning and genetic analysis.
+                                    I'm Dauletuly Aidyn — an AI Engineer, ML Researcher, and Lecturer with 13+ years of experience across software engineering, applied machine learning, and research leadership. I'm a PhD candidate at Satbayev University (KazNITU), focusing on personalized cell therapy for cardiovascular disease using machine learning and genetic analysis.
                                 </p>
 
                                 <p data-en="I build end-to-end ML products: data extraction and APIs, modeling and evaluation, and production-ready pipelines. Recent work includes LLM-based Islamic finance screening (SEC filings + LSEG/Refinitiv data) and ML-driven analysis of genomic and single-cell data for biomarker discovery in cardiovascular and peripheral artery disease."
@@ -729,10 +811,10 @@
                                 <strong class="site-footer-title d-block mt-4 mb-3" data-en="Write to Me" data-ru="Написать мне" data-kk="Маған жазу">Write to Me</strong>
 
                                 <p class="mb-2"
-                                    data-en="Please email me at aidyn.daulet@gmail.com. Do not attach files or include links—everything must be written in the email. Subject must include &quot;CV-Portfolio&quot; or the AI won’t retrieve your email."
+                                    data-en="Please email me at aidyn.daulet@gmail.com. Do not attach files or include links—everything must be written in the email. Subject must include &quot;CV-Portfolio&quot; or the AI won't retrieve your email."
                                     data-ru="Пишите на почту aidyn.daulet@gmail.com. Не прикрепляйте файлы и не вставляйте ссылки — всё должно быть написано в письме. Тема письма должна содержать &quot;CV-Portfolio&quot;, иначе AI не сможет извлечь письмо."
                                     data-kk="Маған aidyn.daulet@gmail.com поштасына жазыңыз. Файл қоспаңыз және сілтеме қоспаңыз — бәрі хаттың ішінде жазылуы керек. Хат тақырыбында &quot;CV-Portfolio&quot; болуы керек, әйтпесе AI хатты шығара алмайды.">
-                                    Please email me at aidyn.daulet@gmail.com. Do not attach files or include links—everything must be written in the email. Subject must include "CV-Portfolio" or the AI won’t retrieve your email.
+                                    Please email me at aidyn.daulet@gmail.com. Do not attach files or include links—everything must be written in the email. Subject must include "CV-Portfolio" or the AI won't retrieve your email.
                                 </p>
 
                                 <ol class="contact-requirements mb-2">
@@ -744,10 +826,10 @@
                                 </ol>
 
                                 <p class="mb-0"
-                                    data-en="Warning: if you send links or additional files, I won’t review them. My inbox is monitored by an AI assistant."
+                                    data-en="Warning: if you send links or additional files, I won't review them. My inbox is monitored by an AI assistant."
                                     data-ru="Предупреждение: если будут ссылки или дополнительные файлы, я их не буду смотреть. За моей почтой следит AI агент."
                                     data-kk="Ескерту: егер сілтемелер немесе қосымша файлдар болса, олар қаралмайды. Поштаны AI агент қадағалайды.">
-                                    Warning: if you send links or additional files, I won’t review them. My inbox is monitored by an AI assistant.
+                                    Warning: if you send links or additional files, I won't review them. My inbox is monitored by an AI assistant.
                                 </p>
                             </div>
                         </div>
@@ -780,6 +862,7 @@
         <script src="js/jquery.magnific-popup.min.js"></script>
         <script src="js/magnific-popup-options.js"></script>
         <script src="js/custom.js"></script>
+        <script src="js/course-launch-timer.js"></script>
 
         <script>
             document.addEventListener('DOMContentLoaded', function() {
@@ -790,6 +873,14 @@
                         window.print();
                     });
                 }
+            });
+
+            document.addEventListener('DOMContentLoaded', function() {
+                var langSelect = document.getElementById('lang-select');
+                if (langSelect) {
+                    langSelect.value = 'kk';
+                }
+                changeLanguage('kk');
             });
 
             function changeLanguage(lang) {
@@ -803,8 +894,16 @@
                         el.textContent = value;
                     }
                 });
+
+                document.querySelectorAll('[data-show-langs]').forEach(function(el) {
+                    var langs = (el.getAttribute('data-show-langs') || '')
+                        .split(',')
+                        .map(function(v) { return v.trim(); })
+                        .filter(Boolean);
+                    var visible = langs.indexOf(lang) !== -1;
+                    el.style.display = visible ? '' : 'none';
+                });
             }
         </script>
     </body>
 </html>
-

@@ -1,0 +1,660 @@
+﻿<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="Applied AI agents in life, work, selfdevelopment and research. Practical training in building, evaluating, and deploying agentic systems.">
+        <meta name="author" content="Dauletuly Aidyn">
+
+        <title>Applied AI agents in life, work, selfdevelopment and research</title>
+
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Roboto+Slab:wght@400;500;700&display=swap" rel="stylesheet">
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+        <link href="css/templatemo-first-portfolio-style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <section class="preloader">
+            <div class="spinner">
+                <span class="spinner-rotate"></span>
+            </div>
+        </section>
+
+        <nav class="navbar navbar-expand-lg navbar-split">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <a href="index.html" class="navbar-brand mx-auto mx-lg-0">Aidyn</a>
+
+                <div class="d-flex align-items-center d-lg-none">
+                    <i class="navbar-icon bi-whatsapp me-3"></i>
+                    <a class="custom-btn btn" href="https://wa.me/77769889889" target="_blank"
+                        data-en="Chat on WhatsApp" data-ru="Написать в WhatsApp" data-kk="WhatsApp-та жазу">
+                        Chat on WhatsApp
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="navbar-split-layout w-100">
+                    <div class="navbar-top-contact d-none d-lg-flex">
+                        <div class="navbar-top-contact-left">
+                            <a class="navbar-top-contact-link" href="mailto:aidyn.daulet@gmail.com">
+                                <i class="bi bi-envelope"></i>
+                                <span>aidyn.daulet@gmail.com</span>
+                            </a>
+                            <a class="navbar-top-contact-link" href="https://wa.me/77769889889" target="_blank" rel="noopener">
+                                <i class="bi bi-whatsapp"></i>
+                                <span>+7 776 988 9889</span>
+                            </a>
+                        </div>
+                        <div class="navbar-top-tools">
+                            <div class="language-selector navbar-top-lang">
+                                <select id="lang-select" class="form-select form-select-sm" onchange="changeLanguage(this.value)">
+                                    <option value="ru">RU</option>
+                                    <option value="kk" selected>KK</option>
+                                </select>
+                            </div>
+                            <a href="Aidyn_Kunikeyev_cv Official — rus.docx" download class="navbar-top-tool-btn">
+                                <i class="bi bi-download me-1"></i>
+                                <span data-en="Download CV" data-ru="Скачать CV" data-kk="CV жүктеу">Download CV</span>
+                            </a>
+                            <a class="navbar-top-tool-icon" href="https://wa.me/77769889889" target="_blank" rel="noopener" aria-label="WhatsApp">
+                                <i class="bi bi-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="navbar-nav ms-lg-0 nav-row-primary">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#section_1" data-en="Home" data-ru="Главная" data-kk="Басты">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#section_2" data-en="About" data-ru="Обо мне" data-kk="Мен туралы">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#section_3" data-en="Skills" data-ru="Навыки" data-kk="Дағдылар">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#section_4" data-en="Projects" data-ru="Проекты" data-kk="Жобалар">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#section_5" data-en="Contact" data-ru="Контакты" data-kk="Байланыс">Contact</a>
+                        </li>
+                        <li class="nav-item dropdown" data-show-langs="ru,kk">
+                            <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-en="Just Aidyn Courses" data-ru="Курсы Just Aidyn" data-kk="Just Aidyn курстары">Just Aidyn Courses</a>
+                            <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
+                                <li><a class="dropdown-item active" href="ai-agents-course.html" data-en="Applied AI agents" data-ru="AI-агенты" data-kk="AI агенттер">Applied AI agents</a></li>
+                                <li><a class="dropdown-item" href="motivational-letter.html" data-en="Motivational letter" data-ru="Мотивационное письмо" data-kk="Мотивациялық хат">Motivational letter</a></li>
+                                <li><a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true" data-en="Programming" data-ru="Программирование" data-kk="Бағдарламалау">Programming</a></li>
+                                <li><a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true" data-en="Non-standard math and logic" data-ru="Нестандартная математика и логика" data-kk="Стандарттан тыс математика және логика">Non-standard math and logic</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="nav-row-secondary d-none"></div>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <section class="subpage-hero">
+                <div class="container">
+                    <div class="subpage-back mb-3">
+                        <a href="index.html"
+                           data-en="&larr; Back to Home"
+                           data-ru="&larr; Назад на главную"
+                           data-kk="&larr; Басты бетке">&larr; Back to Home</a>
+                    </div>
+
+                    <h1 class="subpage-title" data-en="Applied AI agents in life, work, selfdevelopment and research" data-ru="Прикладные AI-агенты в жизни, работе, саморазвитии и исследованиях" data-kk="Өмірде, жұмыста, өзін-өзі дамытуда және зерттеуде қолданбалы AI-агенттер">Applied AI agents in life, work, selfdevelopment and research</h1>
+                    <p class="subpage-lead" data-en="A practical course on building agentic systems: MCP tools, RAG, memory, orchestration, evaluation, and deployment."
+                       data-ru="Практический курс по созданию агентных систем: инструменты MCP, RAG, память, оркестрация, оценка и деплой."
+                       data-kk="Агенттік жүйелерді жасауға арналған практикалық курс: MCP құралдары, RAG, жад, оркестрация, бағалау және деплой.">
+                       A practical course on building agentic systems: MCP tools, RAG, memory, orchestration, evaluation, and deployment.
+                    </p>
+                    <div class="non-it-message mt-4">
+                        <h3 class="non-it-message-title mb-3"
+                            data-en="Important for non-IT professionals"
+                            data-ru="Важно для не-IT специалистов"
+                            data-kk="IT емес мамандар үшін маңызды">Important for non-IT professionals</h3>
+                        <ol class="non-it-message-list mb-0">
+                            <li data-en="Before, automation was ordered from programmers. Now you can build it yourself. This course is about creating AI agents for your own work without becoming a developer."
+                                data-ru="Раньше автоматизацию заказывали у программистов. Теперь её можно собрать самому. Курс про то, как создавать AI-агентов под свою работу без превращения в разработчика."
+                                data-kk="Бұрын автоматтандыруды бағдарламашыларға тапсыратын. Енді оны өзіңіз жасай аласыз. Бұл курс өз жұмысыңызға арналған AI-агенттерді әзірлеуді үйретеді, бағдарламашыға айналмай-ақ.">Before, automation was ordered from programmers. Now you can build it yourself. This course is about creating AI agents for your own work without becoming a developer.</li>
+                            <li data-en="Before, tools were created by IT specialists. Now they are created by the person who has the task."
+                                data-ru="Раньше инструменты создавали IT-специалисты. Теперь их создаёт тот, у кого есть задача."
+                                data-kk="Бұрын құралдарды IT мамандары жасайтын. Енді оларды нақты міндеті бар адамның өзі жасайды.">Before, tools were created by IT specialists. Now they are created by the person who has the task.</li>
+                            <li data-en="You do not need to become a programmer to have your own software."
+                                data-ru="Не нужно становиться программистом, чтобы иметь собственные программы."
+                                data-kk="Өз бағдарламаңыз болу үшін бағдарламашы болу міндетті емес.">You do not need to become a programmer to have your own software.</li>
+                        </ol>
+                    </div>
+
+                    <div class="course-launch-card course-launch-card-subpage mt-4" data-course-launch data-target-date="2026-03-09T08:00:00">
+                        <p class="course-launch-title mb-2"
+                           data-en="Time left until this course starts:"
+                           data-ru="До старта этого курса осталось:"
+                           data-kk="Осы курс басталуына дейін қалды:">
+                           Time left until this course starts:
+                        </p>
+                        <p class="course-launch-meta mb-2"
+                           data-en="Course starts on March 9, 2026 at 08:00."
+                           data-ru="Курс стартует 9 марта 2026 года в 08:00."
+                           data-kk="Курс 2026 жылғы 9 наурызда сағат 08:00-де басталады.">
+                           Course starts on March 9, 2026 at 08:00.
+                        </p>
+                        <p class="course-launch-meta mb-3"
+                           data-en="Enrollment can be done in advance by contacting via email."
+                           data-ru="Записаться можно заранее, написав на email."
+                           data-kk="Жазылуды алдын ала email арқылы жасауға болады.">
+                           Enrollment can be done in advance by contacting via email.
+                        </p>
+                        <div class="course-launch-actions mb-3">
+                            <a href="mailto:aidyn.daulet@gmail.com?subject=Course%20Enrollment"
+                               class="custom-btn btn course-launch-action-btn"
+                               data-en="Enroll"
+                               data-ru="Записаться"
+                               data-kk="Жазылу">Enroll</a>
+                            <a href="motivational-letter.html"
+                               class="custom-btn btn course-launch-action-btn course-launch-action-secondary"
+                               data-en="Open the Motivational letter page"
+                               data-ru="Открыть страницу «Мотивационное письмо»"
+                               data-kk="«Мотивациялық хат» бетін ашу">Open the Motivational letter page</a>
+                        </div>
+                        <div class="course-launch-grid" aria-live="polite">
+                            <div class="course-launch-item">
+                                <span class="course-launch-value" data-unit="days">0</span>
+                                <span class="course-launch-label" data-en="Days" data-ru="Дней" data-kk="Күн">Days</span>
+                            </div>
+                            <div class="course-launch-item">
+                                <span class="course-launch-value" data-unit="hours">00</span>
+                                <span class="course-launch-label" data-en="Hours" data-ru="Часов" data-kk="Сағат">Hours</span>
+                            </div>
+                            <div class="course-launch-item">
+                                <span class="course-launch-value" data-unit="minutes">00</span>
+                                <span class="course-launch-label" data-en="Minutes" data-ru="Минут" data-kk="Минут">Minutes</span>
+                            </div>
+                            <div class="course-launch-item">
+                                <span class="course-launch-value" data-unit="seconds">00</span>
+                                <span class="course-launch-label" data-en="Seconds" data-ru="Секунд" data-kk="Секунд">Seconds</span>
+                            </div>
+                        </div>
+                        <p class="course-launch-status mt-2 mb-0 d-none"
+                           data-en="The course has already started."
+                           data-ru="Курс уже начался."
+                           data-kk="Курс басталып кетті.">
+                           The course has already started.
+                        </p>
+                        <div class="course-launch-contacts mt-3">
+                            <a href="https://wa.me/77769889889" target="_blank" rel="noopener" class="course-launch-contact-link">
+                                <i class="bi bi-whatsapp"></i>
+                                <span>+7 776 9889889</span>
+                            </a>
+                            <a href="mailto:aidyn.daulet@gmail.com" class="course-launch-contact-link">
+                                <i class="bi bi-envelope"></i>
+                                <span>aidyn.daulet@gmail.com</span>
+                            </a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="course-schedule section-padding pt-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-12 mx-auto">
+                            <h2 class="mb-3" data-en="Course schedule and languages" data-ru="Расписание курса и языки" data-kk="Курс кестесі және тілдер">Course schedule and languages</h2>
+                            <div class="schedule-wrap">
+                                <div class="table-responsive">
+                                <table class="table schedule-table align-middle">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" data-en="Time" data-ru="Время" data-kk="Уақыты">Time</th>
+                                            <th scope="col" data-en="Monday" data-ru="Понедельник" data-kk="Дүйсенбі">Monday</th>
+                                            <th scope="col" data-en="Tuesday" data-ru="Вторник" data-kk="Сейсенбі">Tuesday</th>
+                                            <th scope="col" data-en="Saturday" data-ru="Суббота" data-kk="Сенбі">Saturday</th>
+                                            <th scope="col" data-en="Sunday" data-ru="Воскресенье" data-kk="Жексенбі">Sunday</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="schedule-row-max20" data-schedule-lang="ru">
+                                            <th scope="row">08:00 - 09:30</th>
+                                            <td><span class="schedule-course">Max 20 I</span><br><span class="schedule-group schedule-group-ru" data-en="RU group" data-ru="RU группа" data-kk="RU тобы">RU group</span></td>
+                                            <td><span class="schedule-course">Max 20 I</span><br><span class="schedule-group schedule-group-ru" data-en="RU group" data-ru="RU группа" data-kk="RU тобы">RU group</span></td>
+                                            <td><span class="schedule-course">Max 20 I</span><br><span class="schedule-group schedule-group-ru" data-en="RU group" data-ru="RU группа" data-kk="RU тобы">RU group</span></td>
+                                            <td><span class="schedule-course">Max 20 I</span><br><span class="schedule-group schedule-group-ru" data-en="RU group" data-ru="RU группа" data-kk="RU тобы">RU group</span></td>
+                                        </tr>
+                                        <tr class="schedule-row-max100" data-schedule-lang="ru">
+                                            <th scope="row">09:45 - 11:15</th>
+                                            <td><span class="schedule-course">Max 100 I</span><br><span class="schedule-group schedule-group-ru" data-en="RU group" data-ru="RU группа" data-kk="RU тобы">RU group</span></td>
+                                            <td><span class="schedule-course">Max 100 I</span><br><span class="schedule-group schedule-group-ru" data-en="RU group" data-ru="RU группа" data-kk="RU тобы">RU group</span></td>
+                                            <td><span class="schedule-course">Max 100 I</span><br><span class="schedule-group schedule-group-ru" data-en="RU group" data-ru="RU группа" data-kk="RU тобы">RU group</span></td>
+                                            <td><span class="schedule-course">Max 100 I</span><br><span class="schedule-group schedule-group-ru" data-en="RU group" data-ru="RU группа" data-kk="RU тобы">RU group</span></td>
+                                        </tr>
+                                        <tr class="schedule-row-max100" data-schedule-lang="ru">
+                                            <th scope="row">11:30 - 13:00</th>
+                                            <td><span class="schedule-course">Max 100 I</span><br><span class="schedule-group schedule-group-ru" data-en="RU group" data-ru="RU группа" data-kk="RU тобы">RU group</span></td>
+                                            <td><span class="schedule-course">Max 100 I</span><br><span class="schedule-group schedule-group-ru" data-en="RU group" data-ru="RU группа" data-kk="RU тобы">RU group</span></td>
+                                            <td><span class="schedule-course">Max 100 I</span><br><span class="schedule-group schedule-group-ru" data-en="RU group" data-ru="RU группа" data-kk="RU тобы">RU group</span></td>
+                                            <td><span class="schedule-course">Max 100 I</span><br><span class="schedule-group schedule-group-ru" data-en="RU group" data-ru="RU группа" data-kk="RU тобы">RU group</span></td>
+                                        </tr>
+                                        <tr class="schedule-row-more100" data-schedule-lang="kk">
+                                            <th scope="row">13:00 - 14:45</th>
+                                            <td><span class="schedule-course">More 100</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span></td>
+                                            <td><span class="schedule-course">More 100</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span></td>
+                                            <td><span class="schedule-course">More 100</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span></td>
+                                            <td><span class="schedule-course">More 100</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span></td>
+                                        </tr>
+                                        <tr class="schedule-row-more100" data-schedule-lang="kk">
+                                            <th scope="row">15:00 - 16:30</th>
+                                            <td><span class="schedule-course">More 100</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span></td>
+                                            <td><span class="schedule-course">More 100</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span></td>
+                                            <td><span class="schedule-course">More 100</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span></td>
+                                            <td><span class="schedule-course">More 100</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span></td>
+                                        </tr>
+                                        <tr class="schedule-row-max100ii" data-schedule-lang="kk">
+                                            <th scope="row">16:30 - 18:15</th>
+                                            <td><span class="schedule-course">Max 100 II</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span></td>
+                                            <td><span class="schedule-course">Max 100 II</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span></td>
+                                            <td><span class="schedule-course">Max 100 II</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span></td>
+                                            <td><span class="schedule-course">Max 100 II</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span></td>
+                                        </tr>
+                                        <tr class="schedule-row-max100ii" data-schedule-lang="kk">
+                                            <th scope="row">18:30 - 20:00</th>
+                                            <td><span class="schedule-course">Max 100 II</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span></td>
+                                            <td><span class="schedule-course">Max 100 II</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span></td>
+                                            <td><span class="schedule-course">Max 100 II</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span></td>
+                                            <td><span class="schedule-course">Max 100 II</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span></td>
+                                        </tr>
+                                        <tr class="schedule-row-max20ii" data-schedule-lang="kk">
+                                            <th scope="row">20:15 - 21:45</th>
+                                            <td><span class="schedule-course">Max 20 II</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span></td>
+                                            <td><span class="schedule-course">Max 20 II</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span></td>
+                                            <td><span class="schedule-course">Max 20 II</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span></td>
+                                            <td><span class="schedule-course">Max 20 II</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-padding pt-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-12 mx-auto">
+                            <div class="agreement-read-card mb-4">
+                                <h2 class="h4 mb-3" data-en="Mini video instructions" data-ru="Мини-видео инструкции" data-kk="Мини-видео нұсқаулықтар">Mini video instructions</h2>
+                                <div class="course-launch-actions">
+                                    <a href="#"
+                                       class="custom-btn btn course-launch-action-btn mini-video-btn"
+                                       data-en="Visual Studio Code setup guide"
+                                       data-ru="Руководство по установке кода Visual Studio"
+                                       data-kk="Visual Studio Code орнату нұсқаулығы">Visual Studio Code setup guide</a>
+                                    <a href="#"
+                                       class="custom-btn btn course-launch-action-btn mini-video-btn"
+                                       data-en="GitHub account registration guide"
+                                       data-ru="Инструкции по регистрации учетной записи GitHub"
+                                       data-kk="GitHub аккаунтын тіркеу нұсқаулығы">GitHub account registration guide</a>
+                                    <a href="#"
+                                       class="custom-btn btn course-launch-action-btn mini-video-btn"
+                                       data-en="ChatGPT Plus subscription guide"
+                                       data-ru="Инструкции по добавлению подписки ChatGPT Plus"
+                                       data-kk="ChatGPT Plus жазылымын қосу нұсқаулығы">ChatGPT Plus subscription guide</a>
+                                    <a href="#"
+                                       class="custom-btn btn course-launch-action-btn mini-video-btn"
+                                       data-en="Domain purchase guide"
+                                       data-ru="Руководство по покупке доменного имени"
+                                       data-kk="Domain атауын сатып алу нұсқаулығы">Domain purchase guide</a>
+                                    <a href="#"
+                                       class="custom-btn btn course-launch-action-btn mini-video-btn"
+                                       data-en="Hosting purchase and launch guide"
+                                       data-ru="Руководство по покупке и запуску хостинга"
+                                       data-kk="Hosting сатып алу және іске қосу нұсқаулығы">Hosting purchase and launch guide</a>
+                                    <a href="#"
+                                       class="custom-btn btn course-launch-action-btn mini-video-btn"
+                                       data-en="Python installation guide"
+                                       data-ru="Руководство по установке Python"
+                                       data-kk="Python орнату нұсқаулығы">Python installation guide</a>
+                                    <a href="#"
+                                       class="custom-btn btn course-launch-action-btn mini-video-btn"
+                                       data-en="Node.js installation guide"
+                                       data-ru="Руководство по установке Node.js"
+                                       data-kk="Node.js орнату нұсқаулығы">Node.js installation guide</a>
+                                </div>
+                            </div>
+
+                            <h2 class="mb-4" data-en="Course Topics" data-ru="Темы курса" data-kk="Курс тақырыптары">Course Topics</h2>
+                            <div class="row g-4 course-modules-grid mb-5">
+                                <div class="col-lg-6 col-12">
+                                    <div class="services-thumb">
+                                        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
+                                            <h3 class="mb-0"><i class="bi bi-cpu me-2"></i><span data-en="AI Core Concepts" data-ru="Базовые AI-концепции" data-kk="AI базалық ұғымдары">AI Core Concepts</span></h3>
+                                        </div>
+                                        <p data-en="Generative AI, LLM applications, OpenAI API vs ChatGPT, and where agents are useful in practice."
+                                           data-ru="Generative AI, LLM-приложения, OpenAI API vs ChatGPT и где агенты полезны на практике."
+                                           data-kk="Generative AI, LLM қолданбалары, OpenAI API мен ChatGPT айырмасы және агенттердің практикадағы орны.">
+                                           Generative AI, LLM applications, OpenAI API vs ChatGPT, and where agents are useful in practice.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                    <div class="services-thumb services-thumb-up">
+                                        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
+                                            <h3 class="mb-0"><i class="bi bi-diagram-3 me-2"></i><span data-en="Prompts, Tools, and Orchestration" data-ru="Промпты, инструменты и оркестрация" data-kk="Промпттар, құралдар және оркестрация">Prompts, Tools, and Orchestration</span></h3>
+                                        </div>
+                                        <p data-en="Prompt engineering, prompt patterns, tool use, and multi-step workflow design for real tasks."
+                                           data-ru="Prompt engineering, prompt patterns, работа с инструментами и дизайн многошаговых workflow для реальных задач."
+                                           data-kk="Prompt engineering, prompt patterns, құралдарды пайдалану және нақты міндеттерге арналған көпқадамды workflow дизайны.">
+                                           Prompt engineering, prompt patterns, tool use, and multi-step workflow design for real tasks.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                    <div class="services-thumb">
+                                        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
+                                            <h3 class="mb-0"><i class="bi bi-hdd-network me-2"></i><span data-en="RAG, Validation, and Delivery" data-ru="RAG, валидация и внедрение" data-kk="RAG, валидация және енгізу">RAG, Validation, and Delivery</span></h3>
+                                        </div>
+                                        <p data-en="RAG and document flows, verification/validation, responsible AI, and presenting results in usable form."
+                                           data-ru="RAG и работа с документами, verification/validation, responsible AI и подача результата в удобном формате."
+                                           data-kk="RAG және құжаттармен жұмыс, verification/validation, responsible AI және нәтижені ыңғайлы форматта ұсыну.">
+                                           RAG and document flows, verification/validation, responsible AI, and presenting results in usable form.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="mb-4" data-en="Practical Modules" data-ru="Модули курса" data-kk="Курс модульдері">Practical Modules</h2>
+                            <div class="row g-4 course-modules-grid">
+                                <div class="col-lg-6 col-12">
+                                    <div class="services-thumb">
+                                        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
+                                            <h3 class="mb-0"><i class="bi bi-person-vcard me-2"></i><span data-en="Project 1: Profile-CV Site" data-ru="Проект 1: Profile-CV сайт" data-kk="Жоба 1: Profile-CV сайты">Project 1: Profile-CV Site</span></h3>
+                                        </div>
+                                        <p data-en="Practice module: build your personal profile website with biography, resume, portfolio, and contact blocks."
+                                           data-ru="Практический модуль: собрать личный сайт-профиль с биографией, резюме, портфолио и контактами."
+                                           data-kk="Практикалық модуль: өмірбаян, түйіндеме, портфолио және байланыс блоктары бар жеке сайт жасау.">
+                                           Practice module: build your personal profile website with biography, resume, portfolio, and contact blocks.
+                                        </p>
+                                        <p data-en="Result: ready public page for applications, clients, and academic/professional presentation."
+                                           data-ru="Результат: готовая публичная страница для откликов, клиентов и академической/профессиональной презентации."
+                                           data-kk="Нәтиже: өтінімдерге, клиенттерге және академиялық/кәсіби таныстыруға арналған дайын ашық парақша.">
+                                           Result: ready public page for applications, clients, and academic/professional presentation.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                    <div class="services-thumb services-thumb-up">
+                                        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
+                                            <h3 class="mb-0"><i class="bi bi-lightbulb me-2"></i><span data-en="Project 2: Own Solution Site" data-ru="Проект 2: Сайт собственного решения" data-kk="Жоба 2: Өз шешіміңіздің сайты">Project 2: Own Solution Site</span></h3>
+                                        </div>
+                                        <p data-en="Practice module: design a website for your own automation solution and your real tasks."
+                                           data-ru="Практический модуль: сделать сайт для своего решения по автоматизации и под свои реальные задачи."
+                                           data-kk="Практикалық модуль: өз автоматтандыру шешіміңізге және нақты міндеттеріңізге арналған сайт әзірлеу.">
+                                           Practice module: design a website for your own automation solution and your real tasks.
+                                        </p>
+                                        <p data-en="Result: clear value proposition, service flow, and demo scenario for your use case."
+                                           data-ru="Результат: понятный value proposition, схема сервиса и demo-сценарий под ваш кейс."
+                                           data-kk="Нәтиже: өз кейсіңізге сай value proposition, сервис сызбасы және demo-сценарий.">
+                                           Result: clear value proposition, service flow, and demo scenario for your use case.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                    <div class="services-thumb">
+                                        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
+                                            <h3 class="mb-0"><i class="bi bi-list-check me-2"></i><span data-en="Project 3: Task Manager" data-ru="Проект 3: Task manager" data-kk="Жоба 3: Task manager">Project 3: Task Manager</span></h3>
+                                        </div>
+                                        <p data-en="Practice module: build a planner and task system for daily and weekly control."
+                                           data-ru="Практический модуль: создать планировщик и систему задач для ежедневного и недельного контроля."
+                                           data-kk="Практикалық модуль: күнделікті және апталық бақылауға арналған жоспарлағыш пен тапсырма жүйесін құру.">
+                                           Practice module: build a planner and task system for daily and weekly control.
+                                        </p>
+                                        <p data-en="Result: personal workflow board with priorities, deadlines, and progress tracking."
+                                           data-ru="Результат: личная рабочая доска с приоритетами, дедлайнами и отслеживанием прогресса."
+                                           data-kk="Нәтиже: басымдықтар, дедлайндар және прогресті бақылауы бар жеке жұмыс тақтасы.">
+                                           Result: personal workflow board with priorities, deadlines, and progress tracking.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                    <div class="services-thumb services-thumb-up">
+                                        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
+                                            <h3 class="mb-0"><i class="bi bi-briefcase me-2"></i><span data-en="Project 4: Work Automation" data-ru="Проект 4: Автоматизация работы" data-kk="Жоба 4: Жұмыс автоматтандыруы">Project 4: Work Automation</span></h3>
+                                        </div>
+                                        <p data-en="Practice module: automate your work tasks, website creation, and presentation preparation."
+                                           data-ru="Практический модуль: автоматизировать рабочие задачи, создание сайтов и подготовку презентаций."
+                                           data-kk="Практикалық модуль: жұмыс міндеттерін, сайт жасауды және презентация дайындауды автоматтандыру.">
+                                           Practice module: automate your work tasks, website creation, and presentation preparation.
+                                        </p>
+                                        <p data-en="Result: reusable pipelines for routine operations in your current role."
+                                           data-ru="Результат: переиспользуемые пайплайны для рутинных операций в вашей текущей работе."
+                                           data-kk="Нәтиже: ағымдағы жұмысыңыздағы қайталанатын операцияларға арналған қайта қолданылатын пайплайндар.">
+                                           Result: reusable pipelines for routine operations in your current role.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                    <div class="services-thumb">
+                                        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
+                                            <h3 class="mb-0"><i class="bi bi-flask me-2"></i><span data-en="Project 5: Research Pipeline" data-ru="Проект 5: Исследование" data-kk="Жоба 5: Зерттеу">Project 5: Research Pipeline</span></h3>
+                                        </div>
+                                        <p data-en="Practice module: get answers to your own questions, formulate hypotheses, and design a research pipeline."
+                                           data-ru="Практический модуль: получать ответы на свои вопросы, формулировать гипотезы и строить исследовательский pipeline."
+                                           data-kk="Практикалық модуль: өз сұрақтарыңызға жауап алу, гипотеза құру және зерттеу pipeline-ын жасау.">
+                                           Practice module: get answers to your own questions, formulate hypotheses, and design a research pipeline.
+                                        </p>
+                                        <p data-en="Result: your own hypothesis-to-answer workflow with steps, tools, and validation checks."
+                                           data-ru="Результат: собственный workflow от гипотезы до ответа с шагами, инструментами и проверками."
+                                           data-kk="Нәтиже: гипотезадан жауапқа дейінгі қадамдары, құралдары және тексерулері бар жеке workflow.">
+                                           Result: your own hypothesis-to-answer workflow with steps, tools, and validation checks.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cases-section mt-5">
+                                <h2 class="mb-4"
+                                    data-en="Use Cases: who needs AI agents and when"
+                                    data-ru="Кейсы: кому и когда нужны AI-агенты"
+                                    data-kk="Кейстер: AI-агенттер кімге және қашан керек">Use Cases: who needs AI agents and when</h2>
+
+                                <div id="aiCasesCarousel" class="carousel slide cases-carousel" data-bs-interval="false" data-bs-touch="true">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#aiCasesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Case 1"></button>
+                                        <button type="button" data-bs-target="#aiCasesCarousel" data-bs-slide-to="1" aria-label="Case 2"></button>
+                                        <button type="button" data-bs-target="#aiCasesCarousel" data-bs-slide-to="2" aria-label="Case 3"></button>
+                                        <button type="button" data-bs-target="#aiCasesCarousel" data-bs-slide-to="3" aria-label="Case 4"></button>
+                                        <button type="button" data-bs-target="#aiCasesCarousel" data-bs-slide-to="4" aria-label="Case 5"></button>
+                                        <button type="button" data-bs-target="#aiCasesCarousel" data-bs-slide-to="5" aria-label="Case 6"></button>
+                                        <button type="button" data-bs-target="#aiCasesCarousel" data-bs-slide-to="6" aria-label="Case 7"></button>
+                                        <button type="button" data-bs-target="#aiCasesCarousel" data-bs-slide-to="7" aria-label="Case 8"></button>
+                                        <button type="button" data-bs-target="#aiCasesCarousel" data-bs-slide-to="8" aria-label="Case 9"></button>
+                                    </div>
+
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <article class="case-slide">
+                                                <h3 class="case-role" data-en="Scientist / Researcher" data-ru="Учёный / исследователь" data-kk="Ғалым / зерттеуші"><i class="bi bi-flask me-2"></i>Scientist / Researcher</h3>
+                                                <p data-en="You work with data. Excel is not enough, heavy biostat tools are inconvenient, and waiting for a developer is too slow." data-ru="Вы работаете с данными. Excel неудобен, готовые биостат-программы тяжёлые, программиста ждать долго." data-kk="Сіз деректермен жұмыс істейсіз. Excel ыңғайсыз, дайын биостат құралдары ауыр, программисті күту ұзақ.">You work with data. Excel is not enough, heavy biostat tools are inconvenient, and waiting for a developer is too slow.</p>
+                                                <p data-en="A research agent lets you ask in plain language: compare groups, find differences, show anomalies." data-ru="Свой агент исследования: вы пишете словами «сравни группы, найди отличия, покажи аномалии», а он строит графики и даёт выводы." data-kk="Зерттеу агенті: «топтарды салыстыр, айырмашылықты тап, аномалияны көрсет» деп жазасыз, ол графиктер мен қорытынды береді.">A research agent lets you ask in plain language: compare groups, find differences, show anomalies.</p>
+                                                <p class="case-result mb-0" data-en="You focus on science, not on scripts." data-ru="Теперь вы думаете о науке, а не о скриптах." data-kk="Енді сіз скриптке емес, ғылымға көңіл бөлесіз.">You focus on science, not on scripts.</p>
+                                            </article>
+                                        </div>
+
+                                        <div class="carousel-item">
+                                            <article class="case-slide">
+                                                <h3 class="case-role" data-en="Teacher" data-ru="Преподаватель" data-kk="Оқытушы"><i class="bi bi-mortarboard me-2"></i>Teacher</h3>
+                                                <p data-en="You repeatedly explain the same mistakes while checking assignments." data-ru="После проверки работ вы снова и снова пишете комментарии к одинаковым ошибкам." data-kk="Жұмысты тексергенде бір қателерге қайта-қайта түсініктеме жазасыз.">You repeatedly explain the same mistakes while checking assignments.</p>
+                                                <p data-en="A grading agent finds errors and writes clear feedback for each student level." data-ru="Агент проверки находит ошибки и пишет объяснение каждому на его уровне." data-kk="Тексеру агенті қателерді тауып, әр оқушы деңгейіне сай түсіндіреді.">A grading agent finds errors and writes clear feedback for each student level.</p>
+                                                <p class="case-result mb-0" data-en="You handle complex cases and spend time on real teaching." data-ru="Вы смотрите только сложные случаи. Вместо рутины — реальное обучение." data-kk="Сіз тек күрделі жағдайларды қарайсыз. Рутинаның орнына — шынайы оқыту.">You handle complex cases and spend time on real teaching.</p>
+                                            </article>
+                                        </div>
+
+                                        <div class="carousel-item">
+                                            <article class="case-slide">
+                                                <h3 class="case-role" data-en="Small Business / Entrepreneur" data-ru="Малый бизнес / ИП" data-kk="Шағын бизнес / ЖК"><i class="bi bi-shop me-2"></i>Small Business / Entrepreneur</h3>
+                                                <p data-en="Daily chats repeat the same questions: price, size, delivery." data-ru="Каждый день одно и то же: «сколько стоит?», «есть ли размер?», «когда доставка?»" data-kk="Күн сайын бір сұрақтар: «бағасы қанша?», «өлшем бар ма?», «жеткізу қашан?»">Daily chats repeat the same questions: price, size, delivery.</p>
+                                                <p data-en="Your own agent knows your products and tone and replies instantly, 24/7." data-ru="Свой агент знает ваш товар, условия и стиль общения. Отвечает как вы — но мгновенно и круглосуточно." data-kk="Өз агентіңіз тауарыңызды, шарттарыңызды және стиліңізді біледі. Сіз сияқты, бірақ лезде және 24/7 жауап береді.">Your own agent knows your products and tone and replies instantly, 24/7.</p>
+                                                <p class="case-result mb-0" data-en="You run the business instead of repeating answers." data-ru="Вы занимаетесь бизнесом, а не одинаковыми вопросами." data-kk="Сіз бір сұрақтарға емес, бизнесті дамытуға көңіл бөлесіз.">You run the business instead of repeating answers.</p>
+                                            </article>
+                                        </div>
+
+                                        <div class="carousel-item">
+                                            <article class="case-slide">
+                                                <h3 class="case-role" data-en="Marketer / Sales" data-ru="Маркетолог / продавец" data-kk="Маркетолог / сатушы"><i class="bi bi-megaphone me-2"></i>Marketer / Sales</h3>
+                                                <p data-en="Posts are often published blindly: sometimes they work, sometimes not." data-ru="Посты публикуются наугад: иногда заходят, иногда нет." data-kk="Посттар кейде сәтті, кейде сәтсіз — көбіне интуициямен жарияланады.">Posts are often published blindly: sometimes they work, sometimes not.</p>
+                                                <p data-en="An agent analyzes past reactions and warns before publishing." data-ru="Агент анализирует прошлые посты, реакции и комментарии и заранее подсказывает, что улучшить." data-kk="Агент бұрынғы реакция мен пікірді талдап, жариялауға дейін не түзету керек екенін айтады.">An agent analyzes past reactions and warns before publishing.</p>
+                                                <p class="case-result mb-0" data-en="You validate content before release, not after failure." data-ru="Вы больше не гадаете — проверяете до публикации." data-kk="Енді болжам емес, жариялауға дейін тексеру.">You validate content before release, not after failure.</p>
+                                            </article>
+                                        </div>
+
+                                        <div class="carousel-item">
+                                            <article class="case-slide">
+                                                <h3 class="case-role" data-en="Manager" data-ru="Руководитель" data-kk="Жетекші"><i class="bi bi-briefcase me-2"></i>Manager</h3>
+                                                <p data-en="Reports are long, but there is no time to read all of them." data-ru="Отчёты длинные, а времени читать всё нет." data-kk="Есептер ұзақ, бәрін оқуға уақыт жоқ.">Reports are long, but there is no time to read all of them.</p>
+                                                <p data-en="An agent summarizes what changed, where risk is, and what needs attention." data-ru="Агент собирает данные и каждый вечер пишет: что изменилось, где риск, что стоит проверить." data-kk="Агент деректерді жинап, күн сайын: не өзгерді, тәуекел қайда, нені тексеру керек — деп жазады.">An agent summarizes what changed, where risk is, and what needs attention.</p>
+                                                <p class="case-result mb-0" data-en="You manage by meaning, not by document volume." data-ru="Вы управляете по сути, а не по объёму документов." data-kk="Сіз құжат көлемімен емес, мәнімен басқарасыз.">You manage by meaning, not by document volume.</p>
+                                            </article>
+                                        </div>
+
+                                        <div class="carousel-item">
+                                            <article class="case-slide">
+                                                <h3 class="case-role" data-en="Professional / Job Seeker" data-ru="Специалист / ищущий работу" data-kk="Маман / жұмыс іздеуші"><i class="bi bi-person-workspace me-2"></i>Professional / Job Seeker</h3>
+                                                <p data-en="You send many applications but get few replies." data-ru="Отклики отправляете десятками — ответов мало." data-kk="Көп өтінім жібересіз, бірақ жауап аз.">You send many applications but get few replies.</p>
+                                                <p data-en="An agent rewrites your experience for each vacancy without changing facts." data-ru="Агент читает вакансию и адаптирует вашу подачу под неё, не меняя факты." data-kk="Агент вакансияны оқып, фактілерді өзгертпей, тәжірибеңізді соған сай ұсынады.">An agent rewrites your experience for each vacancy without changing facts.</p>
+                                                <p class="case-result mb-0" data-en="The employer sees a matching candidate, not a generic template." data-ru="Вакансия видит подходящего человека, а не общий шаблон." data-kk="Жұмыс беруші жалпы шаблонды емес, лайық кандидатты көреді.">The employer sees a matching candidate, not a generic template.</p>
+                                            </article>
+                                        </div>
+
+                                        <div class="carousel-item">
+                                            <article class="case-slide">
+                                                <h3 class="case-role" data-en="School Student" data-ru="Школьник" data-kk="Оқушы"><i class="bi bi-backpack me-2"></i>School Student</h3>
+                                                <p data-en="Homework is done, but the topic is still unclear." data-ru="Домашку сделал — но не понял." data-kk="Үй жұмысын орындадың, бірақ тақырып түсініксіз қалды.">Homework is done, but the topic is still unclear.</p>
+                                                <p data-en="An agent explains differently, asks questions, and checks until understanding appears." data-ru="Агент объясняет по-другому, задаёт вопросы и проверяет, пока не станет ясно." data-kk="Агент басқаша түсіндіреді, сұрақ қояды және түсінгенше тексереді.">An agent explains differently, asks questions, and checks until understanding appears.</p>
+                                                <p class="case-result mb-0" data-en="This is training, not cheating." data-ru="Это не списывание, а тренировка." data-kk="Бұл көшіру емес, жаттығу.">This is training, not cheating.</p>
+                                            </article>
+                                        </div>
+
+                                        <div class="carousel-item">
+                                            <article class="case-slide">
+                                                <h3 class="case-role" data-en="Parents" data-ru="Родители" data-kk="Ата-аналар"><i class="bi bi-people me-2"></i>Parents</h3>
+                                                <p data-en="A child learns a topic and forgets it soon after." data-ru="Ребёнок выучил тему — через два дня забыл." data-kk="Бала тақырыпты оқып, екі күннен кейін ұмытып қалады.">A child learns a topic and forgets it soon after.</p>
+                                                <p data-en="An agent asks 2-3 short daily questions and reinforces old material." data-ru="Агент каждый день задаёт 2-3 коротких вопроса по прошлым темам и закрепляет знания." data-kk="Агент күн сайын өткен тақырыптардан 2-3 қысқа сұрақ қойып, білімді бекітеді.">An agent asks 2-3 short daily questions and reinforces old material.</p>
+                                                <p class="case-result mb-0" data-en="Learning stops being done-and-forgotten." data-ru="Учёба перестаёт быть «сделал и забыл»." data-kk="Оқу «жасадым да ұмыттым» күйінен шығады.">Learning stops being done-and-forgotten.</p>
+                                            </article>
+                                        </div>
+
+                                        <div class="carousel-item">
+                                            <article class="case-slide">
+                                                <h3 class="case-role" data-en="Creative Professional" data-ru="Творческий человек" data-kk="Шығармашылық маман"><i class="bi bi-palette me-2"></i>Creative Professional</h3>
+                                                <p data-en="You finish creative work and wait for audience reaction." data-ru="Сделали работу — ждёте реакцию аудитории." data-kk="Жұмысты жасадыңыз, енді аудитория реакциясын күтесіз.">You finish creative work and wait for audience reaction.</p>
+                                                <p data-en="An agent simulates feedback first: where it is unclear, boring, or engaging." data-ru="Агент заранее играет роль аудитории и показывает, где скучно, где непонятно, где интересно." data-kk="Агент алдын ала аудитория рөлін ойнап, қай жері қызықсыз, түсініксіз не қызықты екенін көрсетеді.">An agent simulates feedback first: where it is unclear, boring, or engaging.</p>
+                                                <p class="case-result mb-0" data-en="You improve before publishing and reduce disappointment." data-ru="Вы исправляете до публикации — меньше разочарований." data-kk="Жариялауға дейін түзетесіз — көңіл қалу азаяды.">You improve before publishing and reduce disappointment.</p>
+                                            </article>
+                                        </div>
+                                    </div>
+
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#aiCasesCarousel" data-bs-slide="prev" aria-label="Previous case">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#aiCasesCarousel" data-bs-slide="next" aria-label="Next case">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <p class="mt-4 text-muted" data-en="Need the syllabus or enrollment details? Reach out via the contact section."
+                               data-ru="Нужна программа курса или детали набора? Напишите через раздел контактов."
+                               data-kk="Курс бағдарламасы немесе қабылдау туралы ақпарат керек пе? Whatsapp-қа немесе email-ге жазыңыз.">
+                               Need the syllabus or enrollment details? Reach out via the contact section.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-12">
+                        <div class="copyright-text-wrap">
+                            <p class="mb-0">
+                                <span class="copyright-text" data-en="Copyright © Dauletuly Aidyn" data-ru="© Дәулетұлы Айдын" data-kk="© Дәулетұлы Айдын">Copyright © Dauletuly Aidyn</span>
+                                <span data-en="All rights reserved." data-ru="Все права защищены." data-kk="Барлық құқықтар қорғалған.">All rights reserved.</span>
+                                <span class="ms-2"><span data-en="Designed by" data-ru="Дизайн" data-kk="Дизайн">Designed by</span> <a href="https://templatemo.com/" target="_blank" rel="noopener">TemplateMo</a></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/course-launch-timer.js"></script>
+        <script src="js/custom.js"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var langSelect = document.getElementById('lang-select');
+                if (langSelect) {
+                    langSelect.value = 'kk';
+                }
+                changeLanguage('kk');
+            });
+
+            function changeLanguage(lang) {
+                if (lang === 'en') {
+                    lang = 'ru';
+                }
+                document.documentElement.lang = lang;
+
+                document.querySelectorAll('[data-en][data-ru][data-kk]').forEach(function(el) {
+                    var value = el.getAttribute('data-' + lang);
+                    if (value && value.indexOf('<br>') !== -1) {
+                        el.innerHTML = value;
+                    } else {
+                        el.textContent = value;
+                    }
+                });
+
+                document.querySelectorAll('tr[data-schedule-lang]').forEach(function(row) {
+                    var rowLang = row.getAttribute('data-schedule-lang');
+                    var visible = (lang === 'en') || rowLang === lang;
+                    row.style.display = visible ? '' : 'none';
+                });
+
+                document.querySelectorAll('[data-show-langs]').forEach(function(el) {
+                    var langs = (el.getAttribute('data-show-langs') || '')
+                        .split(',')
+                        .map(function(v) { return v.trim(); })
+                        .filter(Boolean);
+                    el.style.display = langs.indexOf(lang) !== -1 ? '' : 'none';
+                });
+            }
+        </script>
+    </body>
+</html>
+
+

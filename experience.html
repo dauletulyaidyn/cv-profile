@@ -1,10 +1,10 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <meta name="description" content="Dauletuly Aidyn — Experience timeline. AI Engineer, ML Researcher, and Lecturer.">
+        <meta name="description" content="Dauletuly Aidyn â€” Experience timeline. AI Engineer, ML Researcher, and Lecturer.">
         <meta name="author" content="Dauletuly Aidyn">
 
         <title>Experience - Dauletuly Aidyn</title>
@@ -20,7 +20,7 @@
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg navbar-split">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,23 +30,51 @@
                 <a href="index.html" class="navbar-brand mx-auto mx-lg-0">Aidyn</a>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-lg-5">
-                        <li class="nav-item"><a class="nav-link" href="index.html#section_1" data-en="Home" data-ru="Главная" data-kk="Басты">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index.html#section_2" data-en="About" data-ru="Обо мне" data-kk="Мен туралы">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index.html#section_3" data-en="Skills" data-ru="Навыки" data-kk="Дағдылар">Skills</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index.html#section_4" data-en="Projects" data-ru="Проекты" data-kk="Жобалар">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index.html#section_5" data-en="Contact" data-ru="Контакты" data-kk="Байланыс">Contact</a></li>
+                    <div class="navbar-split-layout w-100">
+                    <div class="navbar-top-contact d-none d-lg-flex">
+                        <div class="navbar-top-contact-left">
+                            <a class="navbar-top-contact-link" href="mailto:aidyn.daulet@gmail.com">
+                                <i class="bi bi-envelope"></i>
+                                <span>aidyn.daulet@gmail.com</span>
+                            </a>
+                            <a class="navbar-top-contact-link" href="https://wa.me/77769889889" target="_blank" rel="noopener">
+                                <i class="bi bi-whatsapp"></i>
+                                <span>+7 776 988 9889</span>
+                            </a>
+                        </div>
+                        <div class="navbar-top-tools">
+                            <div class="language-selector navbar-top-lang">
+                                <select id="lang-select" class="form-select form-select-sm" onchange="changeLanguage(this.value)">
+                                    <option value="en">EN</option>
+                                    <option value="ru">RU</option>
+                                    <option value="kk" selected>KK</option>
+                                </select>
+                            </div>
+                            <a href="Aidyn_Kunikeyev_cv Official — rus.docx" download class="navbar-top-tool-btn">
+                                <i class="bi bi-download me-1"></i>
+                                <span data-en="Download CV" data-ru="Скачать CV" data-kk="CV жүктеу">Download CV</span>
+                            </a>
+                            <a class="navbar-top-tool-icon" href="https://wa.me/77769889889" target="_blank" rel="noopener" aria-label="WhatsApp">
+                                <i class="bi bi-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>                    <ul class="navbar-nav ms-lg-0 nav-row-primary">
+                        <li class="nav-item"><a class="nav-link" href="index.html#section_1" data-en="Home" data-ru="Ð“Ð»Ð°Ð²Ð½Ð°Ñ" data-kk="Ð‘Ð°ÑÑ‚Ñ‹">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#section_2" data-en="About" data-ru="ÐžÐ±Ð¾ Ð¼Ð½Ðµ" data-kk="ÐœÐµÐ½ Ñ‚ÑƒÑ€Ð°Ð»Ñ‹">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#section_3" data-en="Skills" data-ru="ÐÐ°Ð²Ñ‹ÐºÐ¸" data-kk="Ð”Ð°Ò“Ð´Ñ‹Ð»Ð°Ñ€">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#section_4" data-en="Projects" data-ru="ÐŸÑ€Ð¾ÐµÐºÑ‚Ñ‹" data-kk="Ð–Ð¾Ð±Ð°Ð»Ð°Ñ€">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#section_5" data-en="Contact" data-ru="ÐšÐ¾Ð½Ñ‚Ð°ÐºÑ‚Ñ‹" data-kk="Ð‘Ð°Ð¹Ð»Ð°Ð½Ñ‹Ñ">Contact</a></li>
+                        <li class="nav-item dropdown" data-show-langs="ru,kk">
+                            <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-en="Just Aidyn Courses" data-ru="ÐšÑƒÑ€ÑÑ‹ Just Aidyn" data-kk="Just Aidyn ÐºÑƒÑ€ÑÑ‚Ð°Ñ€Ñ‹">Just Aidyn Courses</a>
+                            <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
+                                <li><a class="dropdown-item" href="ai-agents-course.html" data-en="AI agents" data-ru="AI-Ð°Ð³ÐµÐ½Ñ‚Ñ‹" data-kk="AI Ð°Ð³ÐµÐ½Ñ‚Ñ‚ÐµÑ€">AI agents</a></li>
+                                <li><a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true" data-en="Programming" data-ru="ÐŸÑ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð¸Ðµ" data-kk="Ð‘Ð°Ò“Ð´Ð°Ñ€Ð»Ð°Ð¼Ð°Ð»Ð°Ñƒ">Programming</a></li>
+                                <li><a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true" data-en="Non-standard math and logic" data-ru="ÐÐµÑÑ‚Ð°Ð½Ð´Ð°Ñ€Ñ‚Ð½Ð°Ñ Ð¼Ð°Ñ‚ÐµÐ¼Ð°Ñ‚Ð¸ÐºÐ° Ð¸ Ð»Ð¾Ð³Ð¸ÐºÐ°" data-kk="Ð¡Ñ‚Ð°Ð½Ð´Ð°Ñ€Ñ‚Ñ‚Ð°Ð½ Ñ‚Ñ‹Ñ Ð¼Ð°Ñ‚ÐµÐ¼Ð°Ñ‚Ð¸ÐºÐ° Ð¶Ó™Ð½Ðµ Ð»Ð¾Ð³Ð¸ÐºÐ°">Non-standard math and logic</a></li>
+                            </ul>
+                        </li>
                     </ul>
 
-                    <div class="d-lg-flex align-items-center d-none ms-auto">
-                        <div class="language-selector me-3">
-                            <select id="lang-select" class="form-select form-select-sm" onchange="changeLanguage(this.value)">
-                                <option value="en" selected>EN</option>
-                                <option value="ru">RU</option>
-                                <option value="kk">KK</option>
-                            </select>
-                        </div>
-                        <a class="custom-btn btn" href="index.html#section_5" data-en="Get in touch" data-ru="Связаться" data-kk="Байланысу">Get in touch</a>
+                    <div class="nav-row-secondary d-none"></div>
                     </div>
                 </div>
             </div>
@@ -56,11 +84,11 @@
             <section class="subpage-hero">
                 <div class="container">
                     <div class="subpage-back mb-3">
-                        <a href="index.html" data-en="← Back to Home" data-ru="← Назад на главную" data-kk="← Басты бетке">← Back to Home</a>
+                        <a href="index.html" data-en="<- Back to Home" data-ru="<- ÐÐ°Ð·Ð°Ð´ Ð½Ð° Ð³Ð»Ð°Ð²Ð½ÑƒÑŽ" data-kk="<- Ð‘Ð°ÑÑ‚Ñ‹ Ð±ÐµÑ‚ÐºÐµ"><- Back to Home</a>
                     </div>
 
-                    <h1 class="subpage-title" data-en="Experience Timeline" data-ru="Опыт работы (таймлайн)" data-kk="Тəжірибе (таймлайн)">Experience Timeline</h1>
-                    <p class="subpage-lead" data-en="A detailed overview of roles across engineering, research, and teaching." data-ru="Подробный обзор ролей в разработке, исследованиях и преподавании." data-kk="Инженерия, зерттеу және оқыту салаларындағы рөлдердің толық шолуы.">A detailed overview of roles across engineering, research, and teaching.</p>
+                    <h1 class="subpage-title" data-en="Experience Timeline" data-ru="ÐžÐ¿Ñ‹Ñ‚ Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹ (Ñ‚Ð°Ð¹Ð¼Ð»Ð°Ð¹Ð½)" data-kk="Ð¢É™Ð¶Ñ–Ñ€Ð¸Ð±Ðµ (Ñ‚Ð°Ð¹Ð¼Ð»Ð°Ð¹Ð½)">Experience Timeline</h1>
+                    <p class="subpage-lead" data-en="A detailed overview of roles across engineering, research, and teaching." data-ru="ÐŸÐ¾Ð´Ñ€Ð¾Ð±Ð½Ñ‹Ð¹ Ð¾Ð±Ð·Ð¾Ñ€ Ñ€Ð¾Ð»ÐµÐ¹ Ð² Ñ€Ð°Ð·Ñ€Ð°Ð±Ð¾Ñ‚ÐºÐµ, Ð¸ÑÑÐ»ÐµÐ´Ð¾Ð²Ð°Ð½Ð¸ÑÑ… Ð¸ Ð¿Ñ€ÐµÐ¿Ð¾Ð´Ð°Ð²Ð°Ð½Ð¸Ð¸." data-kk="Ð˜Ð½Ð¶ÐµÐ½ÐµÑ€Ð¸Ñ, Ð·ÐµÑ€Ñ‚Ñ‚ÐµÑƒ Ð¶Ó™Ð½Ðµ Ð¾Ò›Ñ‹Ñ‚Ñƒ ÑÐ°Ð»Ð°Ð»Ð°Ñ€Ñ‹Ð½Ð´Ð°Ò“Ñ‹ Ñ€Ó©Ð»Ð´ÐµÑ€Ð´Ñ–Ò£ Ñ‚Ð¾Ð»Ñ‹Ò› ÑˆÐ¾Ð»ÑƒÑ‹.">A detailed overview of roles across engineering, research, and teaching.</p>
                 </div>
             </section>
 
@@ -70,101 +98,101 @@
                         <div class="col-lg-10 col-12 mx-auto">
                             <ul class="timeline">
                                 <li class="timeline-item">
-                                    <div class="timeline-date" data-en="Sep 2024 — Present" data-ru="09.2024 — н.в." data-kk="09.2024 — қазір">Sep 2024 — Present</div>
+                                    <div class="timeline-date" data-en="Sep 2024 â€” Present" data-ru="09.2024 â€” Ð½.Ð²." data-kk="09.2024 â€” Ò›Ð°Ð·Ñ–Ñ€">Sep 2024 â€” Present</div>
                                     <div class="timeline-card">
                                         <h3 class="timeline-title">Prompt Engineer</h3>
-                                        <p class="timeline-org">TOO Ailat — “Ailat AI Screening”</p>
+                                        <p class="timeline-org">TOO Ailat â€” â€œAilat AI Screeningâ€</p>
                                         <p data-en="Led a year-long automation effort for Islamic financial screening using LLMs and structured financial data."
-                                           data-ru="Реализовал годичный проект по автоматизации исламского финансового скрининга на базе LLM и финансовых данных."
-                                           data-kk="LLM және қаржылық деректер негізінде исламдық қаржылық скринингті автоматтандыру жобасын іске асырдым.">
+                                           data-ru="Ð ÐµÐ°Ð»Ð¸Ð·Ð¾Ð²Ð°Ð» Ð³Ð¾Ð´Ð¸Ñ‡Ð½Ñ‹Ð¹ Ð¿Ñ€Ð¾ÐµÐºÑ‚ Ð¿Ð¾ Ð°Ð²Ñ‚Ð¾Ð¼Ð°Ñ‚Ð¸Ð·Ð°Ñ†Ð¸Ð¸ Ð¸ÑÐ»Ð°Ð¼ÑÐºÐ¾Ð³Ð¾ Ñ„Ð¸Ð½Ð°Ð½ÑÐ¾Ð²Ð¾Ð³Ð¾ ÑÐºÑ€Ð¸Ð½Ð¸Ð½Ð³Ð° Ð½Ð° Ð±Ð°Ð·Ðµ LLM Ð¸ Ñ„Ð¸Ð½Ð°Ð½ÑÐ¾Ð²Ñ‹Ñ… Ð´Ð°Ð½Ð½Ñ‹Ñ…."
+                                           data-kk="LLM Ð¶Ó™Ð½Ðµ Ò›Ð°Ñ€Ð¶Ñ‹Ð»Ñ‹Ò› Ð´ÐµÑ€ÐµÐºÑ‚ÐµÑ€ Ð½ÐµÐ³Ñ–Ð·Ñ–Ð½Ð´Ðµ Ð¸ÑÐ»Ð°Ð¼Ð´Ñ‹Ò› Ò›Ð°Ñ€Ð¶Ñ‹Ð»Ñ‹Ò› ÑÐºÑ€Ð¸Ð½Ð¸Ð½Ð³Ñ‚Ñ– Ð°Ð²Ñ‚Ð¾Ð¼Ð°Ñ‚Ñ‚Ð°Ð½Ð´Ñ‹Ñ€Ñƒ Ð¶Ð¾Ð±Ð°ÑÑ‹Ð½ Ñ–ÑÐºÐµ Ð°ÑÑ‹Ñ€Ð´Ñ‹Ð¼.">
                                            Led a year-long automation effort for Islamic financial screening using LLMs and structured financial data.
                                         </p>
                                         <p data-en="Scope: SEC/EDGAR extraction, report optimization for LLM input, prompt design, structured JSON outputs, LSEG (Refinitiv) integration, and an API with admin panel + user profiles."
-                                           data-ru="Скоуп: извлечение данных из SEC/EDGAR, оптимизация отчётов для LLM, генерация промптов, структурированный JSON, интеграция с LSEG (Refinitiv), API с админ‑панелью и профилями пользователей."
-                                           data-kk="Ауқымы: SEC/EDGAR деректерін шығару, LLM үшін есептерді оңтайландыру, промпт құру, құрылымдалған JSON, LSEG (Refinitiv) интеграциясы, admin панелі және пайдаланушы профилдері бар API.">
+                                           data-ru="Ð¡ÐºÐ¾ÑƒÐ¿: Ð¸Ð·Ð²Ð»ÐµÑ‡ÐµÐ½Ð¸Ðµ Ð´Ð°Ð½Ð½Ñ‹Ñ… Ð¸Ð· SEC/EDGAR, Ð¾Ð¿Ñ‚Ð¸Ð¼Ð¸Ð·Ð°Ñ†Ð¸Ñ Ð¾Ñ‚Ñ‡Ñ‘Ñ‚Ð¾Ð² Ð´Ð»Ñ LLM, Ð³ÐµÐ½ÐµÑ€Ð°Ñ†Ð¸Ñ Ð¿Ñ€Ð¾Ð¼Ð¿Ñ‚Ð¾Ð², ÑÑ‚Ñ€ÑƒÐºÑ‚ÑƒÑ€Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð½Ñ‹Ð¹ JSON, Ð¸Ð½Ñ‚ÐµÐ³Ñ€Ð°Ñ†Ð¸Ñ Ñ LSEG (Refinitiv), API Ñ Ð°Ð´Ð¼Ð¸Ð½â€‘Ð¿Ð°Ð½ÐµÐ»ÑŒÑŽ Ð¸ Ð¿Ñ€Ð¾Ñ„Ð¸Ð»ÑÐ¼Ð¸ Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÐµÐ¹."
+                                           data-kk="ÐÑƒÒ›Ñ‹Ð¼Ñ‹: SEC/EDGAR Ð´ÐµÑ€ÐµÐºÑ‚ÐµÑ€Ñ–Ð½ ÑˆÑ‹Ò“Ð°Ñ€Ñƒ, LLM Ò¯ÑˆÑ–Ð½ ÐµÑÐµÐ¿Ñ‚ÐµÑ€Ð´Ñ– Ð¾Ò£Ñ‚Ð°Ð¹Ð»Ð°Ð½Ð´Ñ‹Ñ€Ñƒ, Ð¿Ñ€Ð¾Ð¼Ð¿Ñ‚ Ò›Ò±Ñ€Ñƒ, Ò›Ò±Ñ€Ñ‹Ð»Ñ‹Ð¼Ð´Ð°Ð»Ò“Ð°Ð½ JSON, LSEG (Refinitiv) Ð¸Ð½Ñ‚ÐµÐ³Ñ€Ð°Ñ†Ð¸ÑÑÑ‹, admin Ð¿Ð°Ð½ÐµÐ»Ñ– Ð¶Ó™Ð½Ðµ Ð¿Ð°Ð¹Ð´Ð°Ð»Ð°Ð½ÑƒÑˆÑ‹ Ð¿Ñ€Ð¾Ñ„Ð¸Ð»Ð´ÐµÑ€Ñ– Ð±Ð°Ñ€ API.">
                                            Scope: SEC/EDGAR extraction, report optimization for LLM input, prompt design, structured JSON outputs, LSEG (Refinitiv) integration, and an API with admin panel + user profiles.
                                         </p>
                                     </div>
                                 </li>
 
                                 <li class="timeline-item">
-                                    <div class="timeline-date" data-en="Aug 2022 — Mar 2024" data-ru="08.2022 — 03.2024" data-kk="08.2022 — 03.2024">Aug 2022 — Mar 2024</div>
+                                    <div class="timeline-date" data-en="Aug 2022 â€” Mar 2024" data-ru="08.2022 â€” 03.2024" data-kk="08.2022 â€” 03.2024">Aug 2022 â€” Mar 2024</div>
                                     <div class="timeline-card">
-                                        <h3 class="timeline-title" data-en="Researcher & Department Director" data-ru="Исследователь и директор отдела" data-kk="Зерттеуші және бөлім директоры">Researcher & Department Director</h3>
-                                        <p class="timeline-org">QazIIM — Institute of Innovative Medicine, “System biology and ICT”</p>
+                                        <h3 class="timeline-title" data-en="Researcher & Department Director" data-ru="Ð˜ÑÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒ Ð¸ Ð´Ð¸Ñ€ÐµÐºÑ‚Ð¾Ñ€ Ð¾Ñ‚Ð´ÐµÐ»Ð°" data-kk="Ð—ÐµÑ€Ñ‚Ñ‚ÐµÑƒÑˆÑ– Ð¶Ó™Ð½Ðµ Ð±Ó©Ð»Ñ–Ð¼ Ð´Ð¸Ñ€ÐµÐºÑ‚Ð¾Ñ€Ñ‹">Researcher & Department Director</h3>
+                                        <p class="timeline-org">QazIIM â€” Institute of Innovative Medicine, â€œSystem biology and ICTâ€</p>
                                         <p data-en="Performed genetic analyses and ML experiments on research datasets; organized research workflows and introduced modern ICT tools for bio-data analysis."
-                                           data-ru="Проводил генетические анализы и ML эксперименты; отвечал за организацию исследований и внедрение ИКТ‑инструментов в анализ биологических данных."
-                                           data-kk="Генетикалық талдау және ML тәжірибелерін жүргіздім; зерттеу процесін ұйымдастырып, биодеректерді талдауға ИКТ құралдарын енгіздім.">
+                                           data-ru="ÐŸÑ€Ð¾Ð²Ð¾Ð´Ð¸Ð» Ð³ÐµÐ½ÐµÑ‚Ð¸Ñ‡ÐµÑÐºÐ¸Ðµ Ð°Ð½Ð°Ð»Ð¸Ð·Ñ‹ Ð¸ ML ÑÐºÑÐ¿ÐµÑ€Ð¸Ð¼ÐµÐ½Ñ‚Ñ‹; Ð¾Ñ‚Ð²ÐµÑ‡Ð°Ð» Ð·Ð° Ð¾Ñ€Ð³Ð°Ð½Ð¸Ð·Ð°Ñ†Ð¸ÑŽ Ð¸ÑÑÐ»ÐµÐ´Ð¾Ð²Ð°Ð½Ð¸Ð¹ Ð¸ Ð²Ð½ÐµÐ´Ñ€ÐµÐ½Ð¸Ðµ Ð˜ÐšÐ¢â€‘Ð¸Ð½ÑÑ‚Ñ€ÑƒÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð² Ð°Ð½Ð°Ð»Ð¸Ð· Ð±Ð¸Ð¾Ð»Ð¾Ð³Ð¸Ñ‡ÐµÑÐºÐ¸Ñ… Ð´Ð°Ð½Ð½Ñ‹Ñ…."
+                                           data-kk="Ð“ÐµÐ½ÐµÑ‚Ð¸ÐºÐ°Ð»Ñ‹Ò› Ñ‚Ð°Ð»Ð´Ð°Ñƒ Ð¶Ó™Ð½Ðµ ML Ñ‚Ó™Ð¶Ñ–Ñ€Ð¸Ð±ÐµÐ»ÐµÑ€Ñ–Ð½ Ð¶Ò¯Ñ€Ð³Ñ–Ð·Ð´Ñ–Ð¼; Ð·ÐµÑ€Ñ‚Ñ‚ÐµÑƒ Ð¿Ñ€Ð¾Ñ†ÐµÑÑ–Ð½ Ò±Ð¹Ñ‹Ð¼Ð´Ð°ÑÑ‚Ñ‹Ñ€Ñ‹Ð¿, Ð±Ð¸Ð¾Ð´ÐµÑ€ÐµÐºÑ‚ÐµÑ€Ð´Ñ– Ñ‚Ð°Ð»Ð´Ð°ÑƒÒ“Ð° Ð˜ÐšÐ¢ Ò›Ò±Ñ€Ð°Ð»Ð´Ð°Ñ€Ñ‹Ð½ ÐµÐ½Ð³Ñ–Ð·Ð´Ñ–Ð¼.">
                                            Performed genetic analyses and ML experiments on research datasets; organized research workflows and introduced modern ICT tools for bio-data analysis.
                                         </p>
                                     </div>
                                 </li>
 
                                 <li class="timeline-item">
-                                    <div class="timeline-date" data-en="Jan 2017 — Present" data-ru="01.2017 — н.в." data-kk="01.2017 — қазір">Jan 2017 — Present</div>
+                                    <div class="timeline-date" data-en="Jan 2017 â€” Present" data-ru="01.2017 â€” Ð½.Ð²." data-kk="01.2017 â€” Ò›Ð°Ð·Ñ–Ñ€">Jan 2017 â€” Present</div>
                                     <div class="timeline-card">
-                                        <h3 class="timeline-title" data-en="Deputy Director & Senior Lecturer" data-ru="Зам. директора и старший преподаватель" data-kk="Директор орынбасары және аға оқытушы">Deputy Director & Senior Lecturer</h3>
-                                        <p class="timeline-org" data-en="Satbayev University (KazNITU) — Institute of Distance Education" data-ru="Сатбаев Университет (КазНИТУ) — Институт дистанционного образования" data-kk="Satbayev University (KazNITU) — Қашықтықтан білім беру институты">Satbayev University (KazNITU) — Institute of Distance Education</p>
+                                        <h3 class="timeline-title" data-en="Deputy Director & Senior Lecturer" data-ru="Ð—Ð°Ð¼. Ð´Ð¸Ñ€ÐµÐºÑ‚Ð¾Ñ€Ð° Ð¸ ÑÑ‚Ð°Ñ€ÑˆÐ¸Ð¹ Ð¿Ñ€ÐµÐ¿Ð¾Ð´Ð°Ð²Ð°Ñ‚ÐµÐ»ÑŒ" data-kk="Ð”Ð¸Ñ€ÐµÐºÑ‚Ð¾Ñ€ Ð¾Ñ€Ñ‹Ð½Ð±Ð°ÑÐ°Ñ€Ñ‹ Ð¶Ó™Ð½Ðµ Ð°Ò“Ð° Ð¾Ò›Ñ‹Ñ‚ÑƒÑˆÑ‹">Deputy Director & Senior Lecturer</h3>
+                                        <p class="timeline-org" data-en="Satbayev University (KazNITU) â€” Institute of Distance Education" data-ru="Ð¡Ð°Ñ‚Ð±Ð°ÐµÐ² Ð£Ð½Ð¸Ð²ÐµÑ€ÑÐ¸Ñ‚ÐµÑ‚ (ÐšÐ°Ð·ÐÐ˜Ð¢Ð£) â€” Ð˜Ð½ÑÑ‚Ð¸Ñ‚ÑƒÑ‚ Ð´Ð¸ÑÑ‚Ð°Ð½Ñ†Ð¸Ð¾Ð½Ð½Ð¾Ð³Ð¾ Ð¾Ð±Ñ€Ð°Ð·Ð¾Ð²Ð°Ð½Ð¸Ñ" data-kk="Satbayev University (KazNITU) â€” ÒšÐ°ÑˆÑ‹Ò›Ñ‚Ñ‹Ò›Ñ‚Ð°Ð½ Ð±Ñ–Ð»Ñ–Ð¼ Ð±ÐµÑ€Ñƒ Ð¸Ð½ÑÑ‚Ð¸Ñ‚ÑƒÑ‚Ñ‹">Satbayev University (KazNITU) â€” Institute of Distance Education</p>
                                         <p data-en="Teaching IT disciplines and supervising students in applied and research projects."
-                                           data-ru="Преподавание ИТ-дисциплин и руководство студентами в прикладных и научных проектах."
-                                           data-kk="IT пәндерін оқыту және студенттермен қолданбалы/зерттеу жобаларын жүргізу.">
+                                           data-ru="ÐŸÑ€ÐµÐ¿Ð¾Ð´Ð°Ð²Ð°Ð½Ð¸Ðµ Ð˜Ð¢-Ð´Ð¸ÑÑ†Ð¸Ð¿Ð»Ð¸Ð½ Ð¸ Ñ€ÑƒÐºÐ¾Ð²Ð¾Ð´ÑÑ‚Ð²Ð¾ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°Ð¼Ð¸ Ð² Ð¿Ñ€Ð¸ÐºÐ»Ð°Ð´Ð½Ñ‹Ñ… Ð¸ Ð½Ð°ÑƒÑ‡Ð½Ñ‹Ñ… Ð¿Ñ€Ð¾ÐµÐºÑ‚Ð°Ñ…."
+                                           data-kk="IT Ð¿Ó™Ð½Ð´ÐµÑ€Ñ–Ð½ Ð¾Ò›Ñ‹Ñ‚Ñƒ Ð¶Ó™Ð½Ðµ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ñ‚ÐµÑ€Ð¼ÐµÐ½ Ò›Ð¾Ð»Ð´Ð°Ð½Ð±Ð°Ð»Ñ‹/Ð·ÐµÑ€Ñ‚Ñ‚ÐµÑƒ Ð¶Ð¾Ð±Ð°Ð»Ð°Ñ€Ñ‹Ð½ Ð¶Ò¯Ñ€Ð³Ñ–Ð·Ñƒ.">
                                            Teaching IT disciplines and supervising students in applied and research projects.
                                         </p>
-                                        <p data-en="Research highlight: “Zhas Galym” grant project on somatic mutations from single-cell RNA data using ML methods (end-to-end pipeline from genetic preprocessing to ML analysis)."
-                                           data-ru="Научный акцент: грант «Жас Ғалым» по соматическим мутациям на основе данных одноклеточной РНК с применением методов машинного обучения (полный цикл от подготовки данных до ML‑анализа)."
-                                           data-kk="Зерттеу бағыты: «Жас Ғалым» гранты — бір жасушалы РНҚ деректерінен соматикалық мутацияларды ML әдістерімен зерттеу (деректерді дайындаудан бастап ML талдауға дейін).">
-                                           Research highlight: “Zhas Galym” grant project on somatic mutations from single-cell RNA data using ML methods (end-to-end pipeline from genetic preprocessing to ML analysis).
+                                        <p data-en="Research highlight: â€œZhas Galymâ€ grant project on somatic mutations from single-cell RNA data using ML methods (end-to-end pipeline from genetic preprocessing to ML analysis)."
+                                           data-ru="ÐÐ°ÑƒÑ‡Ð½Ñ‹Ð¹ Ð°ÐºÑ†ÐµÐ½Ñ‚: Ð³Ñ€Ð°Ð½Ñ‚ Â«Ð–Ð°Ñ Ò’Ð°Ð»Ñ‹Ð¼Â» Ð¿Ð¾ ÑÐ¾Ð¼Ð°Ñ‚Ð¸Ñ‡ÐµÑÐºÐ¸Ð¼ Ð¼ÑƒÑ‚Ð°Ñ†Ð¸ÑÐ¼ Ð½Ð° Ð¾ÑÐ½Ð¾Ð²Ðµ Ð´Ð°Ð½Ð½Ñ‹Ñ… Ð¾Ð´Ð½Ð¾ÐºÐ»ÐµÑ‚Ð¾Ñ‡Ð½Ð¾Ð¹ Ð ÐÐš Ñ Ð¿Ñ€Ð¸Ð¼ÐµÐ½ÐµÐ½Ð¸ÐµÐ¼ Ð¼ÐµÑ‚Ð¾Ð´Ð¾Ð² Ð¼Ð°ÑˆÐ¸Ð½Ð½Ð¾Ð³Ð¾ Ð¾Ð±ÑƒÑ‡ÐµÐ½Ð¸Ñ (Ð¿Ð¾Ð»Ð½Ñ‹Ð¹ Ñ†Ð¸ÐºÐ» Ð¾Ñ‚ Ð¿Ð¾Ð´Ð³Ð¾Ñ‚Ð¾Ð²ÐºÐ¸ Ð´Ð°Ð½Ð½Ñ‹Ñ… Ð´Ð¾ MLâ€‘Ð°Ð½Ð°Ð»Ð¸Ð·Ð°)."
+                                           data-kk="Ð—ÐµÑ€Ñ‚Ñ‚ÐµÑƒ Ð±Ð°Ò“Ñ‹Ñ‚Ñ‹: Â«Ð–Ð°Ñ Ò’Ð°Ð»Ñ‹Ð¼Â» Ð³Ñ€Ð°Ð½Ñ‚Ñ‹ â€” Ð±Ñ–Ñ€ Ð¶Ð°ÑÑƒÑˆÐ°Ð»Ñ‹ Ð ÐÒš Ð´ÐµÑ€ÐµÐºÑ‚ÐµÑ€Ñ–Ð½ÐµÐ½ ÑÐ¾Ð¼Ð°Ñ‚Ð¸ÐºÐ°Ð»Ñ‹Ò› Ð¼ÑƒÑ‚Ð°Ñ†Ð¸ÑÐ»Ð°Ñ€Ð´Ñ‹ ML Ó™Ð´Ñ–ÑÑ‚ÐµÑ€Ñ–Ð¼ÐµÐ½ Ð·ÐµÑ€Ñ‚Ñ‚ÐµÑƒ (Ð´ÐµÑ€ÐµÐºÑ‚ÐµÑ€Ð´Ñ– Ð´Ð°Ð¹Ñ‹Ð½Ð´Ð°ÑƒÐ´Ð°Ð½ Ð±Ð°ÑÑ‚Ð°Ð¿ ML Ñ‚Ð°Ð»Ð´Ð°ÑƒÒ“Ð° Ð´ÐµÐ¹Ñ–Ð½).">
+                                           Research highlight: â€œZhas Galymâ€ grant project on somatic mutations from single-cell RNA data using ML methods (end-to-end pipeline from genetic preprocessing to ML analysis).
                                         </p>
                                     </div>
                                 </li>
 
                                 <li class="timeline-item">
-                                    <div class="timeline-date" data-en="Sep 2015 — Jun 2016" data-ru="09.2015 — 06.2016" data-kk="09.2015 — 06.2016">Sep 2015 — Jun 2016</div>
+                                    <div class="timeline-date" data-en="Sep 2015 â€” Jun 2016" data-ru="09.2015 â€” 06.2016" data-kk="09.2015 â€” 06.2016">Sep 2015 â€” Jun 2016</div>
                                     <div class="timeline-card">
-                                        <h3 class="timeline-title" data-en="Senior Lecturer" data-ru="Старший преподаватель" data-kk="Аға оқытушы">Senior Lecturer</h3>
-                                        <p class="timeline-org" data-en="International IT University" data-ru="Международный ИТ-университет" data-kk="Халықаралық IT университеті">International IT University</p>
+                                        <h3 class="timeline-title" data-en="Senior Lecturer" data-ru="Ð¡Ñ‚Ð°Ñ€ÑˆÐ¸Ð¹ Ð¿Ñ€ÐµÐ¿Ð¾Ð´Ð°Ð²Ð°Ñ‚ÐµÐ»ÑŒ" data-kk="ÐÒ“Ð° Ð¾Ò›Ñ‹Ñ‚ÑƒÑˆÑ‹">Senior Lecturer</h3>
+                                        <p class="timeline-org" data-en="International IT University" data-ru="ÐœÐµÐ¶Ð´ÑƒÐ½Ð°Ñ€Ð¾Ð´Ð½Ñ‹Ð¹ Ð˜Ð¢-ÑƒÐ½Ð¸Ð²ÐµÑ€ÑÐ¸Ñ‚ÐµÑ‚" data-kk="Ð¥Ð°Ð»Ñ‹Ò›Ð°Ñ€Ð°Ð»Ñ‹Ò› IT ÑƒÐ½Ð¸Ð²ÐµÑ€ÑÐ¸Ñ‚ÐµÑ‚Ñ–">International IT University</p>
                                         <p data-en="Taught software engineering and IT courses; supported students in project-based learning."
-                                           data-ru="Преподавал дисциплины по разработке и ИТ; сопровождал студентов в проектном обучении."
-                                           data-kk="Бағдарламалау және IT курстарын оқыттым; студенттердің жобалық оқуын қолдадым.">
+                                           data-ru="ÐŸÑ€ÐµÐ¿Ð¾Ð´Ð°Ð²Ð°Ð» Ð´Ð¸ÑÑ†Ð¸Ð¿Ð»Ð¸Ð½Ñ‹ Ð¿Ð¾ Ñ€Ð°Ð·Ñ€Ð°Ð±Ð¾Ñ‚ÐºÐµ Ð¸ Ð˜Ð¢; ÑÐ¾Ð¿Ñ€Ð¾Ð²Ð¾Ð¶Ð´Ð°Ð» ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð¾Ð² Ð² Ð¿Ñ€Ð¾ÐµÐºÑ‚Ð½Ð¾Ð¼ Ð¾Ð±ÑƒÑ‡ÐµÐ½Ð¸Ð¸."
+                                           data-kk="Ð‘Ð°Ò“Ð´Ð°Ñ€Ð»Ð°Ð¼Ð°Ð»Ð°Ñƒ Ð¶Ó™Ð½Ðµ IT ÐºÑƒÑ€ÑÑ‚Ð°Ñ€Ñ‹Ð½ Ð¾Ò›Ñ‹Ñ‚Ñ‚Ñ‹Ð¼; ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ñ‚ÐµÑ€Ð´Ñ–Ò£ Ð¶Ð¾Ð±Ð°Ð»Ñ‹Ò› Ð¾Ò›ÑƒÑ‹Ð½ Ò›Ð¾Ð»Ð´Ð°Ð´Ñ‹Ð¼.">
                                            Taught software engineering and IT courses; supported students in project-based learning.
                                         </p>
                                     </div>
                                 </li>
 
                                 <li class="timeline-item">
-                                    <div class="timeline-date" data-en="Jun 2011 — May 2015" data-ru="06.2011 — 05.2015" data-kk="06.2011 — 05.2015">Jun 2011 — May 2015</div>
+                                    <div class="timeline-date" data-en="Jun 2011 â€” May 2015" data-ru="06.2011 â€” 05.2015" data-kk="06.2011 â€” 05.2015">Jun 2011 â€” May 2015</div>
                                     <div class="timeline-card">
-                                        <h3 class="timeline-title" data-en="Deputy Dean & Lecturer (multiple roles)" data-ru="Зам. декана и преподаватель (неск. ролей)" data-kk="Декан орынбасары және оқытушы (бірнеше рөл)">Deputy Dean & Lecturer (multiple roles)</h3>
-                                        <p class="timeline-org" data-en="KBTU — Kazakhstan-British Technical University" data-ru="КБТУ — Казахстанско-Британский технический университет" data-kk="KBTU — Қазақстан-Британ техникалық университеті">KBTU — Kazakhstan-British Technical University</p>
+                                        <h3 class="timeline-title" data-en="Deputy Dean & Lecturer (multiple roles)" data-ru="Ð—Ð°Ð¼. Ð´ÐµÐºÐ°Ð½Ð° Ð¸ Ð¿Ñ€ÐµÐ¿Ð¾Ð´Ð°Ð²Ð°Ñ‚ÐµÐ»ÑŒ (Ð½ÐµÑÐº. Ñ€Ð¾Ð»ÐµÐ¹)" data-kk="Ð”ÐµÐºÐ°Ð½ Ð¾Ñ€Ñ‹Ð½Ð±Ð°ÑÐ°Ñ€Ñ‹ Ð¶Ó™Ð½Ðµ Ð¾Ò›Ñ‹Ñ‚ÑƒÑˆÑ‹ (Ð±Ñ–Ñ€Ð½ÐµÑˆÐµ Ñ€Ó©Ð»)">Deputy Dean & Lecturer (multiple roles)</h3>
+                                        <p class="timeline-org" data-en="KBTU â€” Kazakhstan-British Technical University" data-ru="ÐšÐ‘Ð¢Ð£ â€” ÐšÐ°Ð·Ð°Ñ…ÑÑ‚Ð°Ð½ÑÐºÐ¾-Ð‘Ñ€Ð¸Ñ‚Ð°Ð½ÑÐºÐ¸Ð¹ Ñ‚ÐµÑ…Ð½Ð¸Ñ‡ÐµÑÐºÐ¸Ð¹ ÑƒÐ½Ð¸Ð²ÐµÑ€ÑÐ¸Ñ‚ÐµÑ‚" data-kk="KBTU â€” ÒšÐ°Ð·Ð°Ò›ÑÑ‚Ð°Ð½-Ð‘Ñ€Ð¸Ñ‚Ð°Ð½ Ñ‚ÐµÑ…Ð½Ð¸ÐºÐ°Ð»Ñ‹Ò› ÑƒÐ½Ð¸Ð²ÐµÑ€ÑÐ¸Ñ‚ÐµÑ‚Ñ–">KBTU â€” Kazakhstan-British Technical University</p>
                                         <p data-en="Organized the academic process and taught IT disciplines; mentored students and involved them in applied projects."
-                                           data-ru="Организовывал учебный процесс и преподавал ИТ‑дисциплины; руководил студентами и вовлекал в прикладные проекты."
-                                           data-kk="Оқу процесін ұйымдастырдым және IT пәндерін оқыттым; студенттерді қолданбалы жобаларға тарттым.">
+                                           data-ru="ÐžÑ€Ð³Ð°Ð½Ð¸Ð·Ð¾Ð²Ñ‹Ð²Ð°Ð» ÑƒÑ‡ÐµÐ±Ð½Ñ‹Ð¹ Ð¿Ñ€Ð¾Ñ†ÐµÑÑ Ð¸ Ð¿Ñ€ÐµÐ¿Ð¾Ð´Ð°Ð²Ð°Ð» Ð˜Ð¢â€‘Ð´Ð¸ÑÑ†Ð¸Ð¿Ð»Ð¸Ð½Ñ‹; Ñ€ÑƒÐºÐ¾Ð²Ð¾Ð´Ð¸Ð» ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°Ð¼Ð¸ Ð¸ Ð²Ð¾Ð²Ð»ÐµÐºÐ°Ð» Ð² Ð¿Ñ€Ð¸ÐºÐ»Ð°Ð´Ð½Ñ‹Ðµ Ð¿Ñ€Ð¾ÐµÐºÑ‚Ñ‹."
+                                           data-kk="ÐžÒ›Ñƒ Ð¿Ñ€Ð¾Ñ†ÐµÑÑ–Ð½ Ò±Ð¹Ñ‹Ð¼Ð´Ð°ÑÑ‚Ñ‹Ñ€Ð´Ñ‹Ð¼ Ð¶Ó™Ð½Ðµ IT Ð¿Ó™Ð½Ð´ÐµÑ€Ñ–Ð½ Ð¾Ò›Ñ‹Ñ‚Ñ‚Ñ‹Ð¼; ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ñ‚ÐµÑ€Ð´Ñ– Ò›Ð¾Ð»Ð´Ð°Ð½Ð±Ð°Ð»Ñ‹ Ð¶Ð¾Ð±Ð°Ð»Ð°Ñ€Ò“Ð° Ñ‚Ð°Ñ€Ñ‚Ñ‚Ñ‹Ð¼.">
                                            Organized the academic process and taught IT disciplines; mentored students and involved them in applied projects.
                                         </p>
                                     </div>
                                 </li>
 
                                 <li class="timeline-item">
-                                    <div class="timeline-date" data-en="Jun 2010 — Jul 2010" data-ru="06.2010 — 07.2010" data-kk="06.2010 — 07.2010">Jun 2010 — Jul 2010</div>
+                                    <div class="timeline-date" data-en="Jun 2010 â€” Jul 2010" data-ru="06.2010 â€” 07.2010" data-kk="06.2010 â€” 07.2010">Jun 2010 â€” Jul 2010</div>
                                     <div class="timeline-card">
-                                        <h3 class="timeline-title" data-en=".NET Developer Intern" data-ru="Стажёр .NET разработчик" data-kk=".NET стажер әзірлеуші">.NET Developer Intern</h3>
-                                        <p class="timeline-org" data-en="NAT (Astana)" data-ru="НАТ (г. Астана)" data-kk="NAT (Астана)">NAT (Astana)</p>
+                                        <h3 class="timeline-title" data-en=".NET Developer Intern" data-ru="Ð¡Ñ‚Ð°Ð¶Ñ‘Ñ€ .NET Ñ€Ð°Ð·Ñ€Ð°Ð±Ð¾Ñ‚Ñ‡Ð¸Ðº" data-kk=".NET ÑÑ‚Ð°Ð¶ÐµÑ€ Ó™Ð·Ñ–Ñ€Ð»ÐµÑƒÑˆÑ–">.NET Developer Intern</h3>
+                                        <p class="timeline-org" data-en="NAT (Astana)" data-ru="ÐÐÐ¢ (Ð³. ÐÑÑ‚Ð°Ð½Ð°)" data-kk="NAT (ÐÑÑ‚Ð°Ð½Ð°)">NAT (Astana)</p>
                                         <p data-en="Hands-on practice with .NET Framework and C#; learned application architecture and OOP through team development."
-                                           data-ru="Практика по .NET Framework и C#: архитектура приложений, ООП и командная разработка."
-                                           data-kk=".NET Framework және C# бойынша тәжірибе: қолданба архитектурасы, ООП және командалық әзірлеу.">
+                                           data-ru="ÐŸÑ€Ð°ÐºÑ‚Ð¸ÐºÐ° Ð¿Ð¾ .NET Framework Ð¸ C#: Ð°Ñ€Ñ…Ð¸Ñ‚ÐµÐºÑ‚ÑƒÑ€Ð° Ð¿Ñ€Ð¸Ð»Ð¾Ð¶ÐµÐ½Ð¸Ð¹, ÐžÐžÐŸ Ð¸ ÐºÐ¾Ð¼Ð°Ð½Ð´Ð½Ð°Ñ Ñ€Ð°Ð·Ñ€Ð°Ð±Ð¾Ñ‚ÐºÐ°."
+                                           data-kk=".NET Framework Ð¶Ó™Ð½Ðµ C# Ð±Ð¾Ð¹Ñ‹Ð½ÑˆÐ° Ñ‚Ó™Ð¶Ñ–Ñ€Ð¸Ð±Ðµ: Ò›Ð¾Ð»Ð´Ð°Ð½Ð±Ð° Ð°Ñ€Ñ…Ð¸Ñ‚ÐµÐºÑ‚ÑƒÑ€Ð°ÑÑ‹, ÐžÐžÐŸ Ð¶Ó™Ð½Ðµ ÐºÐ¾Ð¼Ð°Ð½Ð´Ð°Ð»Ñ‹Ò› Ó™Ð·Ñ–Ñ€Ð»ÐµÑƒ.">
                                            Hands-on practice with .NET Framework and C#; learned application architecture and OOP through team development.
                                         </p>
                                     </div>
                                 </li>
 
                                 <li class="timeline-item">
-                                    <div class="timeline-date" data-en="Jun 2009 — Jun 2011" data-ru="06.2009 — 06.2011" data-kk="06.2009 — 06.2011">Jun 2009 — Jun 2011</div>
+                                    <div class="timeline-date" data-en="Jun 2009 â€” Jun 2011" data-ru="06.2009 â€” 06.2011" data-kk="06.2009 â€” 06.2011">Jun 2009 â€” Jun 2011</div>
                                     <div class="timeline-card">
-                                        <h3 class="timeline-title" data-en="Math Olympiad Coach" data-ru="Тренер по олимпиадной математике" data-kk="Олимпиадалық математика жаттықтырушысы">Math Olympiad Coach</h3>
-                                        <p class="timeline-org" data-en="Lyceum No. 173" data-ru="ФМЛ №173" data-kk="173-лицей">Lyceum No. 173</p>
+                                        <h3 class="timeline-title" data-en="Math Olympiad Coach" data-ru="Ð¢Ñ€ÐµÐ½ÐµÑ€ Ð¿Ð¾ Ð¾Ð»Ð¸Ð¼Ð¿Ð¸Ð°Ð´Ð½Ð¾Ð¹ Ð¼Ð°Ñ‚ÐµÐ¼Ð°Ñ‚Ð¸ÐºÐµ" data-kk="ÐžÐ»Ð¸Ð¼Ð¿Ð¸Ð°Ð´Ð°Ð»Ñ‹Ò› Ð¼Ð°Ñ‚ÐµÐ¼Ð°Ñ‚Ð¸ÐºÐ° Ð¶Ð°Ñ‚Ñ‚Ñ‹Ò›Ñ‚Ñ‹Ñ€ÑƒÑˆÑ‹ÑÑ‹">Math Olympiad Coach</h3>
+                                        <p class="timeline-org" data-en="Lyceum No. 173" data-ru="Ð¤ÐœÐ› â„–173" data-kk="173-Ð»Ð¸Ñ†ÐµÐ¹">Lyceum No. 173</p>
                                         <p data-en="Coached students for math olympiads and logic; students achieved prizes in competitions at different levels."
-                                           data-ru="Готовил школьников к олимпиадам по математике и логике; ученики занимали призовые места на олимпиадах."
-                                           data-kk="Оқушыларды олимпиадалық математика мен логикаға дайындадым; оқушылар жүлделі орындар алды.">
+                                           data-ru="Ð“Ð¾Ñ‚Ð¾Ð²Ð¸Ð» ÑˆÐºÐ¾Ð»ÑŒÐ½Ð¸ÐºÐ¾Ð² Ðº Ð¾Ð»Ð¸Ð¼Ð¿Ð¸Ð°Ð´Ð°Ð¼ Ð¿Ð¾ Ð¼Ð°Ñ‚ÐµÐ¼Ð°Ñ‚Ð¸ÐºÐµ Ð¸ Ð»Ð¾Ð³Ð¸ÐºÐµ; ÑƒÑ‡ÐµÐ½Ð¸ÐºÐ¸ Ð·Ð°Ð½Ð¸Ð¼Ð°Ð»Ð¸ Ð¿Ñ€Ð¸Ð·Ð¾Ð²Ñ‹Ðµ Ð¼ÐµÑÑ‚Ð° Ð½Ð° Ð¾Ð»Ð¸Ð¼Ð¿Ð¸Ð°Ð´Ð°Ñ…."
+                                           data-kk="ÐžÒ›ÑƒÑˆÑ‹Ð»Ð°Ñ€Ð´Ñ‹ Ð¾Ð»Ð¸Ð¼Ð¿Ð¸Ð°Ð´Ð°Ð»Ñ‹Ò› Ð¼Ð°Ñ‚ÐµÐ¼Ð°Ñ‚Ð¸ÐºÐ° Ð¼ÐµÐ½ Ð»Ð¾Ð³Ð¸ÐºÐ°Ò“Ð° Ð´Ð°Ð¹Ñ‹Ð½Ð´Ð°Ð´Ñ‹Ð¼; Ð¾Ò›ÑƒÑˆÑ‹Ð»Ð°Ñ€ Ð¶Ò¯Ð»Ð´ÐµÐ»Ñ– Ð¾Ñ€Ñ‹Ð½Ð´Ð°Ñ€ Ð°Ð»Ð´Ñ‹.">
                                            Coached students for math olympiads and logic; students achieved prizes in competitions at different levels.
                                         </p>
                                     </div>
@@ -181,6 +209,14 @@
         <script src="js/bootstrap.min.js"></script>
 
         <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var langSelect = document.getElementById('lang-select');
+                if (langSelect) {
+                    langSelect.value = 'kk';
+                }
+                changeLanguage('kk');
+            });
+
             function changeLanguage(lang) {
                 document.documentElement.lang = lang;
 
@@ -192,7 +228,18 @@
                         el.textContent = value;
                     }
                 });
+
+                document.querySelectorAll('[data-show-langs]').forEach(function(el) {
+                    var langs = (el.getAttribute('data-show-langs') || '')
+                        .split(',')
+                        .map(function(v) { return v.trim(); })
+                        .filter(Boolean);
+                    el.style.display = langs.indexOf(lang) !== -1 ? '' : 'none';
+                });
             }
         </script>
     </body>
 </html>
+
+
+
