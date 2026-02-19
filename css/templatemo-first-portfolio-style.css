@@ -1242,6 +1242,14 @@ strong {
   background: rgba(52, 168, 83, 0.16);
 }
 
+.schedule-registered {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #344272;
+  font-weight: 600;
+}
+
 .schedule-row-max20 td {
   background: #edf6ff;
 }
