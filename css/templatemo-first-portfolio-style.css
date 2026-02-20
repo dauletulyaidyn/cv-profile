@@ -1177,6 +1177,24 @@ strong {
   flex-wrap: wrap;
 }
 
+.schedule-duration-note,
+.schedule-duration-footnote {
+  color: #2e3c6a;
+  background: rgba(255, 255, 255, 0.7);
+  border-left: 4px solid rgba(79, 95, 191, 0.55);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.schedule-duration-note {
+  margin-bottom: 14px;
+}
+
+.schedule-duration-footnote {
+  margin-top: 12px;
+  font-size: 0.95rem;
+}
+
 .schedule-table {
   margin-bottom: 0;
   border-collapse: separate;
@@ -1437,6 +1455,36 @@ strong {
   max-width: 70ch;
 }
 
+.subpage-ai-diff {
+  color: var(--white-color);
+  font-size: clamp(2rem, 1.35rem + 1.7vw, 3rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.1;
+  letter-spacing: -0.6px;
+  margin: 16px 0 10px;
+  max-width: 100%;
+  text-wrap: balance;
+}
+
+.subpage-lead-split {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.subpage-lead-split p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+@media (max-width: 991.98px) {
+  .subpage-lead-split {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
 .subpage-back a {
   color: rgba(255, 255, 255, 0.92);
   font-weight: var(--font-weight-bold);
@@ -1452,6 +1500,21 @@ strong {
   background: rgba(20, 183, 137, 0.14);
   border-radius: 6px;
   padding: 0 6px;
+}
+
+h2[data-en="Group formats and pricing"] + .row .h5 {
+  text-align: center;
+  font-size: clamp(1.45rem, 1.1rem + 1vw, 1.95rem);
+  font-weight: var(--font-weight-bold);
+}
+
+h2[data-en="Group formats and pricing"] + .row p[data-en^="Course price:"] {
+  font-size: clamp(1.15rem, 1.02rem + 0.42vw, 1.4rem);
+  font-weight: var(--font-weight-bold);
+}
+
+h2[data-en="Group formats and pricing"] + .row .group-plan-accent {
+  font-size: 1.2em;
 }
 
 /*---------------------------------------
