@@ -1466,6 +1466,43 @@ strong {
   text-wrap: balance;
 }
 
+.hero-diff-carousel {
+  margin: 16px 0 16px;
+  max-width: 100%;
+}
+
+.hero-diff-carousel .carousel-inner {
+  min-height: 7.2rem;
+}
+
+.hero-diff-carousel .carousel-item {
+  padding-bottom: 18px;
+}
+
+.hero-diff-carousel .subpage-ai-diff {
+  margin: 0;
+}
+
+.hero-diff-carousel .carousel-indicators {
+  position: static;
+  justify-content: flex-start;
+  margin: 0;
+  gap: 8px;
+}
+
+.hero-diff-carousel .carousel-indicators [data-bs-target] {
+  width: 26px;
+  height: 4px;
+  margin: 0;
+  border: 0;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.55);
+}
+
+.hero-diff-carousel .carousel-indicators .active {
+  background-color: var(--white-color);
+}
+
 .subpage-lead-split {
   max-width: 100%;
   display: grid;
@@ -1479,6 +1516,10 @@ strong {
 }
 
 @media (max-width: 991.98px) {
+  .hero-diff-carousel .carousel-inner {
+    min-height: 8.6rem;
+  }
+
   .subpage-lead-split {
     grid-template-columns: 1fr;
     gap: 14px;
