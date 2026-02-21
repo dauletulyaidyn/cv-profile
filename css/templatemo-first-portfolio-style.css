@@ -2183,6 +2183,64 @@ h2[data-en="Group formats and pricing"] + .row .group-plan-accent {
   color: var(--white-color);
 }
 
+.contact-community-intro {
+  color: var(--dark-color);
+  margin-bottom: 12px;
+}
+
+.contact-community-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.contact-community-link {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  color: var(--dark-color);
+  display: flex;
+  gap: 10px;
+  padding: 9px 12px;
+}
+
+.contact-community-link:hover {
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.contact-community-icon {
+  align-items: center;
+  background: #f8f9fb;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  color: var(--secondary-color);
+  display: inline-flex;
+  height: 30px;
+  justify-content: center;
+  min-width: 30px;
+}
+
+.contact-community-svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+.course-launch-card .contact-community-intro {
+  color: rgba(255, 255, 255, 0.96);
+}
+
+@media screen and (max-width: 767px) {
+  .contact-community-list {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /*---------------------------------------
   RESPONSIVE STYLES               
