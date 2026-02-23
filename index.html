@@ -4,10 +4,20 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <meta name="description" content="Portfolio of Dauletuly Aidyn — AI Engineer, ML Researcher, and Lecturer. PhD candidate at Satbayev University (KazNITU). Focus: LLM applications, machine learning, and bioinformatics.">
+        <meta name="description" content="Portfolio of Dauletuly Aidyn — AI Agent Engineer, ML Researcher, and Lecturer. Building LLM-powered agents, MCP workflows, RAG pipelines, and production ML systems. PhD candidate at Satbayev University.">
         <meta name="author" content="Dauletuly Aidyn">
 
-        <title>Dauletuly Aidyn - AI Engineer | ML Researcher | Lecturer</title>
+        <title>Dauletuly Aidyn — AI Agent Engineer | ML Researcher | Lecturer</title>
+
+        <meta property="og:title" content="Dauletuly Aidyn — AI Agent Engineer | ML Researcher">
+        <meta property="og:description" content="Building LLM-powered agents, MCP workflows, RAG pipelines, and production ML systems. 17+ years of experience in software engineering and applied ML.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://justaidyn.vercel.app">
+        <meta property="og:image" content="https://justaidyn.vercel.app/images/aidyn-avatar.jpg">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Dauletuly Aidyn — AI Agent Engineer">
+        <meta name="twitter:description" content="Building LLM-powered agents, MCP workflows, and production ML systems.">
+        <meta name="twitter:image" content="https://justaidyn.vercel.app/images/aidyn-avatar.jpg">
 
         <!-- CSS FILES -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -63,9 +73,9 @@
                                 <button type="button" class="lang-flag-btn" data-lang-option="ru" onclick="changeLanguage('ru')" aria-label="Russian" title="Russian">&#x1F1F7;&#x1F1FA;</button>
                                 <button type="button" class="lang-flag-btn" data-lang-option="kk" onclick="changeLanguage('kk')" aria-label="Kazakh" title="Kazakh">&#x1F1F0;&#x1F1FF;</button>
                             </div>
-                            <a href="Aidyn_Kunikeyev_cv Official — rus.docx" download class="navbar-top-tool-btn">
+                            <a href="#" onclick="generateResumePDF(); return false;" class="navbar-top-tool-btn">
                                 <i class="bi bi-download me-1"></i>
-                                <span data-en="Download CV" data-ru="Скачать CV" data-kk="CV жүктеу">Download CV</span>
+                                <span data-en="Download CV (PDF)" data-ru="Скачать CV (PDF)" data-kk="CV жүктеу (PDF)">Download CV (PDF)</span>
                             </a>
                             <a class="navbar-top-tool-icon" href="https://wa.me/77769889889" target="_blank" rel="noopener" aria-label="WhatsApp">
                                 <i class="bi bi-whatsapp"></i>
@@ -119,94 +129,39 @@
                                     <h1 class="hero-title ms-3 mb-0" data-en="My name is Dauletuly Aidyn" data-ru="Меня зовут Дәулетұлы Айдын" data-kk="Менің атым Дәулетұлы Айдын">My name is Dauletuly Aidyn</h1>
                                 </div>
 
+                                <p class="hero-subtitle"
+                                    data-en="Building intelligent AI agents and production ML systems"
+                                    data-ru="Создаю интеллектуальных AI-агентов и production ML-системы"
+                                    data-kk="Зияткерлік AI агенттер мен production ML жүйелерін құрамын">
+                                    Building intelligent AI agents and production ML systems
+                                </p>
+
                                 <div class="hero-skills-wrap" aria-label="Key skills">
                                     <div class="hero-skills-title">
                                         <i class="bi bi-stars me-2"></i>
                                         <span data-en="Key Skills" data-ru="Ключевые навыки" data-kk="Негізгі дағдылар">Key Skills</span>
                                     </div>
                                     <div class="hero-skills">
-                                        <span class="hero-skill" data-en="Machine Learning" data-ru="Машинное обучение" data-kk="Машиналық оқыту">Machine Learning</span>
-                                        <span class="hero-skill" data-en="LLMs" data-ru="LLM" data-kk="LLM">LLMs</span>
+                                        <span class="hero-skill" data-en="AI Agents & MCP" data-ru="AI-агенты и MCP" data-kk="AI агенттер және MCP">AI Agents & MCP</span>
+                                        <span class="hero-skill" data-en="LLM Pipelines" data-ru="LLM-пайплайны" data-kk="LLM пайплайндары">LLM Pipelines</span>
+                                        <span class="hero-skill" data-en="RAG Systems" data-ru="RAG-системы" data-kk="RAG жүйелері">RAG Systems</span>
                                         <span class="hero-skill" data-en="Prompt Engineering" data-ru="Промпт-инженерия" data-kk="Промпт инженериясы">Prompt Engineering</span>
-                                        <span class="hero-skill" data-en="Data & APIs" data-ru="Данные и API" data-kk="Деректер және API">Data & APIs</span>
-                                        <span class="hero-skill" data-en="Bioinformatics" data-ru="Биоинформатика" data-kk="Биоинформатика">Bioinformatics</span>
-                                        <span class="hero-skill" data-en=".NET / Python" data-ru=".NET / Python" data-kk=".NET / Python">.NET / Python</span>
+                                        <span class="hero-skill" data-en="Machine Learning" data-ru="Машинное обучение" data-kk="Машиналық оқыту">Machine Learning</span>
+                                        <span class="hero-skill" data-en="Python / .NET" data-ru="Python / .NET" data-kk="Python / .NET">Python / .NET</span>
                                     </div>
                                 </div>
 
                                 <p class="mb-4">
                                     <a class="custom-btn btn custom-link" href="#section_2" data-en="Learn More" data-ru="Узнать больше" data-kk="Көбірек білу">Learn More</a>
                                 </p>
-
-                                <div class="course-launch-card course-launch-card-floating mt-4" data-course-launch data-target-date="2026-03-09T08:00:00">
-                                    <p class="course-launch-title mb-2"
-                                       data-en="Time left until Applied AI agents course starts:"
-                                       data-ru="До старта курса AI-агенты осталось:"
-                                       data-kk="AI агенттер курсы басталуына дейін қалды:">
-                                       Time left until Applied AI agents course starts:
-                                    </p>
-                                    <p class="course-launch-meta mb-2"
-                                       data-en="Course starts on March 9, 2026 at 08:00."
-                                       data-ru="Курс стартует 9 марта 2026 года в 08:00."
-                                       data-kk="Курс 2026 жылғы 9 наурызда сағат 08:00-де басталады.">
-                                       Course starts on March 9, 2026 at 08:00.
-                                    </p>
-                                    <p class="course-launch-meta mb-3"
-                                       data-en="Enrollment can be done in advance by contacting via email."
-                                       data-ru="Записаться можно заранее, написав на email."
-                                       data-kk="Жазылуды алдын ала email арқылы жасауға болады.">
-                                       Enrollment can be done in advance by contacting via email.
-                                    </p>
-                                    <div class="course-launch-actions mb-3" data-show-langs="ru,kk">
-                                        <a href="ai-agents-course.html"
-                                           class="custom-btn btn course-launch-action-btn"
-                                           data-en="Enroll"
-                                           data-ru="&#1047;&#1072;&#1087;&#1080;&#1089;&#1072;&#1090;&#1100;&#1089;&#1103;"
-                                           data-kk="&#1046;&#1072;&#1079;&#1099;&#1083;&#1091;">Enroll</a>
-                                    </div>
-                                    <div class="course-launch-grid" aria-live="polite">
-                                        <div class="course-launch-item">
-                                            <span class="course-launch-value" data-unit="days">0</span>
-                                            <span class="course-launch-label" data-en="Days" data-ru="Дней" data-kk="Күн">Days</span>
-                                        </div>
-                                        <div class="course-launch-item">
-                                            <span class="course-launch-value" data-unit="hours">00</span>
-                                            <span class="course-launch-label" data-en="Hours" data-ru="Часов" data-kk="Сағат">Hours</span>
-                                        </div>
-                                        <div class="course-launch-item">
-                                            <span class="course-launch-value" data-unit="minutes">00</span>
-                                            <span class="course-launch-label" data-en="Minutes" data-ru="Минут" data-kk="Минут">Minutes</span>
-                                        </div>
-                                        <div class="course-launch-item">
-                                            <span class="course-launch-value" data-unit="seconds">00</span>
-                                            <span class="course-launch-label" data-en="Seconds" data-ru="Секунд" data-kk="Секунд">Seconds</span>
-                                        </div>
-                                    </div>
-                                    <p class="course-launch-status mt-2 mb-0 d-none"
-                                       data-en="The course has already started."
-                                       data-ru="Курс уже начался."
-                                       data-kk="Курс басталып кетті.">
-                                       The course has already started.
-                                    </p>
-                                    <div class="course-launch-contacts mt-3">
-                                        <a href="https://wa.me/77769889889" target="_blank" rel="noopener" class="course-launch-contact-link">
-                                            <i class="bi bi-whatsapp"></i>
-                                            <span>+7 776 9889889</span>
-                                        </a>
-                                        <a href="mailto:aidyn.daulet@gmail.com" class="course-launch-contact-link">
-                                            <i class="bi bi-envelope"></i>
-                                            <span>aidyn.daulet@gmail.com</span>
-                                        </a>
-                                    </div>
-                                </div>
                             </div>
                         </div>
 
                         <div class="col-lg-5 col-12 position-relative">
                             <div class="hero-position-card">
-                                <div class="hero-roles mb-0" data-en="<span class='hero-roles-label'>I am:</span><br>AI Engineer<br>ML Researcher<br>Lecturer"
-                                    data-ru="<span class='hero-roles-label'>Я:</span><br>AI инженер<br>ML исследователь<br>Преподаватель"
-                                    data-kk="<span class='hero-roles-label'>Мен:</span><br>AI инженер<br>ML зерттеуші<br>Оқытушы"><span class="hero-roles-label">I am:</span><br>AI Engineer<br>ML Researcher<br>Lecturer</div>
+                                <div class="hero-roles mb-0" data-en="<span class='hero-roles-label'>I am:</span><br>AI Agent Engineer<br>ML Researcher<br>Lecturer"
+                                    data-ru="<span class='hero-roles-label'>Я:</span><br>AI Agent инженер<br>ML исследователь<br>Преподаватель"
+                                    data-kk="<span class='hero-roles-label'>Мен:</span><br>AI Agent инженер<br>ML зерттеуші<br>Оқытушы"><span class="hero-roles-label">I am:</span><br>AI Agent Engineer<br>ML Researcher<br>Lecturer</div>
                             </div>
                         </div>
                     </div>
@@ -233,16 +188,16 @@
 
                                 <h3 class="pt-2 mb-3" data-en="About Me" data-ru="Обо мне" data-kk="Мен туралы">About Me</h3>
 
-                                <p data-en="I'm Dauletuly Aidyn — an AI Engineer, ML Researcher, and Lecturer with 13+ years of experience across software engineering, applied machine learning, and research leadership. I'm a PhD candidate at Satbayev University (KazNITU), focusing on personalized cell therapy for cardiovascular disease using machine learning and genetic analysis."
-                                    data-ru="Я Дәулетұлы Айдын — AI инженер, ML исследователь и преподаватель с опытом 13+ лет в разработке, прикладном машинном обучении и управлении исследованиями. Я являюсь PhD кандидатом Сатбаев Университета (КазНИТУ) и занимаюсь персонализированной клеточной терапией сердечно‑сосудистых заболеваний на основе машинного обучения и генетического анализа."
-                                    data-kk="Мен Дәулетұлы Айдын — AI инженер, ML зерттеуші және оқытушымын. Satbayev University (KazNITU) университетінде PhD кандидаты ретінде машиналық оқыту және генетикалық талдау негізінде жүрек‑қантамыр ауруларына арналған жекелендірілген жасушалық терапия тақырыбымен айналысамын.">
-                                    I'm Dauletuly Aidyn — an AI Engineer, ML Researcher, and Lecturer with 13+ years of experience across software engineering, applied machine learning, and research leadership. I'm a PhD candidate at Satbayev University (KazNITU), focusing on personalized cell therapy for cardiovascular disease using machine learning and genetic analysis.
+                                <p data-en="I'm Dauletuly Aidyn — an AI Agent Engineer, ML Researcher, and Lecturer with 17+ years of experience building intelligent systems. I design LLM-powered agents, MCP-based tool workflows, and RAG pipelines for production environments. Currently a PhD candidate at Satbayev University (KazNITU), combining machine learning with genetic analysis for personalized cardiovascular therapy."
+                                    data-ru="Я Дәулетұлы Айдын — AI Agent инженер, ML исследователь и преподаватель с 17+ лет опыта в создании интеллектуальных систем. Проектирую LLM-агентов, MCP-инструменты и RAG-пайплайны для production-сред. PhD кандидат Сатбаев Университета (КазНИТУ), объединяю машинное обучение с генетическим анализом для персонализированной терапии сердечно-сосудистых заболеваний."
+                                    data-kk="Мен Дәулетұлы Айдын — AI Agent инженер, ML зерттеуші және оқытушымын, зияткерлік жүйелер құру саласында 17+ жыл тәжірибем бар. LLM-агенттер, MCP құралдар мен RAG пайплайндарын production ортаға жобалаймын. Satbayev University (KazNITU) PhD кандидаты, жүрек-қантамыр ауруларын жекелендірілген терапия үшін ML мен генетикалық талдауды біріктіремін.">
+                                    I'm Dauletuly Aidyn — an AI Agent Engineer, ML Researcher, and Lecturer with 17+ years of experience building intelligent systems. I design LLM-powered agents, MCP-based tool workflows, and RAG pipelines for production environments. Currently a PhD candidate at Satbayev University (KazNITU), combining machine learning with genetic analysis for personalized cardiovascular therapy.
                                 </p>
 
-                                <p data-en="I build end-to-end ML products: data extraction and APIs, modeling and evaluation, and production-ready pipelines. Recent work includes LLM-based Islamic finance screening (SEC filings + LSEG/Refinitiv data) and ML-driven analysis of genomic and single-cell data for biomarker discovery in cardiovascular and peripheral artery disease."
-                                    data-ru="Я делаю end-to-end ML продукты: сбор и извлечение данных, API и пайплайны, обучение и оценку моделей, а также внедрение в production. В последних проектах — автоматизация исламского финансового скрининга на базе LLM (данные SEC + LSEG/Refinitiv) и ML-анализ геномных и single‑cell данных для поиска биомаркеров при сердечно‑сосудистых заболеваниях и заболевании периферических артерий."
-                                    data-kk="Мен end-to-end ML өнімдерін жасаймын: деректерді алу және API, модельдерді құру және бағалау, production деңгейіндегі пайплайндар. Соңғы жұмыстарым: LLM негізіндегі исламдық қаржылық скрининг (SEC + LSEG/Refinitiv) және жүрек‑қантамыр және перифериялық артерия ауруларында биомаркер іздеуге арналған геномдық және single‑cell деректердің ML талдауы.">
-                                    I build end-to-end ML products: data extraction and APIs, modeling and evaluation, and production-ready pipelines. Recent work includes LLM-based Islamic finance screening (SEC filings + LSEG/Refinitiv data) and ML-driven analysis of genomic and single-cell data for biomarker discovery in cardiovascular and peripheral artery disease.
+                                <p data-en="I build end-to-end AI agent systems and ML products: from LLM orchestration and prompt engineering to data extraction pipelines and production APIs. Recent work includes an LLM-agent-driven Islamic finance screening platform (SEC filings + LSEG/Refinitiv data) and ML analysis of genomic and single-cell data for biomarker discovery in cardiovascular disease."
+                                    data-ru="Создаю end-to-end AI-агентные системы и ML-продукты: от оркестрации LLM и промпт-инженерии до пайплайнов извлечения данных и production API. Недавние проекты: платформа исламского финансового скрининга на базе LLM-агентов (данные SEC + LSEG/Refinitiv) и ML-анализ геномных и single-cell данных для поиска биомаркеров сердечно-сосудистых заболеваний."
+                                    data-kk="End-to-end AI агенттік жүйелер мен ML өнімдерін жасаймын: LLM оркестрациясы мен промпт инженериядан деректер шығару пайплайндары мен production API-ге дейін. Соңғы жобалар: LLM агенттеріне негізделген исламдық қаржылық скрининг платформасы (SEC + LSEG/Refinitiv) және жүрек-қантамыр ауруларында биомаркер табуға арналған геномдық және single-cell деректерді ML талдау.">
+                                    I build end-to-end AI agent systems and ML products: from LLM orchestration and prompt engineering to data extraction pipelines and production APIs. Recent work includes an LLM-agent-driven Islamic finance screening platform (SEC filings + LSEG/Refinitiv data) and ML analysis of genomic and single-cell data for biomarker discovery in cardiovascular disease.
                                 </p>
                             </div>
                         </div>
@@ -255,7 +210,7 @@
                         <div class="col-lg-6 col-12">
                             <div class="profile-thumb">
                                 <div class="profile-title">
-                                    <h4 class="mb-0" data-en="Personal Information" data-ru="Личная информация" data-kk="Жеке ақпарат">Personal Information</h4>
+                                    <h4 class="mb-0" data-en="Professional Profile" data-ru="Профессиональный профиль" data-kk="Кәсіби профиль">Professional Profile</h4>
                                 </div>
 
                                 <div class="profile-body profile-body-single">
@@ -265,8 +220,8 @@
                                     </p>
 
                                     <p>
-                                        <span class="profile-small-title" data-en="Birthday" data-ru="День рождения" data-kk="Туған күн">Birthday</span>
-                                        <span>January 9, 1989</span>
+                                        <span class="profile-small-title" data-en="Role" data-ru="Роль" data-kk="Рөлі">Role</span>
+                                        <span data-en="AI Agent Engineer" data-ru="AI Agent инженер" data-kk="AI Agent инженер">AI Agent Engineer</span>
                                     </p>
 
                                     <p>
@@ -280,13 +235,18 @@
                                     </p>
 
                                     <p>
-                                        <span class="profile-small-title" data-en="Nationality" data-ru="Национальность" data-kk="Ұлты">Nationality</span>
-                                        <span data-en="Kazakh" data-ru="Казах" data-kk="Қазақ">Kazakh</span>
+                                        <span class="profile-small-title" data-en="Location" data-ru="Локация" data-kk="Орналасуы">Location</span>
+                                        <span data-en="Kazakhstan" data-ru="Казахстан" data-kk="Қазақстан">Kazakhstan</span>
                                     </p>
 
                                     <p>
-                                        <span class="profile-small-title" data-en="Family Status" data-ru="Семейное положение" data-kk="Отбасы жағдайы">Family Status</span>
-                                        <span data-en="Big family" data-ru="Большая семья" data-kk="Үлкен отбасы">Big family</span>
+                                        <span class="profile-small-title">GitHub</span>
+                                        <span><a href="https://github.com/" target="_blank" rel="noopener">github.com/your-profile</a></span>
+                                    </p>
+
+                                    <p>
+                                        <span class="profile-small-title">LinkedIn</span>
+                                        <span><a href="https://linkedin.com/in/" target="_blank" rel="noopener">linkedin.com/in/your-profile</a></span>
                                     </p>
                                 </div>
                             </div>
@@ -535,6 +495,66 @@
                     </div>
                 </div>
             </section>
+            <section class="achievements-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-12 mx-auto">
+                            <h3 class="text-center text-white mb-5" data-en="Highlights" data-ru="Ключевые достижения" data-kk="Басты жетістіктер">Highlights</h3>
+
+                            <div class="row g-4">
+                                <div class="col-lg-3 col-md-6 col-12">
+                                    <div class="achievement-item">
+                                        <i class="bi bi-trophy"></i>
+                                        <h5 data-en="Math Olympiad Winner" data-ru="Призёр мат. олимпиад" data-kk="Мат. олимпиада жүлдегері">Math Olympiad Winner</h5>
+                                        <p data-en="International, national & regional math olympiad prizes. KBTU olympiad grant recipient."
+                                           data-ru="Призёр международных, республиканских и областных олимпиад. Обладатель олимпийского гранта КБТУ."
+                                           data-kk="Халықаралық, республикалық және облыстық олимпиада жүлдегері. KBTU олимпиадалық грант иегері.">
+                                           International, national & regional math olympiad prizes. KBTU olympiad grant recipient.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 col-12">
+                                    <div class="achievement-item">
+                                        <i class="bi bi-award"></i>
+                                        <h5 data-en="Research Grant PI" data-ru="Руководитель гранта" data-kk="Грант жетекшісі">Research Grant PI</h5>
+                                        <p data-en="Principal Investigator of «Zhas Galym» grant: somatic mutations from single-cell RNA using ML methods."
+                                           data-ru="Руководитель гранта «Жас Ғалым»: соматические мутации из одноклеточной РНК методами машинного обучения."
+                                           data-kk="«Жас Ғалым» грантының жетекшісі: бір жасушалы РНҚ-дан соматикалық мутацияларды ML әдістерімен зерттеу.">
+                                           Principal Investigator of «Zhas Galym» grant: somatic mutations from single-cell RNA using ML methods.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 col-12">
+                                    <div class="achievement-item">
+                                        <i class="bi bi-journal-text"></i>
+                                        <h5 data-en="Published Researcher" data-ru="Автор публикаций" data-kk="Ғылыми мақалалар авторы">Published Researcher</h5>
+                                        <p data-en="Published in Frontiers in Cardiovascular Medicine (Scopus) and KBTU Bulletin. DOI-indexed research."
+                                           data-ru="Публикации в Frontiers in Cardiovascular Medicine (Scopus) и Вестнике КБТУ. Индексированные DOI."
+                                           data-kk="Frontiers in Cardiovascular Medicine (Scopus) және КБТУ Хабаршысында жарияланымдар. DOI индекстелген.">
+                                           Published in Frontiers in Cardiovascular Medicine (Scopus) and KBTU Bulletin. DOI-indexed research.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 col-12">
+                                    <div class="achievement-item">
+                                        <i class="bi bi-people"></i>
+                                        <h5 data-en="Academic Leadership" data-ru="Академическое лидерство" data-kk="Академиялық көшбасшылық">Academic Leadership</h5>
+                                        <p data-en="Deputy Dean at KBTU, Deputy Director at Satbayev University, Department Director at QazIIM."
+                                           data-ru="Зам. декана КБТУ, Зам. директора Сатбаев Университета, Директор отдела QazIIM."
+                                           data-kk="КБТУ декан орынбасары, Satbayev University директор орынбасары, QazIIM бөлім директоры.">
+                                           Deputy Dean at KBTU, Deputy Director at Satbayev University, Department Director at QazIIM.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section class="services section-padding" id="section_3">
                 <div class="container">
                     <div class="row">
@@ -566,20 +586,16 @@
                                 <div class="col-lg-6 col-12">
                                     <div class="services-thumb services-thumb-up">
                                         <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
-                                            <h3 class="mb-0" data-en="AI & Machine Learning" data-ru="AI и машинное обучение" data-kk="AI жəне машиналық оқыту">AI & Machine Learning</h3>
+                                            <h3 class="mb-0" data-en="AI Agents & LLM Engineering" data-ru="AI-агенты и LLM-инженерия" data-kk="AI агенттер және LLM инженериясы">AI Agents & LLM Engineering</h3>
                                         </div>
 
-                                        <p>• Python, R (ML/analytics)</p>
+                                        <p>• AI agent design: skills, tool use, technical specs</p>
+                                        <p>• MCP server & tool development, agent workflows</p>
+                                        <p>• Local RAG pipelines (retrieval + generation)</p>
+                                        <p>• Prompt engineering, evaluation & optimization</p>
+                                        <p>• LLM integration with structured data (SEC filings, financial reports)</p>
                                         <p>• End-to-end ML: data prep, modeling, evaluation, deployment</p>
-                                        <p>• Prompt engineering and LLM evaluation</p>
-                                        <p>• MCP workflows (local)</p>
-                                        <p>• Local RAG pipelines</p>
-                                        <p>• LLM integration (SEC filings, structured data), pipeline optimization</p>
-                                        <p>• AI agent skills and technical specs</p>
-                                        <p>• Financial screening automation (LLMs + financial data)</p>
-                                        <p>• MCP development locally (tools + agents)</p>
-                                        <p>• Local RAG pipelines</p>
-                                        <p>• Skills and tech specs for AI agents</p>
+                                        <p>• Python, R (ML/analytics)</p>
 
                                         <div class="services-icon-wrap d-flex justify-content-center align-items-center">
                                             <i class="services-icon bi-cpu"></i>
@@ -779,6 +795,122 @@
                     </div>
                 </div>
             </section>
+            <section class="publications-compact section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-8 col-12 ms-auto">
+                            <div class="section-title-wrap d-flex justify-content-center align-items-center mb-5">
+                                <h2 class="text-white ms-4 mb-0" data-en="Publications" data-ru="Публикации" data-kk="Жарияланымдар">Publications</h2>
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                        <div class="col-lg-10 col-12 mx-auto">
+                            <div class="publication-card">
+                                <h5>Latest Advances in Endothelial Progenitor Cell-Derived Extracellular Vesicles Translation to the Clinic</h5>
+                                <p class="pub-journal">Frontiers in Cardiovascular Medicine — October 4, 2021</p>
+                                <p class="pub-doi"><a href="https://doi.org/10.3389/fcvm.2021.734562" target="_blank" rel="noopener">DOI: 10.3389/fcvm.2021.734562</a></p>
+                            </div>
+
+                            <div class="publication-card">
+                                <h5 data-en="Review of Tools, Methodologies and Methods for Processing, Preprocessing and Cluster Analysis of Genetic Data"
+                                    data-ru="Обзор инструментов, методологий и методов обработки, предварительной обработки и кластерного анализа генетических данных"
+                                    data-kk="Генетикалық деректерді өңдеу, алдын ала өңдеу және кластерлік талдау құралдарын, әдіснамалары мен әдістерін шолу">
+                                    Review of Tools, Methodologies and Methods for Processing, Preprocessing and Cluster Analysis of Genetic Data
+                                </h5>
+                                <p class="pub-journal"
+                                    data-en="KBTU Bulletin — Vol. 21, No. 4 (2024)"
+                                    data-ru="Вестник КБТУ — Том 21, №4 (2024)"
+                                    data-kk="КБТУ Хабаршысы — Том 21, №4 (2024)">
+                                    KBTU Bulletin — Vol. 21, No. 4 (2024)
+                                </p>
+                                <p class="pub-doi"><a href="https://doi.org/10.55452/1998-6688-2024-21-4-45-57" target="_blank" rel="noopener">DOI: 10.55452/1998-6688-2024-21-4-45-57</a></p>
+                            </div>
+
+                            <p class="text-center mt-4">
+                                <a href="education.html" class="custom-btn btn"
+                                    data-en="View All Education & Publications"
+                                    data-ru="Все образование и публикации"
+                                    data-kk="Барлық білім және жарияланымдар">
+                                    View All Education & Publications
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="course-launch-standalone section-padding" data-show-langs="ru,kk">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-12 mx-auto">
+                            <div class="course-launch-card" data-course-launch data-target-date="2026-03-09T08:00:00">
+                                <p class="course-launch-title mb-2"
+                                   data-en="Time left until Applied AI agents course starts:"
+                                   data-ru="До старта курса AI-агенты осталось:"
+                                   data-kk="AI агенттер курсы басталуына дейін қалды:">
+                                   Time left until Applied AI agents course starts:
+                                </p>
+                                <p class="course-launch-meta mb-2"
+                                   data-en="Course starts on March 9, 2026 at 08:00."
+                                   data-ru="Курс стартует 9 марта 2026 года в 08:00."
+                                   data-kk="Курс 2026 жылғы 9 наурызда сағат 08:00-де басталады.">
+                                   Course starts on March 9, 2026 at 08:00.
+                                </p>
+                                <p class="course-launch-meta mb-3"
+                                   data-en="Enrollment can be done in advance by contacting via email."
+                                   data-ru="Записаться можно заранее, написав на email."
+                                   data-kk="Жазылуды алдын ала email арқылы жасауға болады.">
+                                   Enrollment can be done in advance by contacting via email.
+                                </p>
+                                <div class="course-launch-actions mb-3">
+                                    <a href="ai-agents-course.html"
+                                       class="custom-btn btn course-launch-action-btn"
+                                       data-en="Learn more"
+                                       data-ru="Подробнее"
+                                       data-kk="Толығырақ">Learn more</a>
+                                </div>
+                                <div class="course-launch-grid" aria-live="polite">
+                                    <div class="course-launch-item">
+                                        <span class="course-launch-value" data-unit="days">0</span>
+                                        <span class="course-launch-label" data-en="Days" data-ru="Дней" data-kk="Күн">Days</span>
+                                    </div>
+                                    <div class="course-launch-item">
+                                        <span class="course-launch-value" data-unit="hours">00</span>
+                                        <span class="course-launch-label" data-en="Hours" data-ru="Часов" data-kk="Сағат">Hours</span>
+                                    </div>
+                                    <div class="course-launch-item">
+                                        <span class="course-launch-value" data-unit="minutes">00</span>
+                                        <span class="course-launch-label" data-en="Minutes" data-ru="Минут" data-kk="Минут">Minutes</span>
+                                    </div>
+                                    <div class="course-launch-item">
+                                        <span class="course-launch-value" data-unit="seconds">00</span>
+                                        <span class="course-launch-label" data-en="Seconds" data-ru="Секунд" data-kk="Секунд">Seconds</span>
+                                    </div>
+                                </div>
+                                <p class="course-launch-status mt-2 mb-0 d-none"
+                                   data-en="The course has already started."
+                                   data-ru="Курс уже начался."
+                                   data-kk="Курс басталып кетті.">
+                                   The course has already started.
+                                </p>
+                                <div class="course-launch-contacts mt-3">
+                                    <a href="https://wa.me/77769889889" target="_blank" rel="noopener" class="course-launch-contact-link">
+                                        <i class="bi bi-whatsapp"></i>
+                                        <span>+7 776 9889889</span>
+                                    </a>
+                                    <a href="mailto:aidyn.daulet@gmail.com" class="course-launch-contact-link">
+                                        <i class="bi bi-envelope"></i>
+                                        <span>aidyn.daulet@gmail.com</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section class="contact section-padding" id="section_5">
                 <div class="container">
                     <div class="row">
@@ -803,19 +935,19 @@
                                 <strong class="site-footer-title d-block mt-4 mb-3" data-en="Available" data-ru="Доступен" data-kk="Қолжетімді">Available</strong>
 
                                 <p class="mb-0"
-                                    data-en="Open to research collaborations, ML engineering roles, and consulting"
-                                    data-ru="Открыт к исследовательским сотрудничествам, ML инженерным ролям и консалтингу"
-                                    data-kk="Зерттеу əріптестігіне, ML инженерлік рөлдерге және консалтингке ашық">
-                                    Open to research collaborations, ML engineering roles, and consulting
+                                    data-en="Open to AI agent engineering, research collaborations, ML roles, and consulting"
+                                    data-ru="Открыт к AI-агентной инженерии, исследовательским коллаборациям, ML ролям и консалтингу"
+                                    data-kk="AI агент инженериясы, зерттеу əріптестігі, ML рөлдері және консалтингке ашық">
+                                    Open to AI agent engineering, research collaborations, ML roles, and consulting
                                 </p>
 
                                 <strong class="site-footer-title d-block mt-4 mb-3" data-en="Write to Me" data-ru="Написать мне" data-kk="Маған жазу">Write to Me</strong>
 
                                 <p class="mb-2"
-                                    data-en="Please email me at aidyn.daulet@gmail.com. Do not attach files or include links—everything must be written in the email. Subject must include &quot;CV-Portfolio&quot; or the AI won't retrieve your email."
-                                    data-ru="Пишите на почту aidyn.daulet@gmail.com. Не прикрепляйте файлы и не вставляйте ссылки — всё должно быть написано в письме. Тема письма должна содержать &quot;CV-Portfolio&quot;, иначе AI не сможет извлечь письмо."
-                                    data-kk="Маған aidyn.daulet@gmail.com поштасына жазыңыз. Файл қоспаңыз және сілтеме қоспаңыз — бәрі хаттың ішінде жазылуы керек. Хат тақырыбында &quot;CV-Portfolio&quot; болуы керек, әйтпесе AI хатты шығара алмайды.">
-                                    Please email me at aidyn.daulet@gmail.com. Do not attach files or include links—everything must be written in the email. Subject must include "CV-Portfolio" or the AI won't retrieve your email.
+                                    data-en="Email me at aidyn.daulet@gmail.com. For the fastest response, write your proposal directly in the email body (plain text preferred). Include &quot;CV-Portfolio&quot; in the subject line."
+                                    data-ru="Напишите мне на aidyn.daulet@gmail.com. Для быстрого ответа опишите ваше предложение прямо в теле письма (предпочтителен простой текст). Укажите &quot;CV-Portfolio&quot; в теме письма."
+                                    data-kk="Маған aidyn.daulet@gmail.com поштасына жазыңыз. Жылдам жауап алу үшін ұсынысыңызды хаттың мәтінінде жазыңыз (қарапайым мәтін артықшылықты). Хат тақырыбына &quot;CV-Portfolio&quot; жазыңыз.">
+                                    Email me at aidyn.daulet@gmail.com. For the fastest response, write your proposal directly in the email body (plain text preferred). Include "CV-Portfolio" in the subject line.
                                 </p>
 
                                 <ol class="contact-requirements mb-2">
@@ -827,10 +959,10 @@
                                 </ol>
 
                                 <p class="mb-0"
-                                    data-en="Warning: if you send links or additional files, I won't review them. My inbox is monitored by an AI assistant."
-                                    data-ru="Предупреждение: если будут ссылки или дополнительные файлы, я их не буду смотреть. За моей почтой следит AI агент."
-                                    data-kk="Ескерту: егер сілтемелер немесе қосымша файлдар болса, олар қаралмайды. Поштаны AI агент қадағалайды.">
-                                    Warning: if you send links or additional files, I won't review them. My inbox is monitored by an AI assistant.
+                                    data-en="Note: plain-text proposals receive the fastest response. My inbox is pre-screened by an AI assistant for efficiency."
+                                    data-ru="Примечание: текстовые предложения получают самый быстрый ответ. Моя почта предварительно обрабатывается AI-ассистентом для эффективности."
+                                    data-kk="Ескерту: мәтіндік ұсыныстар ең жылдам жауап алады. Поштамды AI көмекші тиімділік үшін алдын ала өңдейді.">
+                                    Note: plain-text proposals receive the fastest response. My inbox is pre-screened by an AI assistant for efficiency.
                                 </p>
                             </div>
                         </div>
@@ -838,6 +970,231 @@
                 </div>
             </section>
         </main>
+
+        <div id="resume-pdf"><div class="rpdf">
+            <div class="rpdf-header">
+                <h1 class="rpdf-name" data-en="DAULETULY AIDYN" data-ru="ДӘУЛЕТҰЛЫ АЙДЫН" data-kk="ДӘУЛЕТҰЛЫ АЙДЫН">DAULETULY AIDYN</h1>
+                <p class="rpdf-role" data-en="AI Agent Engineer | ML Researcher | Lecturer" data-ru="AI Agent инженер | ML исследователь | Преподаватель" data-kk="AI Agent инженер | ML зерттеуші | Оқытушы">AI Agent Engineer | ML Researcher | Lecturer</p>
+                <p class="rpdf-contacts">aidyn.daulet@gmail.com · +7 776 988 9889 · Kazakhstan</p>
+            </div>
+
+            <div class="rpdf-section">
+                <h2 class="rpdf-section-title" data-en="Summary" data-ru="О себе" data-kk="Мен туралы">Summary</h2>
+                <p data-en="AI Agent Engineer with 17+ years of experience building intelligent systems. Designing LLM-powered agents, MCP-based tool workflows, and RAG pipelines for production. PhD candidate at Satbayev University combining ML with genetic analysis for personalized cardiovascular therapy. Published in Frontiers in Cardiovascular Medicine (Scopus). Principal Investigator of «Zhas Galym» research grant."
+                   data-ru="AI Agent инженер с 17+ лет опыта в создании интеллектуальных систем. Проектирую LLM-агентов, MCP-инструменты и RAG-пайплайны для production-сред. PhD кандидат Сатбаев Университета, объединяю ML с генетическим анализом для персонализированной терапии ССЗ. Публикации в Frontiers in Cardiovascular Medicine (Scopus). Руководитель гранта «Жас Ғалым»."
+                   data-kk="AI Agent инженер, зияткерлік жүйелер құру саласында 17+ жыл тәжірибе. LLM-агенттер, MCP құралдар мен RAG пайплайндарын production ортаға жобалаймын. Satbayev University PhD кандидаты, ML мен генетикалық талдауды біріктіремін. Frontiers in Cardiovascular Medicine (Scopus) авторы. «Жас Ғалым» грантының жетекшісі.">
+                   AI Agent Engineer with 17+ years of experience building intelligent systems. Designing LLM-powered agents, MCP-based tool workflows, and RAG pipelines for production. PhD candidate at Satbayev University combining ML with genetic analysis for personalized cardiovascular therapy. Published in Frontiers in Cardiovascular Medicine (Scopus). Principal Investigator of «Zhas Galym» research grant.
+                </p>
+            </div>
+
+            <div class="rpdf-section">
+                <h2 class="rpdf-section-title" data-en="Experience" data-ru="Опыт работы" data-kk="Тәжірибе">Experience</h2>
+
+                <div class="rpdf-entry">
+                    <div class="rpdf-entry-header">
+                        <span class="rpdf-entry-title">Prompt Engineer</span>
+                        <span class="rpdf-entry-date" data-en="Sep 2024 — Present" data-ru="09.2024 — н.в." data-kk="09.2024 — қазір">Sep 2024 — Present</span>
+                    </div>
+                    <div class="rpdf-entry-org">TOO Ailat — "Ailat AI Screening"</div>
+                    <p class="rpdf-entry-desc" data-en="Led automation of Islamic financial screening using LLMs: SEC/EDGAR extraction, report optimization, prompt design, LSEG (Refinitiv) integration, API with admin panel and user profiles."
+                       data-ru="Автоматизация исламского финансового скрининга на базе LLM: извлечение из SEC/EDGAR, оптимизация для LLM, промпты, интеграция с LSEG (Refinitiv), API с админ-панелью и профилями."
+                       data-kk="LLM негізінде исламдық қаржылық скринингті автоматтандыру: SEC/EDGAR-дан шығару, LLM үшін оңтайландыру, промпт құру, LSEG (Refinitiv) интеграциясы, admin панелі бар API.">
+                       Led automation of Islamic financial screening using LLMs: SEC/EDGAR extraction, report optimization, prompt design, LSEG (Refinitiv) integration, API with admin panel and user profiles.
+                    </p>
+                </div>
+
+                <div class="rpdf-entry">
+                    <div class="rpdf-entry-header">
+                        <span class="rpdf-entry-title" data-en="Researcher & Department Director" data-ru="Исследователь и директор отдела" data-kk="Зерттеуші және бөлім директоры">Researcher & Department Director</span>
+                        <span class="rpdf-entry-date" data-en="Aug 2022 — Mar 2024" data-ru="08.2022 — 03.2024" data-kk="08.2022 — 03.2024">Aug 2022 — Mar 2024</span>
+                    </div>
+                    <div class="rpdf-entry-org">QazIIM — "System biology and ICT"</div>
+                    <p class="rpdf-entry-desc" data-en="Genetic analyses and ML experiments; organized research workflows and introduced ICT tools for bio-data analysis."
+                       data-ru="Генетические анализы и ML-эксперименты; организация исследований и внедрение ИКТ-инструментов для анализа биоданных."
+                       data-kk="Генетикалық талдау және ML тәжірибелері; зерттеу процесін ұйымдастыру, биодеректерге ИКТ құралдарын енгізу.">
+                       Genetic analyses and ML experiments; organized research workflows and introduced ICT tools for bio-data analysis.
+                    </p>
+                </div>
+
+                <div class="rpdf-entry">
+                    <div class="rpdf-entry-header">
+                        <span class="rpdf-entry-title" data-en="Deputy Director & Senior Lecturer" data-ru="Зам. директора и ст. преподаватель" data-kk="Директор орынбасары және аға оқытушы">Deputy Director & Senior Lecturer</span>
+                        <span class="rpdf-entry-date" data-en="Jan 2017 — Present" data-ru="01.2017 — н.в." data-kk="01.2017 — қазір">Jan 2017 — Present</span>
+                    </div>
+                    <div class="rpdf-entry-org" data-en="Satbayev University (KazNITU) — Institute of Distance Education" data-ru="Сатбаев Университет (КазНИТУ) — Институт дист. образования" data-kk="Satbayev University (KazNITU) — Қашықтықтан білім беру институты">Satbayev University (KazNITU) — Institute of Distance Education</div>
+                    <p class="rpdf-entry-desc" data-en="Teaching IT disciplines; PI of «Zhas Galym» grant on somatic mutations from single-cell RNA using ML (full pipeline from genetic preprocessing to ML analysis)."
+                       data-ru="Преподавание ИТ-дисциплин; руководитель гранта «Жас Ғалым» по соматическим мутациям из одноклеточной РНК методами ML (полный цикл)."
+                       data-kk="IT пәндерін оқыту; «Жас Ғалым» гранты жетекшісі — бір жасушалы РНҚ-дан соматикалық мутацияларды ML әдістерімен зерттеу.">
+                       Teaching IT disciplines; PI of «Zhas Galym» grant on somatic mutations from single-cell RNA using ML (full pipeline from genetic preprocessing to ML analysis).
+                    </p>
+                </div>
+
+                <div class="rpdf-entry">
+                    <div class="rpdf-entry-header">
+                        <span class="rpdf-entry-title" data-en="Senior Lecturer" data-ru="Старший преподаватель" data-kk="Аға оқытушы">Senior Lecturer</span>
+                        <span class="rpdf-entry-date" data-en="Sep 2015 — Jun 2016" data-ru="09.2015 — 06.2016" data-kk="09.2015 — 06.2016">Sep 2015 — Jun 2016</span>
+                    </div>
+                    <div class="rpdf-entry-org" data-en="International IT University" data-ru="Международный ИТ-университет" data-kk="Халықаралық IT университеті">International IT University</div>
+                </div>
+
+                <div class="rpdf-entry">
+                    <div class="rpdf-entry-header">
+                        <span class="rpdf-entry-title" data-en="Deputy Dean & Lecturer" data-ru="Зам. декана и преподаватель" data-kk="Декан орынбасары және оқытушы">Deputy Dean & Lecturer</span>
+                        <span class="rpdf-entry-date" data-en="Jun 2011 — May 2015" data-ru="06.2011 — 05.2015" data-kk="06.2011 — 05.2015">Jun 2011 — May 2015</span>
+                    </div>
+                    <div class="rpdf-entry-org" data-en="KBTU — Kazakhstan-British Technical University" data-ru="КБТУ — Казахстанско-Британский техн. университет" data-kk="KBTU — Қазақстан-Британ техникалық университеті">KBTU — Kazakhstan-British Technical University</div>
+                    <p class="rpdf-entry-desc" data-en="Organized academic process; taught IT disciplines; mentored students in applied projects."
+                       data-ru="Организация учебного процесса; преподавание ИТ-дисциплин; руководство студентами в прикладных проектах."
+                       data-kk="Оқу процесін ұйымдастыру; IT пәндерін оқыту; студенттерді қолданбалы жобаларға тарту.">
+                       Organized academic process; taught IT disciplines; mentored students in applied projects.
+                    </p>
+                </div>
+
+                <div class="rpdf-entry">
+                    <div class="rpdf-entry-header">
+                        <span class="rpdf-entry-title" data-en="Math Olympiad Coach" data-ru="Тренер по олимпиадной математике" data-kk="Олимпиадалық математика жаттықтырушысы">Math Olympiad Coach</span>
+                        <span class="rpdf-entry-date" data-en="Jun 2009 — Jun 2011" data-ru="06.2009 — 06.2011" data-kk="06.2009 — 06.2011">Jun 2009 — Jun 2011</span>
+                    </div>
+                    <div class="rpdf-entry-org" data-en="Lyceum No. 173" data-ru="ФМЛ №173" data-kk="173-лицей">Lyceum No. 173</div>
+                </div>
+            </div>
+
+            <div class="rpdf-section">
+                <h2 class="rpdf-section-title" data-en="Education" data-ru="Образование" data-kk="Білімі">Education</h2>
+
+                <div class="rpdf-entry">
+                    <div class="rpdf-entry-header">
+                        <span class="rpdf-entry-title">PhD (in progress) — Machine Learning & Data Science</span>
+                        <span class="rpdf-entry-date" data-en="2020 — Present" data-ru="2020 — н.в." data-kk="2020 — қазір">2020 — Present</span>
+                    </div>
+                    <div class="rpdf-entry-org" data-en="Satbayev University (KazNITU)" data-ru="Сатбаев Университет (КазНИТУ)" data-kk="Satbayev University (KazNITU)">Satbayev University (KazNITU)</div>
+                    <p class="rpdf-entry-desc" data-en="Thesis: Personalized cell therapy for cardiovascular disease based on ML and genetic analysis."
+                       data-ru="Тема: персонализированная клеточная терапия ССЗ на основе ML и генетического анализа."
+                       data-kk="Тақырып: ML және генетикалық талдау негізінде ЖҚА-ға арналған жекелендірілген жасушалық терапия.">
+                       Thesis: Personalized cell therapy for cardiovascular disease based on ML and genetic analysis.
+                    </p>
+                </div>
+
+                <div class="rpdf-entry">
+                    <div class="rpdf-entry-header">
+                        <span class="rpdf-entry-title">MSc, Information Systems · GPA 3.52/4</span>
+                        <span class="rpdf-entry-date">2011 — 2013</span>
+                    </div>
+                    <div class="rpdf-entry-org" data-en="KBTU — Kazakhstan-British Technical University" data-ru="КБТУ — Казахстанско-Британский техн. университет" data-kk="KBTU — Қазақстан-Британ техникалық университеті">KBTU — Kazakhstan-British Technical University</div>
+                </div>
+
+                <div class="rpdf-entry">
+                    <div class="rpdf-entry-header">
+                        <span class="rpdf-entry-title">BSc, Information Systems · GPA 3.33/4</span>
+                        <span class="rpdf-entry-date">2007 — 2011</span>
+                    </div>
+                    <div class="rpdf-entry-org" data-en="KBTU — Kazakhstan-British Technical University" data-ru="КБТУ — Казахстанско-Британский техн. университет" data-kk="KBTU — Қазақстан-Британ техникалық университеті">KBTU — Kazakhstan-British Technical University</div>
+                </div>
+
+                <div class="rpdf-entry">
+                    <div class="rpdf-entry-header">
+                        <span class="rpdf-entry-title" data-en="Math & Physics Lyceum No. 173" data-ru="Математико-физический лицей №173" data-kk="173 математика-физика лицейі">Math & Physics Lyceum No. 173</span>
+                        <span class="rpdf-entry-date">2003 — 2007</span>
+                    </div>
+                    <p class="rpdf-entry-desc" data-en="Prize winner: international, national & regional math olympiads. KBTU olympiad grant."
+                       data-ru="Призёр международных, республиканских и областных мат. олимпиад. Олимпийский грант КБТУ."
+                       data-kk="Халықаралық, республикалық, облыстық мат. олимпиада жүлдегері. KBTU олимпиадалық гранты.">
+                       Prize winner: international, national & regional math olympiads. KBTU olympiad grant.
+                    </p>
+                </div>
+            </div>
+
+            <div class="rpdf-section">
+                <h2 class="rpdf-section-title" data-en="Technical Skills" data-ru="Технические навыки" data-kk="Техникалық дағдылар">Technical Skills</h2>
+                <div class="rpdf-skills-grid">
+                    <div class="rpdf-skill-group">
+                        <h4 data-en="AI Agents & LLM Engineering" data-ru="AI-агенты и LLM-инженерия" data-kk="AI агенттер және LLM инженериясы">AI Agents & LLM Engineering</h4>
+                        <p>AI agent design, MCP tools, RAG pipelines, prompt engineering, LLM integration, end-to-end ML</p>
+                    </div>
+                    <div class="rpdf-skill-group">
+                        <h4 data-en="Development" data-ru="Разработка" data-kk="Әзірлеу">Development</h4>
+                        <p>.NET Core (ASP.NET Core, WPF), Python (Django, Flask), PHP, Go, JS, MySQL, PostgreSQL, MSSQL, REST APIs</p>
+                    </div>
+                    <div class="rpdf-skill-group">
+                        <h4 data-en="Bioinformatics" data-ru="Биоинформатика" data-kk="Биоинформатика">Bioinformatics</h4>
+                        <p>Genomic & transcriptomic analysis, scRNA-seq, ML for cardiovascular & peripheral artery disease</p>
+                    </div>
+                    <div class="rpdf-skill-group">
+                        <h4 data-en="Tools" data-ru="Инструменты" data-kk="Құралдар">Tools</h4>
+                        <p>Linux, Git, Postman, DBeaver, LSEG (Refinitiv), SEC/EDGAR, Python, R</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rpdf-section">
+                <h2 class="rpdf-section-title" data-en="Key Projects" data-ru="Ключевые проекты" data-kk="Негізгі жобалар">Key Projects</h2>
+
+                <div class="rpdf-project">
+                    <span class="rpdf-project-name">Ailat AI Screening</span> <span class="rpdf-project-tag" data-en="— LLMs & Finance" data-ru="— LLM и финансы" data-kk="— LLM және қаржы">— LLMs & Finance</span>
+                    <p class="rpdf-entry-desc" data-en="Year-long Islamic financial screening automation: SEC/EDGAR extraction, LLM prompt pipeline, JSON structuring, LSEG integration, API with admin panel."
+                       data-ru="Годичная автоматизация исламского финансового скрининга: SEC/EDGAR, LLM-пайплайн, JSON, LSEG-интеграция, API с админ-панелью."
+                       data-kk="Исламдық қаржылық скринингті жылдық автоматтандыру: SEC/EDGAR, LLM пайплайн, JSON, LSEG интеграциясы, admin панелі бар API.">
+                       Year-long Islamic financial screening automation: SEC/EDGAR extraction, LLM prompt pipeline, JSON structuring, LSEG integration, API with admin panel.
+                    </p>
+                </div>
+
+                <div class="rpdf-project">
+                    <span class="rpdf-project-name">Shariah AI Stock Screener</span> <span class="rpdf-project-tag" data-en="— AI & Finance" data-ru="— AI и финансы" data-kk="— AI және қаржы">— AI & Finance</span>
+                    <p class="rpdf-entry-desc" data-en="End-to-end screening service: SEC data extraction, HTML optimization for LLM input, ML/LLM classification pipeline, REST API."
+                       data-ru="End-to-end сервис: извлечение из SEC, оптимизация для LLM, ML/LLM классификация, REST API."
+                       data-kk="End-to-end қызмет: SEC-тен шығару, LLM үшін оңтайландыру, ML/LLM жіктеу, REST API.">
+                       End-to-end screening service: SEC data extraction, HTML optimization for LLM input, ML/LLM classification pipeline, REST API.
+                    </p>
+                </div>
+
+                <div class="rpdf-project">
+                    <span class="rpdf-project-name" data-en="ML for Medical Research" data-ru="ML для мед. исследований" data-kk="Медицинаға арналған ML">ML for Medical Research</span> <span class="rpdf-project-tag" data-en="— Bioinformatics" data-ru="— Биоинформатика" data-kk="— Биоинформатика">— Bioinformatics</span>
+                    <p class="rpdf-entry-desc" data-en="ML models for cardiovascular genetic deviations, kidney transplant outcomes, diabetes/PAD biomarker discovery."
+                       data-ru="ML-модели для генетических отклонений ССЗ, исходов трансплантации почек, поиска биомаркеров при диабете/ЗПА."
+                       data-kk="ЖҚА генетикалық ауытқуларына, бүйрек трансплантациясы нәтижелеріне, диабет/ПАА биомаркерлеріне ML модельдері.">
+                       ML models for cardiovascular genetic deviations, kidney transplant outcomes, diabetes/PAD biomarker discovery.
+                    </p>
+                </div>
+
+                <div class="rpdf-project">
+                    <span class="rpdf-project-name">TJB.kz Exam Platform</span> <span class="rpdf-project-tag" data-en="— Education" data-ru="— Образование" data-kk="— Білім беру">— Education</span>
+                    <p class="rpdf-entry-desc" data-en="Back-end for private school exam platform: reliability, scalability, clean integration."
+                       data-ru="Back-end платформы экзаменов для частной школы: надёжность, масштабируемость, интеграция."
+                       data-kk="Жеке мектеп емтихан платформасының back-end: сенімділік, масштабталу, интеграция.">
+                       Back-end for private school exam platform: reliability, scalability, clean integration.
+                    </p>
+                </div>
+            </div>
+
+            <div class="rpdf-section">
+                <h2 class="rpdf-section-title" data-en="Publications" data-ru="Публикации" data-kk="Жарияланымдар">Publications</h2>
+                <div class="rpdf-pub">
+                    <p class="rpdf-pub-title">Latest Advances in Endothelial Progenitor Cell-Derived Extracellular Vesicles Translation to the Clinic</p>
+                    <p class="rpdf-pub-meta">Frontiers in Cardiovascular Medicine, Oct 2021 · DOI: 10.3389/fcvm.2021.734562</p>
+                </div>
+                <div class="rpdf-pub">
+                    <p class="rpdf-pub-title" data-en="Review of Tools, Methodologies and Methods for Processing, Preprocessing and Cluster Analysis of Genetic Data"
+                       data-ru="Обзор инструментов, методологий и методов обработки, предварительной обработки и кластерного анализа генетических данных"
+                       data-kk="Генетикалық деректерді өңдеу, алдын ала өңдеу және кластерлік талдау құралдарын шолу">
+                       Review of Tools, Methodologies and Methods for Processing, Preprocessing and Cluster Analysis of Genetic Data
+                    </p>
+                    <p class="rpdf-pub-meta" data-en="KBTU Bulletin, Vol. 21, No. 4 (2024) · DOI: 10.55452/1998-6688-2024-21-4-45-57"
+                       data-ru="Вестник КБТУ, Том 21, №4 (2024) · DOI: 10.55452/1998-6688-2024-21-4-45-57"
+                       data-kk="КБТУ Хабаршысы, Том 21, №4 (2024) · DOI: 10.55452/1998-6688-2024-21-4-45-57">
+                       KBTU Bulletin, Vol. 21, No. 4 (2024) · DOI: 10.55452/1998-6688-2024-21-4-45-57
+                    </p>
+                </div>
+            </div>
+
+            <div class="rpdf-section">
+                <h2 class="rpdf-section-title" data-en="Languages" data-ru="Языки" data-kk="Тілдер">Languages</h2>
+                <div class="rpdf-langs">
+                    <div class="rpdf-lang"><strong data-en="Kazakh" data-ru="Казахский" data-kk="Қазақ тілі">Kazakh</strong> — <span data-en="Native" data-ru="Родной" data-kk="Ана тілі">Native</span></div>
+                    <div class="rpdf-lang"><strong data-en="Russian" data-ru="Русский" data-kk="Орыс тілі">Russian</strong> — <span data-en="Fluent" data-ru="Свободно" data-kk="Еркін">Fluent</span></div>
+                    <div class="rpdf-lang"><strong data-en="English" data-ru="Английский" data-kk="Ағылшын тілі">English</strong> — <span data-en="Fluent" data-ru="Свободно" data-kk="Еркін">Fluent</span></div>
+                </div>
+            </div>
+        </div></div>
 
         <footer class="site-footer">
     <div class="container"><div class="row"><div class="col-lg-12 col-12"><div class="copyright-text-wrap"><p class="mb-0"><span class="copyright-text" data-en="Copyright © Dauletuly Aidyn" data-ru="Copyright © Dauletuly Aidyn" data-kk="Copyright © Dauletuly Aidyn">Copyright © Dauletuly Aidyn</span> <span data-en="All rights reserved." data-ru="All rights reserved." data-kk="All rights reserved.">All rights reserved.</span> <span class="ms-2"><span data-en="Designed by" data-ru="Designed by" data-kk="Designed by">Designed by</span> <a href="https://templatemo.com/" target="_blank" rel="noopener">TemplateMo</a></span></p></div></div></div></div>
@@ -854,15 +1211,65 @@
         <script src="js/course-launch-timer.js"></script>
 
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                var downloadBtn = document.getElementById('download-cv');
-                if (downloadBtn) {
-                    downloadBtn.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        window.print();
-                    });
-                }
-            });
+            function generateResumePDF() {
+                var el = document.getElementById('resume-pdf');
+                if (!el) return;
+                var rpdf = el.querySelector('.rpdf');
+                if (!rpdf) return;
+
+                var css = [
+                    '*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }',
+                    'body { background:#fff; -webkit-print-color-adjust:exact; print-color-adjust:exact; }',
+                    '.rpdf { font-family:"DM Sans",Arial,sans-serif; color:#222; max-width:700px; margin:0 auto; padding:28px 36px; font-size:11.5px; line-height:1.55; }',
+                    '.rpdf-header { text-align:center; margin-bottom:18px; padding-bottom:14px; border-bottom:2px solid #535da1; }',
+                    '.rpdf-name { font-size:26px; font-weight:700; margin:0 0 4px; color:#535da1; letter-spacing:2px; }',
+                    '.rpdf-role { font-size:13px; color:#555; margin:0 0 6px; font-weight:500; }',
+                    '.rpdf-contacts { font-size:11px; color:#666; margin:0; }',
+                    '.rpdf-section { margin-bottom:14px; }',
+                    '.rpdf-section-title { font-size:12.5px; font-weight:700; color:#535da1; text-transform:uppercase; letter-spacing:1.5px; border-bottom:1.5px solid #535da1; padding-bottom:3px; margin:0 0 8px; }',
+                    '.rpdf-section > p { font-size:11.5px; color:#333; margin:0 0 6px; }',
+                    '.rpdf-entry { margin-bottom:8px; page-break-inside:avoid; }',
+                    '.rpdf-entry-header { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:1px; }',
+                    '.rpdf-entry-title { font-weight:700; font-size:12px; color:#222; }',
+                    '.rpdf-entry-date { font-size:10.5px; color:#888; white-space:nowrap; margin-left:12px; }',
+                    '.rpdf-entry-org { font-size:11px; color:#14B789; font-weight:500; margin-bottom:2px; }',
+                    '.rpdf-entry-desc { font-size:11px; color:#444; margin:2px 0 0; }',
+                    '.rpdf-skills-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px 16px; }',
+                    '.rpdf-skill-group h4 { font-size:11.5px; font-weight:700; color:#333; margin:0 0 3px; }',
+                    '.rpdf-skill-group p { font-size:10.5px; color:#555; margin:0; }',
+                    '.rpdf-project { margin-bottom:7px; page-break-inside:avoid; }',
+                    '.rpdf-project-name { font-weight:700; font-size:11.5px; color:#222; }',
+                    '.rpdf-project-tag { font-size:10.5px; color:#14B789; font-weight:500; }',
+                    '.rpdf-pub { margin-bottom:8px; page-break-inside:avoid; }',
+                    '.rpdf-pub-title { font-weight:600; font-size:11px; color:#222; margin:0 0 2px; }',
+                    '.rpdf-pub-meta { font-size:10px; color:#666; margin:0; }',
+                    '.rpdf-langs { display:flex; gap:28px; font-size:11.5px; }',
+                    '.rpdf-lang strong { color:#222; }',
+                    '.rpdf-lang span { color:#555; }',
+                    '@media print { body { margin:0; } .rpdf { padding:10px 20px; } }'
+                ].join('\n');
+
+                var win = window.open('', '_blank', 'width=820,height=700');
+                if (!win) { alert('Please allow popups to download CV as PDF'); return; }
+
+                var lang = localStorage.getItem('site_lang') || 'kk';
+                var langNames = { en: 'English', ru: 'Русский', kk: 'Қазақша' };
+
+                win.document.write('<!DOCTYPE html><html lang="' + lang + '"><head><meta charset="utf-8">');
+                win.document.write('<title>CV — Dauletuly Aidyn (' + (langNames[lang] || '') + ')</title>');
+                win.document.write('<link rel="preconnect" href="https://fonts.googleapis.com">');
+                win.document.write('<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>');
+                win.document.write('<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">');
+                win.document.write('<style>' + css + '</style>');
+                win.document.write('</head><body>');
+                win.document.write(rpdf.outerHTML);
+                win.document.write('</body></html>');
+                win.document.close();
+
+                win.onload = function() {
+                    setTimeout(function() { win.print(); }, 600);
+                };
+            }
 
             var languageStorageKey = 'site_lang';
             document.addEventListener('DOMContentLoaded', function() {
