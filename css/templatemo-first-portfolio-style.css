@@ -2117,6 +2117,224 @@ h2[data-en="Group formats and pricing"] + .row .group-plan-accent {
   .course-launch-card-right-fixed .course-launch-contacts {
     display: none;
   }
+
+  .course-launch-card-right-fixed.timer-collapsed {
+    max-width: 280px;
+    padding: 14px 18px;
+  }
+
+  .course-launch-card-right-fixed.timer-collapsed .course-launch-title {
+    font-size: 14px;
+  }
+
+  .course-launch-card-right-fixed.timer-collapsed .course-launch-grid {
+    gap: 6px;
+  }
+
+  .course-launch-card-right-fixed.timer-collapsed .course-launch-value {
+    font-size: 18px;
+  }
+
+  .course-launch-card-right-fixed.timer-collapsed .course-launch-label {
+    font-size: 10px;
+  }
+}
+
+/*---------------------------------------
+  OUTCOMES SECTION
+-----------------------------------------*/
+.outcomes-section {
+  background: linear-gradient(135deg, #535da1 0%, #14B789 100%);
+  padding: 60px 0;
+}
+
+.outcome-item {
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(12px);
+  border-radius: 14px;
+  padding: 28px 24px;
+  height: 100%;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.outcome-item:hover {
+  transform: translateY(-4px);
+  background: rgba(255,255,255,0.18);
+}
+
+.outcome-item i {
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.outcome-item h5 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.outcome-item p {
+  color: rgba(255,255,255,0.85);
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/*---------------------------------------
+  INSTRUCTOR CARD
+-----------------------------------------*/
+.instructor-card {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  background: rgba(83,93,161,0.06);
+  border: 1px solid rgba(83,93,161,0.15);
+  border-radius: 16px;
+  padding: 28px 32px;
+}
+
+.instructor-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-color, #535da1);
+  flex-shrink: 0;
+}
+
+.instructor-info {
+  flex: 1;
+}
+
+.instructor-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--dark-color, #222);
+  margin: 0 0 4px;
+}
+
+.instructor-role {
+  font-size: 14px;
+  color: var(--secondary-color, #14B789);
+  font-weight: 500;
+  margin: 0 0 10px;
+}
+
+.instructor-bio {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin: 0 0 16px;
+}
+
+@media (max-width: 575.98px) {
+  .instructor-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px 20px;
+  }
+
+  .instructor-avatar {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/*---------------------------------------
+  PRICING COMPARISON TABLE
+-----------------------------------------*/
+.pricing-comparison {
+  background: #fff;
+}
+
+.pricing-comparison thead th {
+  text-align: center;
+  font-weight: 700;
+  vertical-align: middle;
+}
+
+.pricing-comparison tbody td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.pricing-comparison tbody td:first-child {
+  text-align: left;
+}
+
+.pricing-vip-col {
+  background: rgba(83,93,161,0.08) !important;
+  position: relative;
+}
+
+.pricing-comparison thead .pricing-vip-col::after {
+  content: '★';
+  display: block;
+  font-size: 10px;
+  color: var(--primary-color, #535da1);
+  margin-top: 2px;
+}
+
+.pricing-row-price td {
+  font-size: 18px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-top: 2px solid var(--primary-color, #535da1);
+}
+
+/*---------------------------------------
+  TIMER TOGGLE
+-----------------------------------------*/
+.timer-toggle-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+  z-index: 2;
+}
+
+.timer-toggle-btn:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+.timer-expandable {
+  transition: max-height 0.35s ease, opacity 0.3s ease;
+  max-height: 500px;
+  opacity: 1;
+  overflow: hidden;
+}
+
+.timer-collapsed .timer-expandable {
+  max-height: 0;
+  opacity: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.timer-collapsed .course-launch-title {
+  margin-bottom: 8px !important;
+}
+
+.timer-collapsed .course-launch-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.timer-collapsed .course-launch-status {
+  display: none !important;
 }
 
 /*---------------------------------------

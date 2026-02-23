@@ -4,10 +4,20 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <meta name="description" content="Applied AI agents in life, work, selfdevelopment and research. Practical training in building, evaluating, and deploying agentic systems.">
+        <meta name="description" content="Практический курс по AI-агентам: MCP, RAG, оркестрация, память, деплой. 6 недель, 5 проектов. Инструктор — Дәулетұлы Айдын, AI Agent Engineer, PhD candidate.">
         <meta name="author" content="Dauletuly Aidyn">
 
-        <title>Applied AI agents in life, work, selfdevelopment and research</title>
+        <title>Курс AI-агентов — Прикладные AI-агенты в жизни, работе и исследованиях | Dauletuly Aidyn</title>
+
+        <meta property="og:title" content="Курс AI-агентов — Прикладные AI-агенты в жизни и работе">
+        <meta property="og:description" content="6 недель, 5 проектов, MCP, RAG, оркестрация и деплой. Научитесь создавать AI-агентов под свои задачи.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://justaidyn.vercel.app/ai-agents-course.html">
+        <meta property="og:image" content="https://justaidyn.vercel.app/images/ChatGPT Image Feb 23, 2026, 05_37_07 PM.png">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Курс AI-агентов — Dauletuly Aidyn">
+        <meta name="twitter:description" content="Практический курс: MCP, RAG, оркестрация. 6 недель, 5 проектов.">
+        <meta name="twitter:image" content="https://justaidyn.vercel.app/images/ChatGPT Image Feb 23, 2026, 05_37_07 PM.png">
 
         <!-- CSS FILES -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -214,12 +224,16 @@
                     </div>
 
                     <div class="course-launch-card course-launch-card-subpage course-launch-card-right-fixed mt-4" data-course-launch data-target-date="2026-03-09T08:00:00">
+                        <button type="button" class="timer-toggle-btn" onclick="toggleTimerCard()" aria-label="Toggle details">
+                            <i class="bi bi-chevron-up"></i>
+                        </button>
                         <p class="course-launch-title mb-2"
                            data-en="Time left until this course starts:"
                            data-ru="До старта этого курса осталось:"
                            data-kk="Осы курс басталуына дейін қалды:">
                            Time left until this course starts:
                         </p>
+                        <div class="timer-expandable">
                         <p class="course-launch-meta mb-2"
                            data-en="Course starts on March 9, 2026 at 08:00."
                            data-ru="Курс стартует 9 марта 2026 года в 08:00."
@@ -251,6 +265,7 @@
                                data-ru="Открыть страницу «Мотивационное письмо»"
                                data-kk="«Мотивациялық хат» бетін ашу">Open the Motivational letter page</a>
                         </div>
+                        </div>
                         <div class="course-launch-grid" aria-live="polite">
                             <div class="course-launch-item">
                                 <span class="course-launch-value" data-unit="days">0</span>
@@ -275,7 +290,7 @@
                            data-kk="Курс басталып кетті.">
                            The course has already started.
                         </p>
-                        <div class="course-launch-contacts mt-3">
+                        <div class="course-launch-contacts mt-3 timer-expandable">
                             <a href="https://wa.me/77769889889" target="_blank" rel="noopener" class="course-launch-contact-link">
                                 <i class="bi bi-whatsapp"></i>
                                 <span>+7 776 988 9889</span>
@@ -429,6 +444,201 @@
                     </div>
                 </div>
             </section>
+
+            <section class="section-padding pt-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-12 mx-auto">
+                            <h2 class="mb-4" data-en="Course Topics" data-ru="Темы курса" data-kk="Курс тақырыптары">Course Topics</h2>
+                            <div class="course-tech-icons-card mb-4">
+                                <p class="course-tech-icons-title mb-2"
+                                   data-en="Technology icon set used across MCP, RAG, orchestration, memory, and deployment modules."
+                                   data-ru="Набор иконок технологий для модулей MCP, RAG, оркестрации, памяти и деплоя."
+                                   data-kk="MCP, RAG, оркестрация, жады және деплой модульдеріне арналған технология иконкалары жиынтығы.">
+                                   Technology icon set used across MCP, RAG, orchestration, memory, and deployment modules.
+                                </p>
+                                <img src="images/ChatGPT Image Feb 23, 2026, 05_42_14 PM.png" class="course-tech-icons-image" loading="lazy" alt="Technology icon set for generative AI, prompt engineering, RAG, orchestration, memory, and deployment.">
+                                <ul class="course-tech-icon-list mt-3 mb-0">
+                                    <li><i class="bi bi-cpu"></i><span data-en="Generative AI" data-ru="Generative AI" data-kk="Generative AI">Generative AI</span></li>
+                                    <li><i class="bi bi-sliders"></i><span data-en="Prompt Engineering" data-ru="Prompt engineering" data-kk="Prompt engineering">Prompt Engineering</span></li>
+                                    <li><i class="bi bi-file-earmark-text"></i><span data-en="RAG + Knowledge Base" data-ru="RAG + база знаний" data-kk="RAG + білім базасы">RAG + Knowledge Base</span></li>
+                                    <li><i class="bi bi-diagram-3"></i><span data-en="Orchestration" data-ru="Оркестрация" data-kk="Оркестрация">Orchestration</span></li>
+                                    <li><i class="bi bi-journal-bookmark"></i><span data-en="Memory and History" data-ru="Память и история" data-kk="Жады және тарих">Memory and History</span></li>
+                                    <li><i class="bi bi-cloud-upload"></i><span data-en="Deploy and Delivery" data-ru="Деплой и внедрение" data-kk="Деплой және енгізу">Deploy and Delivery</span></li>
+                                </ul>
+                            </div>
+                            <div class="row g-4 course-modules-grid mb-5">
+                                <div class="col-lg-6 col-12">
+                                    <div class="services-thumb">
+                                        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
+                                            <h3 class="mb-0"><i class="bi bi-cpu me-2"></i><span data-en="AI Core Concepts" data-ru="Базовые AI-концепции" data-kk="AI базалық ұғымдары">AI Core Concepts</span></h3>
+                                        </div>
+                                        <p data-en="Generative AI, LLM applications, OpenAI API vs ChatGPT, and where agents are useful in practice." data-ru="Generative AI, LLM-приложения, OpenAI API vs ChatGPT и где агенты полезны на практике." data-kk="Generative AI, LLM қолданбалары, OpenAI API мен ChatGPT айырмасы және агенттердің практикадағы орны.">Generative AI, LLM applications, OpenAI API vs ChatGPT, and where agents are useful in practice.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="services-thumb services-thumb-up">
+                                        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
+                                            <h3 class="mb-0"><i class="bi bi-diagram-3 me-2"></i><span data-en="Prompts, Tools, and Orchestration" data-ru="Промпты, инструменты и оркестрация" data-kk="Промпттар, құралдар және оркестрация">Prompts, Tools, and Orchestration</span></h3>
+                                        </div>
+                                        <p data-en="Prompt engineering, prompt patterns, tool use, and multi-step workflow design for real tasks." data-ru="Prompt engineering, prompt patterns, работа с инструментами и дизайн многошаговых workflow для реальных задач." data-kk="Prompt engineering, prompt patterns, құралдарды пайдалану және нақты міндеттерге арналған көпқадамды workflow дизайны.">Prompt engineering, prompt patterns, tool use, and multi-step workflow design for real tasks.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="services-thumb">
+                                        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
+                                            <h3 class="mb-0"><i class="bi bi-hdd-network me-2"></i><span data-en="RAG, Validation, and Delivery" data-ru="RAG, валидация и внедрение" data-kk="RAG, валидация және енгізу">RAG, Validation, and Delivery</span></h3>
+                                        </div>
+                                        <p data-en="RAG and document flows, verification/validation, responsible AI, and presenting results in usable form." data-ru="RAG и работа с документами, verification/validation, responsible AI и подача результата в удобном формате." data-kk="RAG және құжаттармен жұмыс, verification/validation, responsible AI және нәтижені ыңғайлы форматта ұсыну.">RAG and document flows, verification/validation, responsible AI, and presenting results in usable form.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="mb-4" data-en="Practical Modules" data-ru="Практические модули" data-kk="Практикалық модульдер">Practical Modules</h2>
+                            <div class="row g-4 course-modules-grid">
+                                <div class="col-lg-6 col-12">
+                                    <div class="services-thumb">
+                                        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
+                                            <h3 class="mb-0"><i class="bi bi-person-vcard me-2"></i><span data-en="Project 1: Profile-CV Site" data-ru="Проект 1: Profile-CV сайт" data-kk="Жоба 1: Profile-CV сайты">Project 1: Profile-CV Site</span></h3>
+                                        </div>
+                                        <p data-en="Build your personal profile website with biography, resume, portfolio, and contact blocks." data-ru="Собрать личный сайт-профиль с биографией, резюме, портфолио и контактами." data-kk="Өмірбаян, түйіндеме, портфолио және байланыс блоктары бар жеке сайт жасау.">Build your personal profile website with biography, resume, portfolio, and contact blocks.</p>
+                                        <figure class="project-preview mb-0"><img src="images/ChatGPT Image Feb 23, 2026, 05_45_24 PM.png" class="project-preview-image" loading="lazy" alt="Project 1 preview"></figure>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="services-thumb services-thumb-up">
+                                        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
+                                            <h3 class="mb-0"><i class="bi bi-lightbulb me-2"></i><span data-en="Project 2: Own Solution Site" data-ru="Проект 2: Сайт собственного решения" data-kk="Жоба 2: Өз шешіміңіздің сайты">Project 2: Own Solution Site</span></h3>
+                                        </div>
+                                        <p data-en="Design a website for your own automation solution and your real tasks." data-ru="Сделать сайт для своего решения по автоматизации и под свои реальные задачи." data-kk="Өз автоматтандыру шешіміңізге және нақты міндеттеріңізге арналған сайт әзірлеу.">Design a website for your own automation solution and your real tasks.</p>
+                                        <figure class="project-preview mb-0"><img src="images/ChatGPT Image Feb 23, 2026, 05_57_39 PM.png" class="project-preview-image" loading="lazy" alt="Project 2 preview"></figure>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="services-thumb">
+                                        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
+                                            <h3 class="mb-0"><i class="bi bi-list-check me-2"></i><span data-en="Project 3: Task Manager" data-ru="Проект 3: Task manager" data-kk="Жоба 3: Task manager">Project 3: Task Manager</span></h3>
+                                        </div>
+                                        <p data-en="Build a planner and task system for daily and weekly control." data-ru="Создать планировщик и систему задач для ежедневного и недельного контроля." data-kk="Күнделікті және апталық бақылауға арналған жоспарлағыш пен тапсырма жүйесін құру.">Build a planner and task system for daily and weekly control.</p>
+                                        <figure class="project-preview mb-0"><img src="images/ChatGPT Image Feb 23, 2026, 05_49_31 PM.png" class="project-preview-image" loading="lazy" alt="Project 3 preview"></figure>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="services-thumb services-thumb-up">
+                                        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
+                                            <h3 class="mb-0"><i class="bi bi-briefcase me-2"></i><span data-en="Project 4: Work Automation" data-ru="Проект 4: Автоматизация работы" data-kk="Жоба 4: Жұмыс автоматтандыруы">Project 4: Work Automation</span></h3>
+                                        </div>
+                                        <p data-en="Automate your work tasks, website creation, and presentation preparation." data-ru="Автоматизировать рабочие задачи, создание сайтов и подготовку презентаций." data-kk="Жұмыс міндеттерін, сайт жасауды және презентация дайындауды автоматтандыру.">Automate your work tasks, website creation, and presentation preparation.</p>
+                                        <figure class="project-preview mb-0"><img src="images/ChatGPT Image Feb 23, 2026, 05_51_00 PM.png" class="project-preview-image" loading="lazy" alt="Project 4 preview"></figure>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="services-thumb">
+                                        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
+                                            <h3 class="mb-0"><i class="bi bi-flask me-2"></i><span data-en="Project 5: Research Pipeline" data-ru="Проект 5: Исследование" data-kk="Жоба 5: Зерттеу">Project 5: Research Pipeline</span></h3>
+                                        </div>
+                                        <p data-en="Get answers to your own questions, formulate hypotheses, and design a research pipeline." data-ru="Получать ответы на свои вопросы, формулировать гипотезы и строить исследовательский pipeline." data-kk="Өз сұрақтарыңызға жауап алу, гипотеза құру және зерттеу pipeline-ын жасау.">Get answers to your own questions, formulate hypotheses, and design a research pipeline.</p>
+                                        <figure class="project-preview mb-0"><img src="images/ChatGPT Image Feb 23, 2026, 05_54_59 PM.png" class="project-preview-image" loading="lazy" alt="Project 5 preview"></figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="outcomes-section section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-12 mx-auto">
+                            <h2 class="text-white mb-4" data-en="What you will get after the course" data-ru="Что вы получите после курса" data-kk="Курстан кейін не аласыз">What you will get after the course</h2>
+                            <div class="row g-4">
+                                <div class="col-md-6 col-12">
+                                    <div class="outcome-item">
+                                        <i class="bi bi-folder-check"></i>
+                                        <h5 data-en="5 ready projects in your portfolio" data-ru="5 готовых проектов в вашем портфолио" data-kk="Портфолиоңызда 5 дайын жоба">5 ready projects in your portfolio</h5>
+                                        <p data-en="Personal site, automation solution, task manager, work pipeline, and research system — all built by you." data-ru="Личный сайт, решение для автоматизации, task manager, рабочий pipeline и исследовательская система — всё собрано вами." data-kk="Жеке сайт, автоматтандыру шешімі, task manager, жұмыс pipeline және зерттеу жүйесі — барлығы сіз жасаған.">Personal site, automation solution, task manager, work pipeline, and research system — all built by you.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="outcome-item">
+                                        <i class="bi bi-robot"></i>
+                                        <h5 data-en="AI agent building skill" data-ru="Навык создания AI-агентов" data-kk="AI-агент жасау дағдысы">AI agent building skill</h5>
+                                        <p data-en="You will be able to design, build, and deploy AI agents for your own tasks — without becoming a programmer." data-ru="Вы сможете проектировать, собирать и внедрять AI-агентов под свои задачи — без необходимости становиться программистом." data-kk="Өз міндеттеріңізге арналған AI-агенттерді жобалай, құрастыра және енгізе аласыз — бағдарламашы болмай-ақ.">You will be able to design, build, and deploy AI agents for your own tasks — without becoming a programmer.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="outcome-item">
+                                        <i class="bi bi-award"></i>
+                                        <h5 data-en="Your name in the permanent graduates list" data-ru="Ваше имя в постоянном списке выпускников" data-kk="Сіздің атыңыз түлектердің тұрақты тізімінде">Your name in the permanent graduates list</h5>
+                                        <p data-en="Everyone who completes the course is added to a public graduates page — a permanent record of your achievement." data-ru="Все, кто прошёл курс, попадают в публичный список выпускников — постоянное подтверждение вашего достижения." data-kk="Курсты аяқтаған әркім түлектердің ашық тізіміне қосылады — жетістігіңіздің тұрақты куәлігі.">Everyone who completes the course is added to a public graduates page — a permanent record of your achievement.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="outcome-item">
+                                        <i class="bi bi-people"></i>
+                                        <h5 data-en="Access to the graduates community" data-ru="Доступ к сообществу выпускников" data-kk="Түлектер қауымдастығына қол жеткізу">Access to the graduates community</h5>
+                                        <p data-en="Join the community of course alumni for networking, knowledge sharing, and collaborative projects." data-ru="Вступите в сообщество выпускников курса для нетворкинга, обмена опытом и совместных проектов." data-kk="Нетворкинг, тәжірибе алмасу және бірлескен жобалар үшін курс түлектерінің қауымдастығына қосылыңыз.">Join the community of course alumni for networking, knowledge sharing, and collaborative projects.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-padding pt-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-12 mx-auto">
+                            <h2 class="mb-4" data-en="About the instructor" data-ru="Об инструкторе" data-kk="Инструктор туралы">About the instructor</h2>
+                            <div class="instructor-card">
+                                <img src="images/aidyn-avatar.jpg" alt="Dauletuly Aidyn" class="instructor-avatar" loading="lazy">
+                                <div class="instructor-info">
+                                    <h3 class="instructor-name" data-en="Dauletuly Aidyn" data-ru="Дәулетұлы Айдын" data-kk="Дәулетұлы Айдын">Dauletuly Aidyn</h3>
+                                    <p class="instructor-role" data-en="AI Agent Engineer · ML Researcher · Lecturer" data-ru="AI Agent инженер · ML исследователь · Преподаватель" data-kk="AI Agent инженер · ML зерттеуші · Оқытушы">AI Agent Engineer · ML Researcher · Lecturer</p>
+                                    <p class="instructor-bio" data-en="PhD candidate at Satbayev University. 17+ years in software engineering and applied ML. Builds LLM-powered agents, MCP workflows, RAG pipelines. 30+ scientific publications." data-ru="PhD candidate в Satbayev University. 17+ лет в разработке ПО и прикладном ML. Создаёт LLM-агентов, MCP-воркфлоу, RAG-пайплайны. 30+ научных публикаций." data-kk="Satbayev University-де PhD candidate. Бағдарламалық жасақтама және қолданбалы ML саласында 17+ жыл тәжірибе. LLM-агенттер, MCP-воркфлоу, RAG-пайплайндар құрады. 30+ ғылыми жарияланым.">PhD candidate at Satbayev University. 17+ years in software engineering and applied ML. Builds LLM-powered agents, MCP workflows, RAG pipelines. 30+ scientific publications.</p>
+                                    <a href="index.html" class="custom-btn btn" data-en="Full resume →" data-ru="Полное резюме →" data-kk="Толық түйіндеме →">Full resume →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-padding pt-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-12 mx-auto">
+                            <h2 class="mb-4" data-en="Course program (6 weeks)" data-ru="Программа курса (6 недель)" data-kk="Курс бағдарламасы (6 апта)">Course program (6 weeks)</h2>
+                            <ul class="timeline">
+                                <li class="timeline-item">
+                                    <div class="timeline-date" data-en="WEEKS 1–2" data-ru="НЕДЕЛИ 1–2" data-kk="1–2 АПТА">WEEKS 1–2</div>
+                                    <div class="timeline-card">
+                                        <h5 class="timeline-title" data-en="AI Core Concepts + Prompt Engineering" data-ru="Базовые AI-концепции + Prompt Engineering" data-kk="AI базалық ұғымдары + Prompt Engineering">AI Core Concepts + Prompt Engineering</h5>
+                                        <p class="timeline-org mb-0" data-en="Generative AI, LLM, OpenAI API vs ChatGPT. Prompt patterns, tool use, multi-step workflows. Project 1: Profile-CV site." data-ru="Generative AI, LLM, OpenAI API vs ChatGPT. Prompt patterns, работа с инструментами, многошаговые workflow. Проект 1: Profile-CV сайт." data-kk="Generative AI, LLM, OpenAI API мен ChatGPT. Prompt patterns, құралдар, көпқадамды workflow. Жоба 1: Profile-CV сайты.">Generative AI, LLM, OpenAI API vs ChatGPT. Prompt patterns, tool use, multi-step workflows. Project 1: Profile-CV site.</p>
+                                    </div>
+                                </li>
+                                <li class="timeline-item">
+                                    <div class="timeline-date" data-en="WEEKS 3–4" data-ru="НЕДЕЛИ 3–4" data-kk="3–4 АПТА">WEEKS 3–4</div>
+                                    <div class="timeline-card">
+                                        <h5 class="timeline-title" data-en="RAG, Tools, and Orchestration" data-ru="RAG, инструменты и оркестрация" data-kk="RAG, құралдар және оркестрация">RAG, Tools, and Orchestration</h5>
+                                        <p class="timeline-org mb-0" data-en="RAG pipelines, knowledge bases, MCP tools, agent orchestration. Project 2: Own Solution site. Project 3: Task Manager." data-ru="RAG-пайплайны, базы знаний, MCP-инструменты, оркестрация агентов. Проект 2: сайт решения. Проект 3: Task manager." data-kk="RAG-пайплайндар, білім базалары, MCP-құралдар, агент оркестрациясы. Жоба 2: шешім сайты. Жоба 3: Task manager.">RAG pipelines, knowledge bases, MCP tools, agent orchestration. Project 2: Own Solution site. Project 3: Task Manager.</p>
+                                    </div>
+                                </li>
+                                <li class="timeline-item">
+                                    <div class="timeline-date" data-en="WEEKS 5–6" data-ru="НЕДЕЛИ 5–6" data-kk="5–6 АПТА">WEEKS 5–6</div>
+                                    <div class="timeline-card">
+                                        <h5 class="timeline-title" data-en="Memory, Validation, Deploy" data-ru="Память, валидация, деплой" data-kk="Жады, валидация, деплой">Memory, Validation, Deploy</h5>
+                                        <p class="timeline-org mb-0" data-en="Agent memory, verification/validation, responsible AI, deployment. Project 4: Work Automation. Project 5: Research Pipeline." data-ru="Память агента, верификация/валидация, responsible AI, деплой. Проект 4: Автоматизация работы. Проект 5: Исследование." data-kk="Агент жадысы, верификация/валидация, responsible AI, деплой. Жоба 4: Жұмыс автоматтандыруы. Жоба 5: Зерттеу.">Agent memory, verification/validation, responsible AI, deployment. Project 4: Work Automation. Project 5: Research Pipeline.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section class="course-schedule section-padding pt-0">
                 <div class="container">
                     <div class="row">
@@ -446,69 +656,69 @@
                                     <thead>
                                         <tr>
                                             <th scope="col" data-en="Time" data-ru="Время" data-kk="Уақыты">Time</th>
-                                            <th scope="col" data-en="Monday" data-ru="Понедельник" data-kk="Дүйсенбі">Monday</th>
-                                            <th scope="col" data-en="Tuesday" data-ru="Вторник" data-kk="Сейсенбі">Tuesday</th>
-                                            <th scope="col" data-en="Saturday" data-ru="Суббота" data-kk="Сенбі">Saturday</th>
-                                            <th scope="col" data-en="Sunday" data-ru="Воскресенье" data-kk="Жексенбі">Sunday</th>
+                                            <th scope="col" data-en="Format" data-ru="Формат" data-kk="Формат">Format</th>
+                                            <th scope="col" data-en="Group" data-ru="Группа" data-kk="Топ">Group</th>
+                                            <th scope="col" data-en="Days" data-ru="Дни" data-kk="Күндер">Days</th>
+                                            <th scope="col" data-en="Spots" data-ru="Места" data-kk="Орындар">Spots</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr class="schedule-row-max20" data-schedule-lang="ru">
-                                            <th scope="row">08:00 - 09:30</th>
-                                            <td><span class="schedule-course" data-en="VIP mentoring (up to 10 participants)" data-ru="VIP-наставничество (до 10 человек)" data-kk="VIP-тәлімгерлік (10 адамға дейін)">VIP mentoring (up to 10 participants)</span><br><span class="schedule-group schedule-group-ru" data-en="RU group" data-ru="RU группа" data-kk="Орыс тобы">RU group</span><br><span class="schedule-registered" data-en="Registered 0/10" data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086; 0/10" data-kk="&#1058;&#1110;&#1088;&#1082;&#1077;&#1083;&#1075;&#1077;&#1085; 0/10">Registered 0/10</span></td>
-                                            <td><span class="schedule-course" data-en="VIP mentoring (up to 10 participants)" data-ru="VIP-наставничество (до 10 человек)" data-kk="VIP-тәлімгерлік (10 адамға дейін)">VIP mentoring (up to 10 participants)</span><br><span class="schedule-group schedule-group-ru" data-en="RU group" data-ru="RU группа" data-kk="Орыс тобы">RU group</span><br><span class="schedule-registered" data-en="Registered 0/10" data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086; 0/10" data-kk="&#1058;&#1110;&#1088;&#1082;&#1077;&#1083;&#1075;&#1077;&#1085; 0/10">Registered 0/10</span></td>
-                                            <td><span class="schedule-course" data-en="VIP mentoring (up to 10 participants)" data-ru="VIP-наставничество (до 10 человек)" data-kk="VIP-тәлімгерлік (10 адамға дейін)">VIP mentoring (up to 10 participants)</span><br><span class="schedule-group schedule-group-ru" data-en="RU group" data-ru="RU группа" data-kk="Орыс тобы">RU group</span><br><span class="schedule-registered" data-en="Registered 0/10" data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086; 0/10" data-kk="&#1058;&#1110;&#1088;&#1082;&#1077;&#1083;&#1075;&#1077;&#1085; 0/10">Registered 0/10</span></td>
-                                            <td><span class="schedule-course" data-en="VIP mentoring (up to 10 participants)" data-ru="VIP-наставничество (до 10 человек)" data-kk="VIP-тәлімгерлік (10 адамға дейін)">VIP mentoring (up to 10 participants)</span><br><span class="schedule-group schedule-group-ru" data-en="RU group" data-ru="RU группа" data-kk="Орыс тобы">RU group</span><br><span class="schedule-registered" data-en="Registered 0/10" data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086; 0/10" data-kk="&#1058;&#1110;&#1088;&#1082;&#1077;&#1083;&#1075;&#1077;&#1085; 0/10">Registered 0/10</span></td>
+                                            <td>08:00 – 09:30</td>
+                                            <td><span class="schedule-course" data-en="VIP mentoring" data-ru="VIP-наставничество" data-kk="VIP-тәлімгерлік">VIP mentoring</span></td>
+                                            <td><span class="schedule-group schedule-group-ru" data-en="RU group" data-ru="RU группа" data-kk="Орыс тобы">RU group</span></td>
+                                            <td data-en="Mon, Tue, Sat, Sun" data-ru="Пн, Вт, Сб, Вс" data-kk="Дс, Сс, Сн, Жс">Mon, Tue, Sat, Sun</td>
+                                            <td><span class="schedule-registered" data-en="0/10" data-ru="0/10" data-kk="0/10">0/10</span></td>
                                         </tr>
                                         <tr class="schedule-row-more100" data-schedule-lang="ru">
-                                            <th scope="row">09:45 - 11:15</th>
-                                            <td><span class="schedule-course" data-en="Basic format (50+ participants)" data-ru="Базовый формат (от 50+ участников)" data-kk="Базалық формат (50+ қатысушы)">Basic format (50+ participants)</span><br><span class="schedule-group schedule-group-ru" data-en="RU group" data-ru="RU группа" data-kk="Орыс тобы">RU group</span><br><span class="schedule-registered" data-en="Registered 1/50+" data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086; 1/50+" data-kk="&#1058;&#1110;&#1088;&#1082;&#1077;&#1083;&#1075;&#1077;&#1085; 1/50+">Registered 1/50+</span></td>
-                                            <td><span class="schedule-course" data-en="Basic format (50+ participants)" data-ru="Базовый формат (от 50+ участников)" data-kk="Базалық формат (50+ қатысушы)">Basic format (50+ participants)</span><br><span class="schedule-group schedule-group-ru" data-en="RU group" data-ru="RU группа" data-kk="Орыс тобы">RU group</span><br><span class="schedule-registered" data-en="Registered 1/50+" data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086; 1/50+" data-kk="&#1058;&#1110;&#1088;&#1082;&#1077;&#1083;&#1075;&#1077;&#1085; 1/50+">Registered 1/50+</span></td>
-                                            <td><span class="schedule-course" data-en="Basic format (50+ participants)" data-ru="Базовый формат (от 50+ участников)" data-kk="Базалық формат (50+ қатысушы)">Basic format (50+ participants)</span><br><span class="schedule-group schedule-group-ru" data-en="RU group" data-ru="RU группа" data-kk="Орыс тобы">RU group</span><br><span class="schedule-registered" data-en="Registered 1/50+" data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086; 1/50+" data-kk="&#1058;&#1110;&#1088;&#1082;&#1077;&#1083;&#1075;&#1077;&#1085; 1/50+">Registered 1/50+</span></td>
-                                            <td><span class="schedule-course" data-en="Basic format (50+ participants)" data-ru="Базовый формат (от 50+ участников)" data-kk="Базалық формат (50+ қатысушы)">Basic format (50+ participants)</span><br><span class="schedule-group schedule-group-ru" data-en="RU group" data-ru="RU группа" data-kk="Орыс тобы">RU group</span><br><span class="schedule-registered" data-en="Registered 1/50+" data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086; 1/50+" data-kk="&#1058;&#1110;&#1088;&#1082;&#1077;&#1083;&#1075;&#1077;&#1085; 1/50+">Registered 1/50+</span></td>
+                                            <td>09:45 – 11:15</td>
+                                            <td><span class="schedule-course" data-en="Basic (50+)" data-ru="Базовый (50+)" data-kk="Базалық (50+)">Basic (50+)</span></td>
+                                            <td><span class="schedule-group schedule-group-ru" data-en="RU group" data-ru="RU группа" data-kk="Орыс тобы">RU group</span></td>
+                                            <td data-en="Mon, Tue, Sat, Sun" data-ru="Пн, Вт, Сб, Вс" data-kk="Дс, Сс, Сн, Жс">Mon, Tue, Sat, Sun</td>
+                                            <td><span class="schedule-registered" data-en="1/50+" data-ru="1/50+" data-kk="1/50+">1/50+</span></td>
                                         </tr>
                                         <tr class="schedule-row-max20" data-schedule-lang="ru">
-                                            <th scope="row">11:30 - 13:00</th>
-                                            <td><span class="schedule-course" data-en="VIP mentoring (up to 10 participants)" data-ru="VIP-наставничество (до 10 человек)" data-kk="VIP-тәлімгерлік (10 адамға дейін)">VIP mentoring (up to 10 participants)</span><br><span class="schedule-group schedule-group-ru" data-en="RU group" data-ru="RU группа" data-kk="Орыс тобы">RU group</span><br><span class="schedule-registered" data-en="Registered 0/10" data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086; 0/10" data-kk="&#1058;&#1110;&#1088;&#1082;&#1077;&#1083;&#1075;&#1077;&#1085; 0/10">Registered 0/10</span></td>
-                                            <td><span class="schedule-course" data-en="VIP mentoring (up to 10 participants)" data-ru="VIP-наставничество (до 10 человек)" data-kk="VIP-тәлімгерлік (10 адамға дейін)">VIP mentoring (up to 10 participants)</span><br><span class="schedule-group schedule-group-ru" data-en="RU group" data-ru="RU группа" data-kk="Орыс тобы">RU group</span><br><span class="schedule-registered" data-en="Registered 0/10" data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086; 0/10" data-kk="&#1058;&#1110;&#1088;&#1082;&#1077;&#1083;&#1075;&#1077;&#1085; 0/10">Registered 0/10</span></td>
-                                            <td><span class="schedule-course" data-en="VIP mentoring (up to 10 participants)" data-ru="VIP-наставничество (до 10 человек)" data-kk="VIP-тәлімгерлік (10 адамға дейін)">VIP mentoring (up to 10 participants)</span><br><span class="schedule-group schedule-group-ru" data-en="RU group" data-ru="RU группа" data-kk="Орыс тобы">RU group</span><br><span class="schedule-registered" data-en="Registered 0/10" data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086; 0/10" data-kk="&#1058;&#1110;&#1088;&#1082;&#1077;&#1083;&#1075;&#1077;&#1085; 0/10">Registered 0/10</span></td>
-                                            <td><span class="schedule-course" data-en="VIP mentoring (up to 10 participants)" data-ru="VIP-наставничество (до 10 человек)" data-kk="VIP-тәлімгерлік (10 адамға дейін)">VIP mentoring (up to 10 participants)</span><br><span class="schedule-group schedule-group-ru" data-en="RU group" data-ru="RU группа" data-kk="Орыс тобы">RU group</span><br><span class="schedule-registered" data-en="Registered 0/10" data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086; 0/10" data-kk="&#1058;&#1110;&#1088;&#1082;&#1077;&#1083;&#1075;&#1077;&#1085; 0/10">Registered 0/10</span></td>
+                                            <td>11:30 – 13:00</td>
+                                            <td><span class="schedule-course" data-en="VIP mentoring" data-ru="VIP-наставничество" data-kk="VIP-тәлімгерлік">VIP mentoring</span></td>
+                                            <td><span class="schedule-group schedule-group-ru" data-en="RU group" data-ru="RU группа" data-kk="Орыс тобы">RU group</span></td>
+                                            <td data-en="Mon, Tue, Sat, Sun" data-ru="Пн, Вт, Сб, Вс" data-kk="Дс, Сс, Сн, Жс">Mon, Tue, Sat, Sun</td>
+                                            <td><span class="schedule-registered" data-en="0/10" data-ru="0/10" data-kk="0/10">0/10</span></td>
                                         </tr>
                                         <tr class="schedule-row-max100" data-schedule-lang="ru">
-                                            <th scope="row">13:15 - 14:45</th>
-                                            <td><span class="schedule-course" data-en="Optimal format with support (up to 50 participants)" data-ru="Оптимальный формат с поддержкой (до 50 человек)" data-kk="Қолдауы бар оңтайлы формат (50 адамға дейін)">Optimal format with support (up to 50 participants)</span><br><span class="schedule-group schedule-group-ru" data-en="RU group" data-ru="RU группа" data-kk="Орыс тобы">RU group</span><br><span class="schedule-registered" data-en="Registered 0/50" data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086; 0/50" data-kk="&#1058;&#1110;&#1088;&#1082;&#1077;&#1083;&#1075;&#1077;&#1085; 0/50">Registered 0/50</span></td>
-                                            <td><span class="schedule-course" data-en="Optimal format with support (up to 50 participants)" data-ru="Оптимальный формат с поддержкой (до 50 человек)" data-kk="Қолдауы бар оңтайлы формат (50 адамға дейін)">Optimal format with support (up to 50 participants)</span><br><span class="schedule-group schedule-group-ru" data-en="RU group" data-ru="RU группа" data-kk="Орыс тобы">RU group</span><br><span class="schedule-registered" data-en="Registered 0/50" data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086; 0/50" data-kk="&#1058;&#1110;&#1088;&#1082;&#1077;&#1083;&#1075;&#1077;&#1085; 0/50">Registered 0/50</span></td>
-                                            <td><span class="schedule-course" data-en="Optimal format with support (up to 50 participants)" data-ru="Оптимальный формат с поддержкой (до 50 человек)" data-kk="Қолдауы бар оңтайлы формат (50 адамға дейін)">Optimal format with support (up to 50 participants)</span><br><span class="schedule-group schedule-group-ru" data-en="RU group" data-ru="RU группа" data-kk="Орыс тобы">RU group</span><br><span class="schedule-registered" data-en="Registered 0/50" data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086; 0/50" data-kk="&#1058;&#1110;&#1088;&#1082;&#1077;&#1083;&#1075;&#1077;&#1085; 0/50">Registered 0/50</span></td>
-                                            <td><span class="schedule-course" data-en="Optimal format with support (up to 50 participants)" data-ru="Оптимальный формат с поддержкой (до 50 человек)" data-kk="Қолдауы бар оңтайлы формат (50 адамға дейін)">Optimal format with support (up to 50 participants)</span><br><span class="schedule-group schedule-group-ru" data-en="RU group" data-ru="RU группа" data-kk="Орыс тобы">RU group</span><br><span class="schedule-registered" data-en="Registered 0/50" data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086; 0/50" data-kk="&#1058;&#1110;&#1088;&#1082;&#1077;&#1083;&#1075;&#1077;&#1085; 0/50">Registered 0/50</span></td>
+                                            <td>13:15 – 14:45</td>
+                                            <td><span class="schedule-course" data-en="Optimal (up to 50)" data-ru="Оптимальный (до 50)" data-kk="Оңтайлы (50 дейін)">Optimal (up to 50)</span></td>
+                                            <td><span class="schedule-group schedule-group-ru" data-en="RU group" data-ru="RU группа" data-kk="Орыс тобы">RU group</span></td>
+                                            <td data-en="Mon, Tue, Sat, Sun" data-ru="Пн, Вт, Сб, Вс" data-kk="Дс, Сс, Сн, Жс">Mon, Tue, Sat, Sun</td>
+                                            <td><span class="schedule-registered" data-en="0/50" data-ru="0/50" data-kk="0/50">0/50</span></td>
                                         </tr>
                                         <tr class="schedule-row-max100ii" data-schedule-lang="kk">
-                                            <th scope="row">15:00 - 16:30</th>
-                                            <td><span class="schedule-course" data-en="Optimal format with support (up to 50 participants)" data-ru="Оптимальный формат с поддержкой (до 50 человек)" data-kk="Қолдауы бар оңтайлы формат (50 адамға дейін)">Optimal format with support (up to 50 participants)</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span><br><span class="schedule-registered" data-en="Registered 0/50" data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086; 0/50" data-kk="&#1058;&#1110;&#1088;&#1082;&#1077;&#1083;&#1075;&#1077;&#1085; 0/50">Registered 0/50</span></td>
-                                            <td><span class="schedule-course" data-en="Optimal format with support (up to 50 participants)" data-ru="Оптимальный формат с поддержкой (до 50 человек)" data-kk="Қолдауы бар оңтайлы формат (50 адамға дейін)">Optimal format with support (up to 50 participants)</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span><br><span class="schedule-registered" data-en="Registered 0/50" data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086; 0/50" data-kk="&#1058;&#1110;&#1088;&#1082;&#1077;&#1083;&#1075;&#1077;&#1085; 0/50">Registered 0/50</span></td>
-                                            <td><span class="schedule-course" data-en="Optimal format with support (up to 50 participants)" data-ru="Оптимальный формат с поддержкой (до 50 человек)" data-kk="Қолдауы бар оңтайлы формат (50 адамға дейін)">Optimal format with support (up to 50 participants)</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span><br><span class="schedule-registered" data-en="Registered 0/50" data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086; 0/50" data-kk="&#1058;&#1110;&#1088;&#1082;&#1077;&#1083;&#1075;&#1077;&#1085; 0/50">Registered 0/50</span></td>
-                                            <td><span class="schedule-course" data-en="Optimal format with support (up to 50 participants)" data-ru="Оптимальный формат с поддержкой (до 50 человек)" data-kk="Қолдауы бар оңтайлы формат (50 адамға дейін)">Optimal format with support (up to 50 participants)</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span><br><span class="schedule-registered" data-en="Registered 0/50" data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086; 0/50" data-kk="&#1058;&#1110;&#1088;&#1082;&#1077;&#1083;&#1075;&#1077;&#1085; 0/50">Registered 0/50</span></td>
+                                            <td>15:00 – 16:30</td>
+                                            <td><span class="schedule-course" data-en="Optimal (up to 50)" data-ru="Оптимальный (до 50)" data-kk="Оңтайлы (50 дейін)">Optimal (up to 50)</span></td>
+                                            <td><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span></td>
+                                            <td data-en="Mon, Tue, Sat, Sun" data-ru="Пн, Вт, Сб, Вс" data-kk="Дс, Сс, Сн, Жс">Mon, Tue, Sat, Sun</td>
+                                            <td><span class="schedule-registered" data-en="0/50" data-ru="0/50" data-kk="0/50">0/50</span></td>
                                         </tr>
                                         <tr class="schedule-row-max20ii" data-schedule-lang="kk">
-                                            <th scope="row">16:45 - 18:15</th>
-                                            <td><span class="schedule-course" data-en="VIP mentoring (up to 10 participants)" data-ru="VIP-наставничество (до 10 человек)" data-kk="VIP-тәлімгерлік (10 адамға дейін)">VIP mentoring (up to 10 participants)</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span><br><span class="schedule-registered" data-en="Registered 0/10" data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086; 0/10" data-kk="&#1058;&#1110;&#1088;&#1082;&#1077;&#1083;&#1075;&#1077;&#1085; 0/10">Registered 0/10</span></td>
-                                            <td><span class="schedule-course" data-en="VIP mentoring (up to 10 participants)" data-ru="VIP-наставничество (до 10 человек)" data-kk="VIP-тәлімгерлік (10 адамға дейін)">VIP mentoring (up to 10 participants)</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span><br><span class="schedule-registered" data-en="Registered 0/10" data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086; 0/10" data-kk="&#1058;&#1110;&#1088;&#1082;&#1077;&#1083;&#1075;&#1077;&#1085; 0/10">Registered 0/10</span></td>
-                                            <td><span class="schedule-course" data-en="VIP mentoring (up to 10 participants)" data-ru="VIP-наставничество (до 10 человек)" data-kk="VIP-тәлімгерлік (10 адамға дейін)">VIP mentoring (up to 10 participants)</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span><br><span class="schedule-registered" data-en="Registered 0/10" data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086; 0/10" data-kk="&#1058;&#1110;&#1088;&#1082;&#1077;&#1083;&#1075;&#1077;&#1085; 0/10">Registered 0/10</span></td>
-                                            <td><span class="schedule-course" data-en="VIP mentoring (up to 10 participants)" data-ru="VIP-наставничество (до 10 человек)" data-kk="VIP-тәлімгерлік (10 адамға дейін)">VIP mentoring (up to 10 participants)</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span><br><span class="schedule-registered" data-en="Registered 0/10" data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086; 0/10" data-kk="&#1058;&#1110;&#1088;&#1082;&#1077;&#1083;&#1075;&#1077;&#1085; 0/10">Registered 0/10</span></td>
+                                            <td>16:45 – 18:15</td>
+                                            <td><span class="schedule-course" data-en="VIP mentoring" data-ru="VIP-наставничество" data-kk="VIP-тәлімгерлік">VIP mentoring</span></td>
+                                            <td><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span></td>
+                                            <td data-en="Mon, Tue, Sat, Sun" data-ru="Пн, Вт, Сб, Вс" data-kk="Дс, Сс, Сн, Жс">Mon, Tue, Sat, Sun</td>
+                                            <td><span class="schedule-registered" data-en="0/10" data-ru="0/10" data-kk="0/10">0/10</span></td>
                                         </tr>
                                         <tr class="schedule-row-more100" data-schedule-lang="kk">
-                                            <th scope="row">18:30 - 20:00</th>
-                                            <td><span class="schedule-course" data-en="Basic format (50+ participants)" data-ru="Базовый формат (от 50+ участников)" data-kk="Базалық формат (50+ қатысушы)">Basic format (50+ participants)</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span><br><span class="schedule-registered" data-en="Registered 0/50+" data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086; 0/50+" data-kk="&#1058;&#1110;&#1088;&#1082;&#1077;&#1083;&#1075;&#1077;&#1085; 0/50+">Registered 0/50+</span></td>
-                                            <td><span class="schedule-course" data-en="Basic format (50+ participants)" data-ru="Базовый формат (от 50+ участников)" data-kk="Базалық формат (50+ қатысушы)">Basic format (50+ participants)</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span><br><span class="schedule-registered" data-en="Registered 0/50+" data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086; 0/50+" data-kk="&#1058;&#1110;&#1088;&#1082;&#1077;&#1083;&#1075;&#1077;&#1085; 0/50+">Registered 0/50+</span></td>
-                                            <td><span class="schedule-course" data-en="Basic format (50+ participants)" data-ru="Базовый формат (от 50+ участников)" data-kk="Базалық формат (50+ қатысушы)">Basic format (50+ participants)</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span><br><span class="schedule-registered" data-en="Registered 0/50+" data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086; 0/50+" data-kk="&#1058;&#1110;&#1088;&#1082;&#1077;&#1083;&#1075;&#1077;&#1085; 0/50+">Registered 0/50+</span></td>
-                                            <td><span class="schedule-course" data-en="Basic format (50+ participants)" data-ru="Базовый формат (от 50+ участников)" data-kk="Базалық формат (50+ қатысушы)">Basic format (50+ participants)</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span><br><span class="schedule-registered" data-en="Registered 0/50+" data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086; 0/50+" data-kk="&#1058;&#1110;&#1088;&#1082;&#1077;&#1083;&#1075;&#1077;&#1085; 0/50+">Registered 0/50+</span></td>
+                                            <td>18:30 – 20:00</td>
+                                            <td><span class="schedule-course" data-en="Basic (50+)" data-ru="Базовый (50+)" data-kk="Базалық (50+)">Basic (50+)</span></td>
+                                            <td><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span></td>
+                                            <td data-en="Mon, Tue, Sat, Sun" data-ru="Пн, Вт, Сб, Вс" data-kk="Дс, Сс, Сн, Жс">Mon, Tue, Sat, Sun</td>
+                                            <td><span class="schedule-registered" data-en="0/50+" data-ru="0/50+" data-kk="0/50+">0/50+</span></td>
                                         </tr>
                                         <tr class="schedule-row-max20ii" data-schedule-lang="kk">
-                                            <th scope="row">20:15 - 21:45</th>
-                                            <td><span class="schedule-course" data-en="VIP mentoring (up to 10 participants)" data-ru="VIP-наставничество (до 10 человек)" data-kk="VIP-тәлімгерлік (10 адамға дейін)">VIP mentoring (up to 10 participants)</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span><br><span class="schedule-registered" data-en="Registered 0/10" data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086; 0/10" data-kk="&#1058;&#1110;&#1088;&#1082;&#1077;&#1083;&#1075;&#1077;&#1085; 0/10">Registered 0/10</span></td>
-                                            <td><span class="schedule-course" data-en="VIP mentoring (up to 10 participants)" data-ru="VIP-наставничество (до 10 человек)" data-kk="VIP-тәлімгерлік (10 адамға дейін)">VIP mentoring (up to 10 participants)</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span><br><span class="schedule-registered" data-en="Registered 0/10" data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086; 0/10" data-kk="&#1058;&#1110;&#1088;&#1082;&#1077;&#1083;&#1075;&#1077;&#1085; 0/10">Registered 0/10</span></td>
-                                            <td><span class="schedule-course" data-en="VIP mentoring (up to 10 participants)" data-ru="VIP-наставничество (до 10 человек)" data-kk="VIP-тәлімгерлік (10 адамға дейін)">VIP mentoring (up to 10 participants)</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span><br><span class="schedule-registered" data-en="Registered 0/10" data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086; 0/10" data-kk="&#1058;&#1110;&#1088;&#1082;&#1077;&#1083;&#1075;&#1077;&#1085; 0/10">Registered 0/10</span></td>
-                                            <td><span class="schedule-course" data-en="VIP mentoring (up to 10 participants)" data-ru="VIP-наставничество (до 10 человек)" data-kk="VIP-тәлімгерлік (10 адамға дейін)">VIP mentoring (up to 10 participants)</span><br><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span><br><span class="schedule-registered" data-en="Registered 0/10" data-ru="&#1047;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086; 0/10" data-kk="&#1058;&#1110;&#1088;&#1082;&#1077;&#1083;&#1075;&#1077;&#1085; 0/10">Registered 0/10</span></td>
-                                        </tr>                                    
+                                            <td>20:15 – 21:45</td>
+                                            <td><span class="schedule-course" data-en="VIP mentoring" data-ru="VIP-наставничество" data-kk="VIP-тәлімгерлік">VIP mentoring</span></td>
+                                            <td><span class="schedule-group schedule-group-kk" data-en="Qazaq group" data-ru="Казахская группа" data-kk="Қазақ тобы">Qazaq group</span></td>
+                                            <td data-en="Mon, Tue, Sat, Sun" data-ru="Пн, Вт, Сб, Вс" data-kk="Дс, Сс, Сн, Жс">Mon, Tue, Sat, Sun</td>
+                                            <td><span class="schedule-registered" data-en="0/10" data-ru="0/10" data-kk="0/10">0/10</span></td>
+                                        </tr>
 </tbody>
                                 </table>
                             </div>
@@ -528,300 +738,115 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-10 col-12 mx-auto">
-                            <div class="agreement-read-card mb-4">
-                                <h2 class="h4 mb-3" data-en="Group formats and pricing" data-ru="Форматы групп и стоимость" data-kk="Топ форматтары және құны">Форматы групп и стоимость</h2>
-                                <div class="row g-3 pricing-plans">
-                                    <div class="col-12 plan-card-basic">
-                                        <div class="agreement-read-card h-100 mb-0">
-                                            <h3 class="h5 mb-3" data-en="Basic format (50+ participants)" data-ru="Базовый формат (от 50+ участников)" data-kk="Базалық формат (50+ қатысушы)">Basic format (50+ participants)</h3>
-                                            <p class="group-plan-highlight"
-                                               data-en="Ideal if you want to gain knowledge at a comfortable pace and are ready to learn from shared examples."
-                                               data-ru="Идеально, если вы хотите получить знания в комфортном темпе и готовы учиться на общих примерах."
-                                               data-kk="Білімді ыңғайлы қарқынмен алып, ортақ мысалдар арқылы үйренгіңіз келсе - бұл формат сізге лайық.">Ideal if you want to gain knowledge at a comfortable pace and are ready to learn from shared examples.</p>
-                                            <p data-en="For groups above 50 participants." data-ru="Группа для более <span class='group-plan-accent'>50 человек</span>." data-kk="Топ <span class='group-plan-accent'>50 адамнан көп</span> қатысушыға арналған.">Группа для более <span class='group-plan-accent'>50 человек</span>.</p>
-                                            <p data-en="Starts if at least 51 participants confirm 1 day before start." data-ru="Занятия начинаются, если подтверждено минимум <span class='group-plan-accent'>51 человек</span>, за сутки до старта курса." data-kk="Сабақтар курс басталуына 1 тәулік қалғанда кемінде <span class='group-plan-accent'>51 адам</span> расталса басталады.">Занятия начинаются, если подтверждено минимум <span class='group-plan-accent'>51 человек</span>, за сутки до старта курса.</p>
-                                            <p data-en="Q&A by email in the same motivational-letter thread." data-ru="Вопросы и ответы через почту, в той же переписке с мотивационным письмом." data-kk="Сұрақ-жауап пошта арқылы, мотивациялық хаттағы сол тізбекпен жүргізіледі.">Вопросы и ответы через почту, в той же переписке с мотивационным письмом.</p>
-                                            <p data-en="Answer is given in one week during online session." data-ru="Ответ через неделю во время online-сессии." data-kk="Жауап бір аптадан кейін online-сессияда беріледі.">Ответ через неделю во время online-сессии.</p>
-                                            <p data-en="Top 3 repeated questions are covered." data-ru="Разбираются одинаковые вопросы, которые большинство задали (top 3)." data-kk="Көпшілік қойған бірдей сұрақтардың top 3 нұсқасы қаралады.">Разбираются одинаковые вопросы, которые большинство задали (top 3).</p>
-                                            <p data-en="No individual review. Consultation is group-based in online session." data-ru="Разбор не индивидуальный. Консультация групповая во время online-сессии." data-kk="Талдау жеке емес. Кеңес беру online-сессияда топтық форматта өтеді.">Разбор не индивидуальный. Консультация групповая во время online-сессии.</p>
-                                            <p data-en="Implementation: 5 projects. Personal new ideas are not reviewed." data-ru="Реализация: 5 проектов. Личные новые идеи не рассматриваются." data-kk="Іске асыру: 5 жоба. Жеке жаңа идеялар қарастырылмайды.">Реализация: 5 проектов. Личные новые идеи не рассматриваются.</p>
-                                            <p data-en="Each project is evaluated by the instructor for quality." data-ru="Каждый проект оценивается инструктором по качеству выполнения." data-kk="Әр жоба орындалу сапасы бойынша инструктор тарапынан бағаланады.">Каждый проект оценивается инструктором по качеству выполнения.</p>
-                                            <p data-en="Course price: 135,000 KZT." data-ru="<strong>Стоимость курса:</strong> <span class='group-plan-accent'>135 000 тг</span>." data-kk="<strong>Курс құны:</strong> <span class='group-plan-accent'>135 000 тг</span>."><strong>Стоимость курса:</strong> <span class='group-plan-accent'>135 000 тг</span>.</p>
-                                            <p class="mb-0" data-en="Additional costs: ChatGPT Plus 23.4 USD, domain 10,000 KZT, hosting 7,000 KZT, OpenAI API 10,000 KZT." data-ru="<strong>Дополнительные затраты</strong> (отдельно от курса): ChatGPT Plus 23.4$, домен 10 000 тг, хостинг 7 000 тг, OpenAI API 10 000 тг." data-kk="<strong>Қосымша шығындар</strong> (курс құнынан бөлек): ChatGPT Plus 23.4$, домен 10 000 тг, хостинг 7 000 тг, OpenAI API 10 000 тг."><strong>Дополнительные затраты</strong> (отдельно от курса): ChatGPT Plus 23.4$, домен 10 000 тг, хостинг 7 000 тг, OpenAI API 10 000 тг.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 plan-card-optimal">
-                                        <div class="agreement-read-card h-100 mb-0">
-                                            <h3 class="h5 mb-3" data-en="Optimal format with support (up to 50 participants)" data-ru="Оптимальный формат с поддержкой (до 50 человек)" data-kk="Қолдауы бар оңтайлы формат (50 адамға дейін)">Optimal format with support (up to 50 participants)</h3>
-                                            <p class="group-plan-highlight"
-                                               data-en="A balance of cost and support: group help, WhatsApp chat, and prioritized Q&A by voting."
-                                               data-ru="Баланс цены и поддержки: групповая помощь, WhatsApp-чат и приоритетный разбор вопросов через голосование."
-                                               data-kk="Құн мен қолдаудың теңгерімі: топтық көмек, WhatsApp чат және дауыс беру арқылы басым сұрақтарды талдау.">A balance of cost and support: group help, WhatsApp chat, and prioritized Q&A by voting.</p>
-                                            <p data-en="Up to 50 participants, minimum 11." data-ru="Группа не более <span class='group-plan-accent'>50 человек</span>, минимум <span class='group-plan-accent'>11</span>." data-kk="Топ <span class='group-plan-accent'>50 адамнан аспайды</span>, минимум <span class='group-plan-accent'>11</span>.">Группа не более <span class='group-plan-accent'>50 человек</span>, минимум <span class='group-plan-accent'>11</span>.</p>
-                                            <p data-en="Starts if 11 to 50 participants confirm 1 day before start." data-ru="Занятия начинаются, если подтверждено минимум <span class='group-plan-accent'>11 человек</span>, но максимум <span class='group-plan-accent'>50</span>, за сутки до старта курса." data-kk="Сабақтар курс басталуына 1 тәулік қалғанда кемінде <span class='group-plan-accent'>11 адам</span>, бірақ максимум <span class='group-plan-accent'>50 адам</span> расталса басталады.">Занятия начинаются, если подтверждено минимум <span class='group-plan-accent'>11 человек</span>, но максимум <span class='group-plan-accent'>50</span>, за сутки до старта курса.</p>
-                                            <p data-en="Q&A by email in the same motivational-letter thread." data-ru="Вопросы и ответы через почту, в той же переписке с мотивационным письмом." data-kk="Сұрақ-жауап пошта арқылы, мотивациялық хаттағы сол тізбекпен жүргізіледі.">Вопросы и ответы через почту, в той же переписке с мотивационным письмом.</p>
-                                            <p data-en="Answer is given during the next online session." data-ru="Ответ во время следующей online-сессии." data-kk="Жауап келесі online-сессия кезінде беріледі.">Ответ во время следующей online-сессии.</p>
-                                            <p data-en="Top 3 repeated questions are covered." data-ru="Разбираются одинаковые вопросы, которые большинство задали (top 3)." data-kk="Көпшілік қойған бірдей сұрақтардың top 3 нұсқасы қаралады.">Разбираются одинаковые вопросы, которые большинство задали (top 3).</p>
-                                            <p data-en="No individual review. Group consultation during online session." data-ru="Разбор не индивидуальный. Консультация групповая во время online-сессии." data-kk="Талдау жеке емес. Кеңес беру online-сессияда топтық форматта өтеді.">Разбор не индивидуальный. Консультация групповая во время online-сессии.</p>
-                                            <p data-en="A WhatsApp group is created. Question voting uses top 10." data-ru="Создаётся WhatsApp-группа. Для разбора вопросов запускается голосование по top 10." data-kk="WhatsApp тобы ашылады. Сұрақтарды талдау үшін top 10 бойынша дауыс беру жүргізіледі.">Создаётся WhatsApp-группа. Для разбора вопросов запускается голосование по top 10.</p>
-                                            <p data-en="Implementation: 5 projects. Personal new ideas are not reviewed." data-ru="Реализация: 5 проектов. Личные новые идеи не рассматриваются." data-kk="Іске асыру: 5 жоба. Жеке жаңа идеялар қарастырылмайды.">Реализация: 5 проектов. Личные новые идеи не рассматриваются.</p>
-                                            <p data-en="Personal ideas/questions are put to vote for review." data-ru="Личные идеи и вопросы выносятся на голосование для разбора." data-kk="Жеке идеялар мен сұрақтар талқылау үшін дауыс беруге шығарылады.">Личные идеи и вопросы выносятся на голосование для разбора.</p>
-                                            <p data-en="Each project is evaluated by the instructor for quality." data-ru="Каждый проект оценивается инструктором по качеству выполнения." data-kk="Әр жоба орындалу сапасы бойынша инструктор тарапынан бағаланады.">Каждый проект оценивается инструктором по качеству выполнения.</p>
-                                            <p data-en="Course price: 270,000 KZT." data-ru="<strong>Стоимость курса:</strong> <span class='group-plan-accent'>270 000 тг</span>." data-kk="<strong>Курс құны:</strong> <span class='group-plan-accent'>270 000 тг</span>."><strong>Стоимость курса:</strong> <span class='group-plan-accent'>270 000 тг</span>.</p>
-                                            <p class="mb-0" data-en="Additional costs: ChatGPT Plus 23.4 USD, domain 10,000 KZT, hosting 7,000 KZT, OpenAI API 10,000 KZT." data-ru="<strong>Дополнительные затраты</strong> (отдельно от курса): ChatGPT Plus 23.4$, домен 10 000 тг, хостинг 7 000 тг, OpenAI API 10 000 тг." data-kk="<strong>Қосымша шығындар</strong> (курс құнынан бөлек): ChatGPT Plus 23.4$, домен 10 000 тг, хостинг 7 000 тг, OpenAI API 10 000 тг."><strong>Дополнительные затраты</strong> (отдельно от курса): ChatGPT Plus 23.4$, домен 10 000 тг, хостинг 7 000 тг, OpenAI API 10 000 тг.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 plan-card-vip">
-                                        <div class="agreement-read-card h-100 mb-0">
-                                            <h3 class="h5 mb-3" data-en="VIP mentoring (up to 10 participants)" data-ru="VIP-наставничество (до 10 человек)" data-kk="VIP-тәлімгерлік (10 адамға дейін)">VIP mentoring (up to 10 participants)</h3>
-                                            <p class="group-plan-highlight group-plan-highlight-vip"
-                                               data-en="Key advantage: personal review of each project and each question during live sessions."
-                                               data-ru="Ключевое преимущество: личный разбор каждого проекта и каждого вопроса на живой сессии."
-                                               data-kk="Негізгі артықшылық: әр жоба мен әр сұраққа live-сессияда жеке талдау.">Key advantage: personal review of each project and each question during live sessions.</p>
-                                            <p data-en="Up to 10 participants, minimum 2." data-ru="Группа не более <span class='group-plan-accent'>10 человек</span>, минимум <span class='group-plan-accent'>2</span>." data-kk="Топ <span class='group-plan-accent'>10 адамнан аспайды</span>, минимум <span class='group-plan-accent'>2</span>.">Группа не более <span class='group-plan-accent'>10 человек</span>, минимум <span class='group-plan-accent'>2</span>.</p>
-                                            <p data-en="Starts if 2 to 10 participants confirm 1 day before start." data-ru="Занятия начинаются, если подтверждено минимум <span class='group-plan-accent'>2 человека</span>, но максимум <span class='group-plan-accent'>10</span>, за сутки до старта курса." data-kk="Сабақтар курс басталуына 1 тәулік қалғанда кемінде <span class='group-plan-accent'>2 адам</span>, бірақ максимум <span class='group-plan-accent'>10 адам</span> расталса басталады.">Занятия начинаются, если подтверждено минимум <span class='group-plan-accent'>2 человека</span>, но максимум <span class='group-plan-accent'>10</span>, за сутки до старта курса.</p>
-                                            <p data-en="Q&A via WhatsApp." data-ru="Вопросы и ответы через WhatsApp." data-kk="Сұрақ-жауап WhatsApp арқылы жүргізіледі.">Вопросы и ответы через WhatsApp.</p>
-                                            <p data-en="Also via email in the same motivational-letter thread." data-ru="Также через почту, в той же переписке с мотивационным письмом." data-kk="Сондай-ақ пошта арқылы, мотивациялық хаттағы сол тізбекпен жүргізіледі.">Также через почту, в той же переписке с мотивационным письмом.</p>
-                                            <p data-en="Answer is given within one day." data-ru="Ответ через день." data-kk="Жауап бір күн ішінде беріледі.">Ответ через день.</p>
-                                            <p data-en="Top 3 repeated questions are covered." data-ru="Разбираются одинаковые вопросы, которые большинство задали (top 3)." data-kk="Көпшілік қойған бірдей сұрақтардың top 3 нұсқасы қаралады.">Разбираются одинаковые вопросы, которые большинство задали (top 3).</p>
-                                            <p data-en="Personal review during online session." data-ru="<span class='group-plan-accent'>Личный разбор</span> каждого проекта и вопроса во время online-сессии." data-kk="online-сессияда әр жоба мен сұраққа <span class='group-plan-accent'>жеке талдау</span> жасалады."><span class='group-plan-accent'>Личный разбор</span> каждого проекта и вопроса во время online-сессии.</p>
-                                            <p data-en="Group consultation during online session. On-the-spot question review." data-ru="Консультация групповая во время online-сессии. Разбор каждого вопроса на месте." data-kk="Кеңес беру online-сессияда топтық форматта өтеді. Әр сұрақ орнында талданады.">Консультация групповая во время online-сессии. Разбор каждого вопроса на месте.</p>
-                                            <p data-en="Implementation: 5 projects. Personal ideas are reviewed." data-ru="Реализация: 5 проектов. Личные идеи рассматриваются." data-kk="Іске асыру: 5 жоба. Жеке идеялар қарастырылады.">Реализация: 5 проектов. Личные идеи рассматриваются.</p>
-                                            <p data-en="Each project is evaluated by the instructor for quality." data-ru="Каждый проект оценивается инструктором по качеству выполнения." data-kk="Әр жоба орындалу сапасы бойынша инструктор тарапынан бағаланады.">Каждый проект оценивается инструктором по качеству выполнения.</p>
-                                            <p data-en="Course price: 1,350,000 KZT." data-ru="<strong>Стоимость курса:</strong> <span class='group-plan-accent'>1 350 000 тг</span>." data-kk="<strong>Курс құны:</strong> <span class='group-plan-accent'>1 350 000 тг</span>."><strong>Стоимость курса:</strong> <span class='group-plan-accent'>1 350 000 тг</span>.</p>
-                                            <p class="mb-0" data-en="Additional costs: ChatGPT Plus 23.4 USD, domain 10,000 KZT, hosting 7,000 KZT, OpenAI API 10,000 KZT." data-ru="<strong>Дополнительные затраты</strong> (отдельно от курса): ChatGPT Plus 23.4$, домен 10 000 тг, хостинг 7 000 тг, OpenAI API 10 000 тг." data-kk="<strong>Қосымша шығындар</strong> (курс құнынан бөлек): ChatGPT Plus 23.4$, домен 10 000 тг, хостинг 7 000 тг, OpenAI API 10 000 тг."><strong>Дополнительные затраты</strong> (отдельно от курса): ChatGPT Plus 23.4$, домен 10 000 тг, хостинг 7 000 тг, OpenAI API 10 000 тг.</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <h2 class="h4 mb-3" data-en="Group formats and pricing" data-ru="Форматы групп и стоимость" data-kk="Топ форматтары және құны">Group formats and pricing</h2>
+                            <div class="table-responsive mb-4">
+                                <table class="table schedule-table pricing-comparison align-middle">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"></th>
+                                            <th scope="col" data-en="Basic (50+)" data-ru="Базовый (50+)" data-kk="Базалық (50+)">Basic (50+)</th>
+                                            <th scope="col" data-en="Optimal (up to 50)" data-ru="Оптимальный (до 50)" data-kk="Оңтайлы (50 дейін)">Optimal (up to 50)</th>
+                                            <th scope="col" class="pricing-vip-col" data-en="VIP (up to 10)" data-ru="VIP (до 10)" data-kk="VIP (10 дейін)">VIP (up to 10)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-en="Min. participants" data-ru="Мин. участников" data-kk="Мин. қатысушы"><strong data-en="Min. participants" data-ru="Мин. участников" data-kk="Мин. қатысушы">Min. participants</strong></td>
+                                            <td>51</td>
+                                            <td>11</td>
+                                            <td class="pricing-vip-col">2</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong data-en="Q&amp;A format" data-ru="Формат Q&amp;A" data-kk="Q&amp;A форматы">Q&amp;A format</strong></td>
+                                            <td data-en="Email, same thread" data-ru="Email, та же переписка" data-kk="Email, сол тізбек">Email, same thread</td>
+                                            <td data-en="Email + WhatsApp group" data-ru="Email + WhatsApp группа" data-kk="Email + WhatsApp тобы">Email + WhatsApp group</td>
+                                            <td class="pricing-vip-col" data-en="WhatsApp + Email" data-ru="WhatsApp + Email" data-kk="WhatsApp + Email">WhatsApp + Email</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong data-en="Response time" data-ru="Время ответа" data-kk="Жауап уақыты">Response time</strong></td>
+                                            <td data-en="1 week (online session)" data-ru="1 неделя (online-сессия)" data-kk="1 апта (online-сессия)">1 week (online session)</td>
+                                            <td data-en="Next online session" data-ru="Следующая online-сессия" data-kk="Келесі online-сессия">Next online session</td>
+                                            <td class="pricing-vip-col" data-en="Within 1 day" data-ru="В течение 1 дня" data-kk="1 күн ішінде">Within 1 day</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong data-en="Personal review" data-ru="Личный разбор" data-kk="Жеке талдау">Personal review</strong></td>
+                                            <td><i class="bi bi-x-lg text-muted"></i></td>
+                                            <td><i class="bi bi-x-lg text-muted"></i></td>
+                                            <td class="pricing-vip-col"><i class="bi bi-check-lg text-success"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong data-en="Personal ideas reviewed" data-ru="Разбор личных идей" data-kk="Жеке идеялар талдауы">Personal ideas reviewed</strong></td>
+                                            <td><i class="bi bi-x-lg text-muted"></i></td>
+                                            <td data-en="Via voting" data-ru="Через голосование" data-kk="Дауыс беру арқылы">Via voting</td>
+                                            <td class="pricing-vip-col"><i class="bi bi-check-lg text-success"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong data-en="Projects" data-ru="Проекты" data-kk="Жобалар">Projects</strong></td>
+                                            <td>5</td>
+                                            <td>5</td>
+                                            <td class="pricing-vip-col">5</td>
+                                        </tr>
+                                        <tr class="pricing-row-price">
+                                            <td><strong data-en="Price" data-ru="Стоимость" data-kk="Құны">Price</strong></td>
+                                            <td><strong>135 000 ₸</strong></td>
+                                            <td><strong>270 000 ₸</strong></td>
+                                            <td class="pricing-vip-col"><strong>1 350 000 ₸</strong></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
+                            <p class="text-muted mb-4" data-en="Additional costs (separate): ChatGPT Plus $23.4, domain 10,000 ₸, hosting 7,000 ₸, OpenAI API 10,000 ₸." data-ru="Дополнительные затраты (отдельно): ChatGPT Plus $23.4, домен 10 000 ₸, хостинг 7 000 ₸, OpenAI API 10 000 ₸." data-kk="Қосымша шығындар (бөлек): ChatGPT Plus $23.4, домен 10 000 ₸, хостинг 7 000 ₸, OpenAI API 10 000 ₸.">Additional costs (separate): ChatGPT Plus $23.4, domain 10,000 ₸, hosting 7,000 ₸, OpenAI API 10,000 ₸.</p>
                             <div class="agreement-read-card mb-4">
                                 <h2 class="h4 mb-3" data-en="On boarding" data-ru="On boarding" data-kk="On boarding">On boarding</h2>
                                 <div class="course-launch-actions">
-                                                                        <a href="#"
-                                       class="custom-btn btn course-launch-action-btn mini-video-btn"
-                                       data-en="About the course and instructor"
-                                       data-ru="О курсе и об инструкторе"
-                                       data-kk="Курс және инструктор туралы">About the course and instructor</a>
                                     <a href="#"
-                                       class="custom-btn btn course-launch-action-btn mini-video-btn"
-                                       data-en="Visual Studio Code setup guide"
-                                       data-ru="Руководство по установке кода Visual Studio"
-                                       data-kk="Visual Studio Code орнату нұсқаулығы">Visual Studio Code setup guide</a>
+                                       class="custom-btn btn course-launch-action-btn mini-video-btn disabled"
+                                       tabindex="-1" aria-disabled="true"
+                                       data-en="About the course and instructor (Coming soon)"
+                                       data-ru="О курсе и об инструкторе (Скоро)"
+                                       data-kk="Курс және инструктор туралы (Жақында)">About the course and instructor (Coming soon)</a>
                                     <a href="#"
-                                       class="custom-btn btn course-launch-action-btn mini-video-btn"
-                                       data-en="GitHub account registration guide"
-                                       data-ru="Инструкции по регистрации учетной записи GitHub"
-                                       data-kk="GitHub аккаунтын тіркеу нұсқаулығы">GitHub account registration guide</a>
+                                       class="custom-btn btn course-launch-action-btn mini-video-btn disabled"
+                                       tabindex="-1" aria-disabled="true"
+                                       data-en="Visual Studio Code setup guide (Coming soon)"
+                                       data-ru="Руководство по установке кода Visual Studio (Скоро)"
+                                       data-kk="Visual Studio Code орнату нұсқаулығы (Жақында)">Visual Studio Code setup guide (Coming soon)</a>
                                     <a href="#"
-                                       class="custom-btn btn course-launch-action-btn mini-video-btn"
-                                       data-en="ChatGPT Plus subscription guide"
-                                       data-ru="Инструкции по добавлению подписки ChatGPT Plus"
-                                       data-kk="ChatGPT Plus жазылымын қосу нұсқаулығы">ChatGPT Plus subscription guide</a>
+                                       class="custom-btn btn course-launch-action-btn mini-video-btn disabled"
+                                       tabindex="-1" aria-disabled="true"
+                                       data-en="GitHub account registration guide (Coming soon)"
+                                       data-ru="Инструкции по регистрации учетной записи GitHub (Скоро)"
+                                       data-kk="GitHub аккаунтын тіркеу нұсқаулығы (Жақында)">GitHub account registration guide (Coming soon)</a>
                                     <a href="#"
-                                       class="custom-btn btn course-launch-action-btn mini-video-btn"
-                                       data-en="Domain purchase guide"
-                                       data-ru="Руководство по покупке доменного имени"
-                                       data-kk="Domain атауын сатып алу нұсқаулығы">Domain purchase guide</a>
+                                       class="custom-btn btn course-launch-action-btn mini-video-btn disabled"
+                                       tabindex="-1" aria-disabled="true"
+                                       data-en="ChatGPT Plus subscription guide (Coming soon)"
+                                       data-ru="Инструкции по добавлению подписки ChatGPT Plus (Скоро)"
+                                       data-kk="ChatGPT Plus жазылымын қосу нұсқаулығы (Жақында)">ChatGPT Plus subscription guide (Coming soon)</a>
                                     <a href="#"
-                                       class="custom-btn btn course-launch-action-btn mini-video-btn"
-                                       data-en="Hosting purchase and launch guide"
-                                       data-ru="Руководство по покупке и запуску хостинга"
-                                       data-kk="Hosting сатып алу және іске қосу нұсқаулығы">Hosting purchase and launch guide</a>
+                                       class="custom-btn btn course-launch-action-btn mini-video-btn disabled"
+                                       tabindex="-1" aria-disabled="true"
+                                       data-en="Domain purchase guide (Coming soon)"
+                                       data-ru="Руководство по покупке доменного имени (Скоро)"
+                                       data-kk="Domain атауын сатып алу нұсқаулығы (Жақында)">Domain purchase guide (Coming soon)</a>
                                     <a href="#"
-                                       class="custom-btn btn course-launch-action-btn mini-video-btn"
-                                       data-en="Python installation guide"
-                                       data-ru="Руководство по установке Python"
-                                       data-kk="Python орнату нұсқаулығы">Python installation guide</a>
+                                       class="custom-btn btn course-launch-action-btn mini-video-btn disabled"
+                                       tabindex="-1" aria-disabled="true"
+                                       data-en="Hosting purchase and launch guide (Coming soon)"
+                                       data-ru="Руководство по покупке и запуску хостинга (Скоро)"
+                                       data-kk="Hosting сатып алу және іске қосу нұсқаулығы (Жақында)">Hosting purchase and launch guide (Coming soon)</a>
                                     <a href="#"
-                                       class="custom-btn btn course-launch-action-btn mini-video-btn"
-                                       data-en="Node.js installation guide"
-                                       data-ru="Руководство по установке Node.js"
-                                       data-kk="Node.js орнату нұсқаулығы">Node.js installation guide</a>
-                                </div>
-                            </div>
-
-                            <h2 class="mb-4" data-en="Course Topics" data-ru="Темы курса" data-kk="Курс тақырыптары">Course Topics</h2>
-                            <div class="course-tech-icons-card mb-4">
-                                <p class="course-tech-icons-title mb-2"
-                                   data-en="Technology icon set used across MCP, RAG, orchestration, memory, and deployment modules."
-                                   data-ru="Набор иконок технологий для модулей MCP, RAG, оркестрации, памяти и деплоя."
-                                   data-kk="MCP, RAG, оркестрация, жады және деплой модульдеріне арналған технология иконкалары жиынтығы.">
-                                   Technology icon set used across MCP, RAG, orchestration, memory, and deployment modules.
-                                </p>
-                                <img src="images/ChatGPT Image Feb 23, 2026, 05_42_14 PM.png"
-                                     class="course-tech-icons-image"
-                                     loading="lazy"
-                                     alt="Minimalist technology icon set for generative AI, prompt engineering, RAG, orchestration, memory, and deployment.">
-                                <ul class="course-tech-icon-list mt-3 mb-0">
-                                    <li><i class="bi bi-cpu"></i><span data-en="Generative AI" data-ru="Generative AI" data-kk="Generative AI">Generative AI</span></li>
-                                    <li><i class="bi bi-sliders"></i><span data-en="Prompt Engineering" data-ru="Prompt engineering" data-kk="Prompt engineering">Prompt Engineering</span></li>
-                                    <li><i class="bi bi-file-earmark-text"></i><span data-en="RAG + Knowledge Base" data-ru="RAG + база знаний" data-kk="RAG + білім базасы">RAG + Knowledge Base</span></li>
-                                    <li><i class="bi bi-diagram-3"></i><span data-en="Orchestration" data-ru="Оркестрация" data-kk="Оркестрация">Orchestration</span></li>
-                                    <li><i class="bi bi-journal-bookmark"></i><span data-en="Memory and History" data-ru="Память и история" data-kk="Жады және тарих">Memory and History</span></li>
-                                    <li><i class="bi bi-cloud-upload"></i><span data-en="Deploy and Delivery" data-ru="Деплой и внедрение" data-kk="Деплой және енгізу">Deploy and Delivery</span></li>
-                                </ul>
-                            </div>
-                            <div class="row g-4 course-modules-grid mb-5">
-                                <div class="col-lg-6 col-12">
-                                    <div class="services-thumb">
-                                        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
-                                            <h3 class="mb-0"><i class="bi bi-cpu me-2"></i><span data-en="AI Core Concepts" data-ru="Базовые AI-концепции" data-kk="AI базалық ұғымдары">AI Core Concepts</span></h3>
-                                        </div>
-                                        <p data-en="Generative AI, LLM applications, OpenAI API vs ChatGPT, and where agents are useful in practice."
-                                           data-ru="Generative AI, LLM-приложения, OpenAI API vs ChatGPT и где агенты полезны на практике."
-                                           data-kk="Generative AI, LLM қолданбалары, OpenAI API мен ChatGPT айырмасы және агенттердің практикадағы орны.">
-                                           Generative AI, LLM applications, OpenAI API vs ChatGPT, and where agents are useful in practice.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-12">
-                                    <div class="services-thumb services-thumb-up">
-                                        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
-                                            <h3 class="mb-0"><i class="bi bi-diagram-3 me-2"></i><span data-en="Prompts, Tools, and Orchestration" data-ru="Промпты, инструменты и оркестрация" data-kk="Промпттар, құралдар және оркестрация">Prompts, Tools, and Orchestration</span></h3>
-                                        </div>
-                                        <p data-en="Prompt engineering, prompt patterns, tool use, and multi-step workflow design for real tasks."
-                                           data-ru="Prompt engineering, prompt patterns, работа с инструментами и дизайн многошаговых workflow для реальных задач."
-                                           data-kk="Prompt engineering, prompt patterns, құралдарды пайдалану және нақты міндеттерге арналған көпқадамды workflow дизайны.">
-                                           Prompt engineering, prompt patterns, tool use, and multi-step workflow design for real tasks.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-12">
-                                    <div class="services-thumb">
-                                        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
-                                            <h3 class="mb-0"><i class="bi bi-hdd-network me-2"></i><span data-en="RAG, Validation, and Delivery" data-ru="RAG, валидация и внедрение" data-kk="RAG, валидация және енгізу">RAG, Validation, and Delivery</span></h3>
-                                        </div>
-                                        <p data-en="RAG and document flows, verification/validation, responsible AI, and presenting results in usable form."
-                                           data-ru="RAG и работа с документами, verification/validation, responsible AI и подача результата в удобном формате."
-                                           data-kk="RAG және құжаттармен жұмыс, verification/validation, responsible AI және нәтижені ыңғайлы форматта ұсыну.">
-                                           RAG and document flows, verification/validation, responsible AI, and presenting results in usable form.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <h2 class="mb-4" data-en="Practical Modules" data-ru="Модули курса" data-kk="Курс модульдері">Practical Modules</h2>
-                            <div class="row g-4 course-modules-grid">
-                                <div class="col-lg-6 col-12">
-                                    <div class="services-thumb">
-                                        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
-                                            <h3 class="mb-0"><i class="bi bi-person-vcard me-2"></i><span data-en="Project 1: Profile-CV Site" data-ru="Проект 1: Profile-CV сайт" data-kk="Жоба 1: Profile-CV сайты">Project 1: Profile-CV Site</span></h3>
-                                        </div>
-                                        <p data-en="Practice module: build your personal profile website with biography, resume, portfolio, and contact blocks."
-                                           data-ru="Практический модуль: собрать личный сайт-профиль с биографией, резюме, портфолио и контактами."
-                                           data-kk="Практикалық модуль: өмірбаян, түйіндеме, портфолио және байланыс блоктары бар жеке сайт жасау.">
-                                           Practice module: build your personal profile website with biography, resume, portfolio, and contact blocks.
-                                        </p>
-                                        <p data-en="Result: ready public page for applications, clients, and academic/professional presentation."
-                                           data-ru="Результат: готовая публичная страница для откликов, клиентов и академической/профессиональной презентации."
-                                           data-kk="Нәтиже: өтінімдерге, клиенттерге және академиялық/кәсіби таныстыруға арналған дайын ашық парақша.">
-                                           Result: ready public page for applications, clients, and academic/professional presentation.
-                                        </p>
-                                        <figure class="project-preview mb-0">
-                                            <img src="images/ChatGPT Image Feb 23, 2026, 05_45_24 PM.png"
-                                                 class="project-preview-image"
-                                                 loading="lazy"
-                                                 alt="Project 1 preview: profile website with avatar and floating chat window.">
-                                        </figure>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-12">
-                                    <div class="services-thumb services-thumb-up">
-                                        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
-                                            <h3 class="mb-0"><i class="bi bi-lightbulb me-2"></i><span data-en="Project 2: Own Solution Site" data-ru="Проект 2: Сайт собственного решения" data-kk="Жоба 2: Өз шешіміңіздің сайты">Project 2: Own Solution Site</span></h3>
-                                        </div>
-                                        <p data-en="Practice module: design a website for your own automation solution and your real tasks."
-                                           data-ru="Практический модуль: сделать сайт для своего решения по автоматизации и под свои реальные задачи."
-                                           data-kk="Практикалық модуль: өз автоматтандыру шешіміңізге және нақты міндеттеріңізге арналған сайт әзірлеу.">
-                                           Practice module: design a website for your own automation solution and your real tasks.
-                                        </p>
-                                        <p data-en="Result: clear value proposition, service flow, and demo scenario for your use case."
-                                           data-ru="Результат: понятный value proposition, схема сервиса и demo-сценарий под ваш кейс."
-                                           data-kk="Нәтиже: өз кейсіңізге сай value proposition, сервис сызбасы және demo-сценарий.">
-                                           Result: clear value proposition, service flow, and demo scenario for your use case.
-                                        </p>
-                                        <figure class="project-preview mb-0">
-                                            <img src="images/ChatGPT Image Feb 23, 2026, 05_57_39 PM.png"
-                                                 class="project-preview-image"
-                                                 loading="lazy"
-                                                 alt="Project 2 preview: landing page with AI solution headline and workflow diagram.">
-                                        </figure>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-12">
-                                    <div class="services-thumb">
-                                        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
-                                            <h3 class="mb-0"><i class="bi bi-list-check me-2"></i><span data-en="Project 3: Task Manager" data-ru="Проект 3: Task manager" data-kk="Жоба 3: Task manager">Project 3: Task Manager</span></h3>
-                                        </div>
-                                        <p data-en="Practice module: build a planner and task system for daily and weekly control."
-                                           data-ru="Практический модуль: создать планировщик и систему задач для ежедневного и недельного контроля."
-                                           data-kk="Практикалық модуль: күнделікті және апталық бақылауға арналған жоспарлағыш пен тапсырма жүйесін құру.">
-                                           Practice module: build a planner and task system for daily and weekly control.
-                                        </p>
-                                        <p data-en="Result: personal workflow board with priorities, deadlines, and progress tracking."
-                                           data-ru="Результат: личная рабочая доска с приоритетами, дедлайнами и отслеживанием прогресса."
-                                           data-kk="Нәтиже: басымдықтар, дедлайндар және прогресті бақылауы бар жеке жұмыс тақтасы.">
-                                           Result: personal workflow board with priorities, deadlines, and progress tracking.
-                                        </p>
-                                        <figure class="project-preview mb-0">
-                                            <img src="images/ChatGPT Image Feb 23, 2026, 05_49_31 PM.png"
-                                                 class="project-preview-image"
-                                                 loading="lazy"
-                                                 alt="Project 3 preview: task manager dashboard with kanban board and progress bars.">
-                                        </figure>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-12">
-                                    <div class="services-thumb services-thumb-up">
-                                        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
-                                            <h3 class="mb-0"><i class="bi bi-briefcase me-2"></i><span data-en="Project 4: Work Automation" data-ru="Проект 4: Автоматизация работы" data-kk="Жоба 4: Жұмыс автоматтандыруы">Project 4: Work Automation</span></h3>
-                                        </div>
-                                        <p data-en="Practice module: automate your work tasks, website creation, and presentation preparation."
-                                           data-ru="Практический модуль: автоматизировать рабочие задачи, создание сайтов и подготовку презентаций."
-                                           data-kk="Практикалық модуль: жұмыс міндеттерін, сайт жасауды және презентация дайындауды автоматтандыру.">
-                                           Practice module: automate your work tasks, website creation, and presentation preparation.
-                                        </p>
-                                        <p data-en="Result: reusable pipelines for routine operations in your current role."
-                                           data-ru="Результат: переиспользуемые пайплайны для рутинных операций в вашей текущей работе."
-                                           data-kk="Нәтиже: ағымдағы жұмысыңыздағы қайталанатын операцияларға арналған қайта қолданылатын пайплайндар.">
-                                           Result: reusable pipelines for routine operations in your current role.
-                                        </p>
-                                        <figure class="project-preview mb-0">
-                                            <img src="images/ChatGPT Image Feb 23, 2026, 05_51_00 PM.png"
-                                                 class="project-preview-image"
-                                                 loading="lazy"
-                                                 alt="Project 4 preview: automation pipeline where a document is transformed into a presentation.">
-                                        </figure>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-12">
-                                    <div class="services-thumb">
-                                        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
-                                            <h3 class="mb-0"><i class="bi bi-flask me-2"></i><span data-en="Project 5: Research Pipeline" data-ru="Проект 5: Исследование" data-kk="Жоба 5: Зерттеу">Project 5: Research Pipeline</span></h3>
-                                        </div>
-                                        <p data-en="Practice module: get answers to your own questions, formulate hypotheses, and design a research pipeline."
-                                           data-ru="Практический модуль: получать ответы на свои вопросы, формулировать гипотезы и строить исследовательский pipeline."
-                                           data-kk="Практикалық модуль: өз сұрақтарыңызға жауап алу, гипотеза құру және зерттеу pipeline-ын жасау.">
-                                           Practice module: get answers to your own questions, formulate hypotheses, and design a research pipeline.
-                                        </p>
-                                        <p data-en="Result: your own hypothesis-to-answer workflow with steps, tools, and validation checks."
-                                           data-ru="Результат: собственный workflow от гипотезы до ответа с шагами, инструментами и проверками."
-                                           data-kk="Нәтиже: гипотезадан жауапқа дейінгі қадамдары, құралдары және тексерулері бар жеке workflow.">
-                                           Result: your own hypothesis-to-answer workflow with steps, tools, and validation checks.
-                                        </p>
-                                        <figure class="project-preview mb-0">
-                                            <img src="images/ChatGPT Image Feb 23, 2026, 05_54_59 PM.png"
-                                                 class="project-preview-image"
-                                                 loading="lazy"
-                                                 alt="Project 5 preview: research workflow from question to search, analysis, and answer.">
-                                        </figure>
-                                    </div>
+                                       class="custom-btn btn course-launch-action-btn mini-video-btn disabled"
+                                       tabindex="-1" aria-disabled="true"
+                                       data-en="Python installation guide (Coming soon)"
+                                       data-ru="Руководство по установке Python (Скоро)"
+                                       data-kk="Python орнату нұсқаулығы (Жақында)">Python installation guide (Coming soon)</a>
+                                    <a href="#"
+                                       class="custom-btn btn course-launch-action-btn mini-video-btn disabled"
+                                       tabindex="-1" aria-disabled="true"
+                                       data-en="Node.js installation guide (Coming soon)"
+                                       data-ru="Руководство по установке Node.js (Скоро)"
+                                       data-kk="Node.js орнату нұсқаулығы (Жақында)">Node.js installation guide (Coming soon)</a>
                                 </div>
                             </div>
                         </div>
@@ -926,6 +951,25 @@
         <script src="js/custom.js"></script>
 
         <script>
+            function toggleTimerCard() {
+                var card = document.querySelector('.course-launch-card-right-fixed');
+                if (!card) return;
+                var isCollapsed = card.classList.toggle('timer-collapsed');
+                var icon = card.querySelector('.timer-toggle-btn i');
+                if (icon) icon.className = isCollapsed ? 'bi bi-chevron-down' : 'bi bi-chevron-up';
+                sessionStorage.setItem('timer_collapsed', isCollapsed ? '1' : '0');
+            }
+            document.addEventListener('DOMContentLoaded', function() {
+                if (sessionStorage.getItem('timer_collapsed') === '1') {
+                    var card = document.querySelector('.course-launch-card-right-fixed');
+                    if (card) {
+                        card.classList.add('timer-collapsed');
+                        var icon = card.querySelector('.timer-toggle-btn i');
+                        if (icon) icon.className = 'bi bi-chevron-down';
+                    }
+                }
+            });
+
             var languageStorageKey = 'site_lang';
             document.addEventListener('DOMContentLoaded', function() {
                 var activeLang = localStorage.getItem(languageStorageKey) || 'kk';
