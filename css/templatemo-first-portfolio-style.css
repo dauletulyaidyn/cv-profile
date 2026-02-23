@@ -2254,35 +2254,71 @@ h2[data-en="Group formats and pricing"] + .row .group-plan-accent {
   text-align: center;
   font-weight: 700;
   vertical-align: middle;
+  font-size: 15px;
+}
+
+.pricing-comparison thead th:first-child {
+  background: transparent;
+  border: none;
 }
 
 .pricing-comparison tbody td {
   text-align: center;
   vertical-align: middle;
+  font-size: 14px;
 }
 
 .pricing-comparison tbody td:first-child {
   text-align: left;
+  background: #f9fafe;
 }
 
 .pricing-vip-col {
-  background: rgba(83,93,161,0.08) !important;
+  background: rgba(20,183,137,0.08) !important;
   position: relative;
+  border-left: 2px solid var(--secondary-color, #14B789) !important;
+  border-right: 2px solid var(--secondary-color, #14B789) !important;
+}
+
+.pricing-comparison thead .pricing-vip-col {
+  background: var(--secondary-color, #14B789) !important;
+  color: #fff !important;
+  border-color: var(--secondary-color, #14B789) !important;
 }
 
 .pricing-comparison thead .pricing-vip-col::after {
-  content: '★';
+  display: none;
+}
+
+.pricing-vip-badge {
   display: block;
   font-size: 10px;
-  color: var(--primary-color, #535da1);
+  color: rgba(255,255,255,0.85);
   margin-top: 2px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
 }
 
 .pricing-row-price td {
   font-size: 18px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  border-top: 2px solid var(--primary-color, #535da1);
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border-top: 2px solid rgba(83,93,161,0.25);
+}
+
+.pricing-row-price .pricing-vip-col {
+  background: rgba(20,183,137,0.12) !important;
+  color: var(--secondary-color, #14B789);
+  font-size: 20px;
+  border-bottom: 2px solid var(--secondary-color, #14B789) !important;
+}
+
+.pricing-comparison .bi-check-lg {
+  font-size: 20px;
+}
+
+.pricing-comparison .bi-x-lg {
+  font-size: 14px;
 }
 
 /*---------------------------------------
