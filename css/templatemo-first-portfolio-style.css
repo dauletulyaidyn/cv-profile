@@ -1124,6 +1124,75 @@ strong {
   margin-bottom: 12px;
 }
 
+.course-tech-icons-card {
+  background: #ffffff;
+  border: 1px solid rgba(83, 93, 161, 0.16);
+  border-radius: var(--border-radius-medium);
+  box-shadow: 0 12px 28px rgba(24, 32, 56, 0.08);
+  padding: 16px;
+}
+
+.course-tech-icons-title {
+  color: #2c3964;
+  font-weight: 600;
+  margin: 0;
+}
+
+.course-tech-icons-image {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 1px solid rgba(83, 93, 161, 0.2);
+}
+
+.course-tech-icon-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.course-tech-icon-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f6f8ff;
+  border: 1px solid rgba(83, 93, 161, 0.14);
+  border-radius: 999px;
+  padding: 7px 10px;
+  color: #2a3763;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.course-tech-icon-list li i {
+  color: var(--secondary-color);
+  font-size: 1rem;
+}
+
+.project-preview {
+  margin-top: 14px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(83, 93, 161, 0.15);
+  box-shadow: 0 12px 24px rgba(24, 32, 56, 0.1);
+}
+
+.project-preview-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.services-thumb:hover .project-preview-image {
+  transform: scale(1.02);
+}
+
 .agreement-read-card {
   background: #ffffff;
   border: 1px solid var(--border-color);
@@ -1240,6 +1309,12 @@ strong {
   margin-bottom: 14px;
 }
 
+.schedule-format-hero {
+  font-size: clamp(1.05rem, 0.96rem + 0.55vw, 1.35rem);
+  font-weight: var(--font-weight-bold);
+  border-left-width: 5px;
+}
+
 .schedule-duration-footnote {
   margin-top: 12px;
   font-size: 0.95rem;
@@ -1286,8 +1361,11 @@ strong {
 }
 
 .schedule-course {
+  display: block;
   font-weight: var(--font-weight-bold);
   color: #203059;
+  font-size: 0.86rem;
+  line-height: 1.25;
 }
 
 .schedule-group {
@@ -1553,6 +1631,28 @@ strong {
   background-color: var(--white-color);
 }
 
+.hero-agent-visual {
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--border-radius-medium);
+  padding: 14px;
+}
+
+.hero-agent-visual-title {
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: var(--font-weight-bold);
+  font-size: 0.95rem;
+}
+
+.hero-agent-visual-image {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 16px 30px rgba(7, 12, 28, 0.35);
+}
+
 .subpage-lead-split {
   max-width: 100%;
   display: grid;
@@ -1568,6 +1668,22 @@ strong {
 @media (max-width: 991.98px) {
   .hero-diff-carousel .carousel-inner {
     min-height: 8.6rem;
+  }
+
+  .hero-agent-visual {
+    padding: 10px;
+  }
+
+  .hero-agent-visual-title {
+    font-size: 0.9rem;
+  }
+
+  .project-preview-image {
+    aspect-ratio: 16 / 11;
+  }
+
+  .course-tech-icon-list {
+    grid-template-columns: 1fr;
   }
 
   .subpage-lead-split {
@@ -1591,6 +1707,44 @@ strong {
   background: rgba(20, 183, 137, 0.14);
   border-radius: 6px;
   padding: 0 6px;
+}
+
+.course-audience-card {
+  background: linear-gradient(145deg, #f7fbff 0%, #ffffff 100%);
+}
+
+.course-audience-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.course-audience-list li + li {
+  margin-top: 10px;
+}
+
+.group-plan-highlight {
+  background: rgba(79, 95, 191, 0.08);
+  border-left: 4px solid rgba(79, 95, 191, 0.55);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-weight: var(--font-weight-bold);
+}
+
+.group-plan-highlight-vip {
+  background: rgba(20, 183, 137, 0.12);
+  border-left-color: rgba(20, 183, 137, 0.7);
+}
+
+.pricing-plans .plan-card-vip {
+  order: 1;
+}
+
+.pricing-plans .plan-card-optimal {
+  order: 2;
+}
+
+.pricing-plans .plan-card-basic {
+  order: 3;
 }
 
 h2[data-en="Group formats and pricing"] + .row .h5 {
@@ -1695,6 +1849,19 @@ h2[data-en="Group formats and pricing"] + .row .group-plan-accent {
   background: #ffe25a;
   border-color: #ffe25a;
   color: #4a3600;
+}
+
+.course-launch-action-whatsapp {
+  background: #29a71a;
+  border-color: #29a71a;
+  color: var(--white-color);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+.course-launch-action-whatsapp:hover {
+  background: #218e16;
+  border-color: #218e16;
+  color: var(--white-color);
 }
 
 .mini-video-btn {
