@@ -4,20 +4,38 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <meta name="description" content="Portfolio of Dauletuly Aidyn — AI Agent Engineer, ML Researcher, and Lecturer. Building LLM-powered agents, MCP workflows, RAG pipelines, and production ML systems. PhD candidate at Satbayev University.">
+        <meta name="description" content="Dauletuly Aidyn (JustAidyn) — AI Agent Engineer, ML Researcher, Lecturer. JustAidyn Courses: курсы по AI-агентам. Building LLM-powered agents, MCP, RAG. PhD candidate Satbayev University.">
         <meta name="author" content="Dauletuly Aidyn">
+        <link rel="canonical" href="https://justaidyn.vercel.app/">
 
-        <title>Dauletuly Aidyn — AI Agent Engineer | ML Researcher | Lecturer</title>
+        <title>Dauletuly Aidyn | JustAidyn — AI Agent Engineer | ML Researcher | JustAidyn Courses</title>
 
-        <meta property="og:title" content="Dauletuly Aidyn — AI Agent Engineer | ML Researcher">
-        <meta property="og:description" content="Building LLM-powered agents, MCP workflows, RAG pipelines, and production ML systems. 17+ years of experience in software engineering and applied ML.">
+        <meta property="og:title" content="Dauletuly Aidyn | JustAidyn — AI Agent Engineer | JustAidyn Courses">
+        <meta property="og:description" content="Dauletuly Aidyn (JustAidyn). AI Agent Engineer, ML Researcher. JustAidyn Courses — курсы AI-агентов. 17+ years experience, PhD candidate.">
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://justaidyn.vercel.app">
         <meta property="og:image" content="https://justaidyn.vercel.app/images/aidyn-avatar.jpg">
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="Dauletuly Aidyn — AI Agent Engineer">
-        <meta name="twitter:description" content="Building LLM-powered agents, MCP workflows, and production ML systems.">
+        <meta name="twitter:title" content="Dauletuly Aidyn | JustAidyn — AI Agent Engineer | JustAidyn Courses">
+        <meta name="twitter:description" content="Dauletuly Aidyn. JustAidyn Courses — AI-агенты, MCP, RAG. AI Agent Engineer, ML Researcher.">
         <meta name="twitter:image" content="https://justaidyn.vercel.app/images/aidyn-avatar.jpg">
+
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Dauletuly Aidyn",
+          "alternateName": ["JustAidyn", "Aidyn Kunikeyev"],
+          "jobTitle": "AI Agent Engineer, ML Researcher, Lecturer",
+          "url": "https://justaidyn.vercel.app",
+          "sameAs": ["https://justaidyn.vercel.app"],
+          "knowsAbout": ["AI Agents", "Machine Learning", "LLM", "MCP", "RAG"],
+          "worksFor": {
+            "@type": "Organization",
+            "name": "JustAidyn Courses"
+          }
+        }
+        </script>
 
         <!-- CSS FILES -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1275,6 +1293,9 @@
                     activeLang = availableLangs.indexOf('kk') !== -1 ? 'kk' : availableLangs[0];
                 }
                 changeLanguage(activeLang);
+                if (window.location.search.includes('dl=pdf') && typeof generateResumePDF === 'function') {
+                    setTimeout(generateResumePDF, 500);
+                }
             });
 
             function changeLanguage(lang) {
