@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banner – KK No Magic</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1a1f3a; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: 'Roboto Slab', serif; }
+
+  .banner { width: 450px; height: 800px; background: #1e2340; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; padding: 52px 44px; }
+
+  .bg-circle { position: absolute; border-radius: 50%; pointer-events: none; }
+  .bg-circle-1 { width: 380px; height: 380px; top: -80px; right: -100px; border: 1px solid rgba(83,93,161,0.28); }
+  .bg-circle-2 { width: 240px; height: 240px; top: 20px; right: -40px; border: 1px solid rgba(20,183,137,0.2); }
+  .bg-circle-3 { width: 500px; height: 500px; bottom: -200px; left: -160px; border: 1px solid rgba(83,93,161,0.18); }
+
+  .accent-dot { position: absolute; width: 6px; height: 6px; border-radius: 50%; background: #14B789; top: 54px; right: 44px; }
+  .vertical-line { position: absolute; left: 44px; top: 0; width: 1px; height: 100%; background: linear-gradient(to bottom, transparent, rgba(83,93,161,0.4) 30%, rgba(20,183,137,0.3) 70%, transparent); }
+  .corner-tr { position: absolute; top: 0; right: 0; width: 48px; height: 48px; border-top: 1.5px solid rgba(83,93,161,0.5); border-right: 1.5px solid rgba(83,93,161,0.5); }
+  .corner-bl { position: absolute; bottom: 0; left: 0; width: 48px; height: 48px; border-bottom: 1.5px solid rgba(20,183,137,0.4); border-left: 1.5px solid rgba(20,183,137,0.4); }
+
+  .top { position: relative; z-index: 2; }
+  .tag { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border: 1px solid rgba(20,183,137,0.4); border-radius: 2px; margin-bottom: 38px; }
+  .tag-dot { width: 5px; height: 5px; border-radius: 50%; background: #14B789; }
+  .tag-text { font-size: 10px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase; color: #14B789; }
+
+  .eyebrow { font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.3); margin-bottom: 14px; }
+
+  .statement-line { display: block; font-size: 35px; font-weight: 700; line-height: 1.12; letter-spacing: -0.5px; }
+  .l1 { color: rgba(255,255,255,0.9); }
+  .l2 { color: #535da1; }
+  .l3 { color: #14B789; }
+  .l4 { color: rgba(255,255,255,0.9); }
+
+  .middle { position: relative; z-index: 2; flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 32px 0; gap: 16px; }
+
+  .card-pair { display: flex; flex-direction: column; gap: 10px; }
+
+  .info-card { padding: 16px 18px; border-radius: 2px; }
+  .info-card.works { background: rgba(20,183,137,0.07); border: 1px solid rgba(20,183,137,0.25); }
+  .info-card.breaks { background: rgba(83,93,161,0.07); border: 1px solid rgba(83,93,161,0.25); }
+
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .card-icon { font-size: 14px; line-height: 1; }
+  .card-label { font-size: 9px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; }
+  .info-card.works .card-label { color: #14B789; }
+  .info-card.breaks .card-label { color: #535da1; }
+
+  .card-points { display: flex; flex-direction: column; gap: 5px; }
+  .card-point { display: flex; align-items: flex-start; gap: 8px; }
+  .point-dash { width: 14px; height: 1.5px; margin-top: 9px; flex-shrink: 0; }
+  .info-card.works .point-dash { background: rgba(20,183,137,0.5); }
+  .info-card.breaks .point-dash { background: rgba(83,93,161,0.5); }
+  .point-text { font-size: 12px; font-weight: 300; line-height: 1.6; color: rgba(255,255,255,0.72); }
+
+  .separator { display: flex; align-items: center; gap: 12px; margin: 4px 0; }
+  .sep-line { height: 1px; flex: 1; background: linear-gradient(to right, rgba(20,183,137,0.4), transparent); }
+  .sep-diamond { width: 5px; height: 5px; background: #14B789; transform: rotate(45deg); flex-shrink: 0; }
+
+  .result-block { padding: 16px 20px; border: 1px solid rgba(20,183,137,0.28); border-radius: 2px; background: rgba(20,183,137,0.05); }
+  .result-label { font-size: 9px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(20,183,137,0.7); margin-bottom: 7px; }
+  .result-text { font-size: 14px; font-weight: 700; line-height: 1.45; color: #ffffff; }
+  .result-text em { color: #14B789; font-style: normal; }
+  .result-text s { color: rgba(255,255,255,0.25); font-weight: 300; text-decoration-color: rgba(83,93,161,0.4); }
+
+  .bottom { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; }
+  .bottom-label { font-size: 9px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.25); }
+  .bottom-accent { display: flex; gap: 6px; align-items: center; }
+  .b-dot { width: 6px; height: 6px; border-radius: 50%; }
+  .b-dot-1 { background: #535da1; }
+  .b-dot-2 { background: #14B789; opacity: 0.6; }
+  .b-dot-3 { background: #ffffff; opacity: 0.2; }
+</style>
+</head>
+<body>
+<div class="banner">
+  <div class="bg-circle bg-circle-1"></div>
+  <div class="bg-circle bg-circle-2"></div>
+  <div class="bg-circle bg-circle-3"></div>
+  <div class="accent-dot"></div>
+  <div class="vertical-line"></div>
+  <div class="corner-tr"></div>
+  <div class="corner-bl"></div>
+
+  <div class="top">
+    <div class="tag"><div class="tag-dot"></div><span class="tag-text">AI · Practical</span></div>
+    <div class="eyebrow">AI туралы — адал</div>
+    <span class="statement-line l1">AI — сиқыр емес.</span>
+    <span class="statement-line l2">Бұл инженерия.</span>
+    <span class="statement-line l3">Мен аңыз бен</span>
+    <span class="statement-line l4">шындықтың шекарасын көрсетемін.</span>
+  </div>
+
+  <div class="middle">
+    <div class="card-pair">
+      <div class="info-card works">
+        <div class="card-header">
+          <span class="card-icon">⚙️</span>
+          <span class="card-label">Шын жұмысы қандай</span>
+        </div>
+        <div class="card-points">
+          <div class="card-point"><div class="point-dash"></div><span class="point-text">Токен болжайды — ойламайды</span></div>
+          <div class="card-point"><div class="point-dash"></div><span class="point-text">Нашар кіріс → қымбат нашар нәтиже</span></div>
+          <div class="card-point"><div class="point-dash"></div><span class="point-text">Агент = модель + құралдар + цикл логикасы</span></div>
+        </div>
+      </div>
+
+      <div class="info-card breaks">
+        <div class="card-header">
+          <span class="card-icon">🔧</span>
+          <span class="card-label">Қайда сынады</span>
+        </div>
+        <div class="card-points">
+          <div class="card-point"><div class="point-dash"></div><span class="point-text">Верификациясыз галлюцинация жасайды</span></div>
+          <div class="card-point"><div class="point-dash"></div><span class="point-text">Контекстті үнсіз, ескертусіз жоғалтады</span></div>
+          <div class="card-point"><div class="point-dash"></div><span class="point-text">Нашар промпт — ақша мен уақытты жоғалту</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="separator"><div class="sep-line"></div><div class="sep-diamond"></div></div>
+
+    <div class="result-block">
+      <div class="result-label">Не үшін білу керек</div>
+      <div class="result-text">
+        <s>Сену</s> → <em>бақылау</em> және ақаусыз жүйе жасау.
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <span class="bottom-label">AI · Practical</span>
+    <div class="bottom-accent">
+      <div class="b-dot b-dot-1"></div>
+      <div class="b-dot b-dot-2"></div>
+      <div class="b-dot b-dot-3"></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

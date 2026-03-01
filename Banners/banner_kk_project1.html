@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banner – KK Project 1</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1a1f3a; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: 'Roboto Slab', serif; }
+
+  .banner { width: 450px; height: 800px; background: #1e2340; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; padding: 52px 44px; }
+
+  .browser-bg { position: absolute; bottom: 60px; right: -20px; width: 200px; height: 140px; border: 1px solid rgba(83,93,161,0.15); border-radius: 6px; overflow: hidden; pointer-events: none; opacity: 0.35; }
+  .browser-bar { height: 16px; background: rgba(83,93,161,0.2); display: flex; align-items: center; gap: 4px; padding: 0 8px; }
+  .browser-dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,0.15); }
+  .browser-body { padding: 10px 12px; display: flex; flex-direction: column; gap: 6px; }
+  .bb-avatar { width: 28px; height: 28px; border-radius: 50%; background: rgba(20,183,137,0.25); border: 1px solid rgba(20,183,137,0.3); }
+  .bb-line { height: 3px; border-radius: 2px; background: rgba(255,255,255,0.1); }
+  .bb-line.short { width: 55%; }
+  .bb-line.mid { width: 75%; }
+  .bb-line.long { width: 90%; }
+  .bb-row { display: flex; gap: 6px; margin-top: 2px; }
+  .bb-chip { height: 10px; width: 32px; border-radius: 2px; background: rgba(83,93,161,0.2); }
+  .bb-chip.green { background: rgba(20,183,137,0.2); }
+
+  .bg-circle { position: absolute; border-radius: 50%; pointer-events: none; }
+  .bg-circle-1 { width: 380px; height: 380px; top: -80px; right: -100px; border: 1px solid rgba(83,93,161,0.22); }
+  .bg-circle-2 { width: 240px; height: 240px; top: 20px; right: -40px; border: 1px solid rgba(20,183,137,0.16); }
+  .bg-circle-3 { width: 500px; height: 500px; bottom: -200px; left: -160px; border: 1px solid rgba(83,93,161,0.14); }
+
+  .accent-dot { position: absolute; width: 6px; height: 6px; border-radius: 50%; background: #14B789; top: 54px; right: 44px; }
+  .vertical-line { position: absolute; left: 44px; top: 0; width: 1px; height: 100%; background: linear-gradient(to bottom, transparent, rgba(83,93,161,0.4) 30%, rgba(20,183,137,0.3) 70%, transparent); }
+  .corner-tr { position: absolute; top: 0; right: 0; width: 48px; height: 48px; border-top: 1.5px solid rgba(83,93,161,0.5); border-right: 1.5px solid rgba(83,93,161,0.5); }
+  .corner-bl { position: absolute; bottom: 0; left: 0; width: 48px; height: 48px; border-bottom: 1.5px solid rgba(20,183,137,0.4); border-left: 1.5px solid rgba(20,183,137,0.4); }
+
+  .top { position: relative; z-index: 2; }
+  .case-row { display: flex; align-items: center; gap: 10px; margin-bottom: 24px; }
+  .case-num { font-size: 9px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.25); white-space: nowrap; }
+  .case-divider { height: 1px; flex: 1; background: rgba(255,255,255,0.1); }
+  .tag { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border: 1px solid rgba(20,183,137,0.4); border-radius: 2px; }
+  .tag-dot { width: 5px; height: 5px; border-radius: 50%; background: #14B789; }
+  .tag-text { font-size: 10px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase; color: #14B789; }
+  .role-label { margin-top: 24px; font-size: 11px; font-weight: 300; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 8px; }
+  .keyword { font-size: 34px; font-weight: 700; color: #ffffff; line-height: 1.15; letter-spacing: -0.5px; }
+  .keyword em { color: #14B789; font-style: normal; }
+  .keyword span { color: #535da1; }
+
+  .middle { position: relative; z-index: 2; flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 26px 0; gap: 14px; }
+
+  .module-block { padding: 16px 20px; border: 1px solid rgba(83,93,161,0.3); border-radius: 2px; background: rgba(83,93,161,0.05); }
+  .module-label { font-size: 9px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(83,93,161,0.8); margin-bottom: 12px; }
+  .module-text { font-size: 13px; font-weight: 300; line-height: 1.75; color: rgba(255,255,255,0.7); }
+
+  .sections-block { padding: 18px 22px; border-left: 2px solid #14B789; background: rgba(20,183,137,0.07); }
+  .sections-label { font-size: 9px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #14B789; margin-bottom: 12px; }
+  .sections-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .section-item { display: flex; align-items: center; gap: 8px; padding: 8px 10px; border-radius: 2px; background: rgba(255,255,255,0.03); border: 1px solid rgba(83,93,161,0.18); }
+  .section-icon { font-size: 12px; flex-shrink: 0; }
+  .section-text { font-size: 11.5px; font-weight: 300; color: rgba(255,255,255,0.75); }
+
+  .separator { display: flex; align-items: center; gap: 12px; }
+  .sep-line { height: 1px; flex: 1; background: linear-gradient(to right, rgba(20,183,137,0.4), transparent); }
+  .sep-diamond { width: 5px; height: 5px; background: #14B789; transform: rotate(45deg); flex-shrink: 0; }
+
+  .result-block { padding: 16px 20px; border: 1px solid rgba(20,183,137,0.28); border-radius: 2px; background: rgba(20,183,137,0.05); }
+  .result-label { font-size: 9px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(20,183,137,0.7); margin-bottom: 10px; }
+  .audience-row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .aud-chip { padding: 5px 11px; border-radius: 2px; font-size: 11px; font-weight: 300; border: 1px solid rgba(20,183,137,0.25); color: rgba(255,255,255,0.75); background: rgba(20,183,137,0.07); }
+
+  .bottom { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; }
+  .bottom-label { font-size: 9px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.25); }
+  .bottom-accent { display: flex; gap: 6px; align-items: center; }
+  .b-dot { width: 6px; height: 6px; border-radius: 50%; }
+  .b-dot-1 { background: #535da1; }
+  .b-dot-2 { background: #14B789; opacity: 0.6; }
+  .b-dot-3 { background: #ffffff; opacity: 0.2; }
+</style>
+</head>
+<body>
+<div class="banner">
+  <div class="browser-bg">
+    <div class="browser-bar"><div class="browser-dot"></div><div class="browser-dot"></div><div class="browser-dot"></div></div>
+    <div class="browser-body">
+      <div class="bb-avatar"></div>
+      <div class="bb-line short" style="margin-top:4px"></div>
+      <div class="bb-line mid"></div>
+      <div class="bb-line long"></div>
+      <div class="bb-line mid"></div>
+      <div class="bb-row"><div class="bb-chip green"></div><div class="bb-chip"></div><div class="bb-chip"></div></div>
+    </div>
+  </div>
+  <div class="bg-circle bg-circle-1"></div>
+  <div class="bg-circle bg-circle-2"></div>
+  <div class="bg-circle bg-circle-3"></div>
+  <div class="accent-dot"></div>
+  <div class="vertical-line"></div>
+  <div class="corner-tr"></div>
+  <div class="corner-bl"></div>
+
+  <div class="top">
+    <div class="case-row">
+      <span class="case-num">Жоба № 01</span>
+      <div class="case-divider"></div>
+    </div>
+    <div class="tag"><div class="tag-dot"></div><span class="tag-text">Практикалық модуль</span></div>
+    <div class="role-label">Не жасаймыз</div>
+    <div class="keyword">
+      <span>Profile</span> –<br><em>CV сайт</em>
+    </div>
+  </div>
+
+  <div class="middle">
+
+    <div class="module-block">
+      <div class="module-label">Модуль тапсырмасы</div>
+      <p class="module-text">Жеке сайт-профиль нөлден жасау — шаблонсыз. Өз мазмұның, өз тарихың, өз брендің.</p>
+    </div>
+
+    <div class="sections-block">
+      <div class="sections-label">Сайт бөлімдері</div>
+      <div class="sections-grid">
+        <div class="section-item"><span class="section-icon">👤</span><span class="section-text">Өмірбаян</span></div>
+        <div class="section-item"><span class="section-icon">📄</span><span class="section-text">Резюме</span></div>
+        <div class="section-item"><span class="section-icon">🗂️</span><span class="section-text">Портфолио</span></div>
+        <div class="section-item"><span class="section-icon">✉️</span><span class="section-text">Байланыс</span></div>
+      </div>
+    </div>
+
+    <div class="separator"><div class="sep-line"></div><div class="sep-diamond"></div></div>
+
+    <div class="result-block">
+      <div class="result-label">Сіздің үздік сатушыңыз ретінде жұмыс істейді</div>
+      <div class="audience-row">
+        <span class="aud-chip">HR-скрининг</span>
+        <span class="aud-chip">Клиенттер</span>
+        <span class="aud-chip">Академия</span>
+        <span class="aud-chip">Нетворкинг</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bottom">
+    <span class="bottom-label">AI · Practical</span>
+    <div class="bottom-accent">
+      <div class="b-dot b-dot-1"></div>
+      <div class="b-dot b-dot-2"></div>
+      <div class="b-dot b-dot-3"></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

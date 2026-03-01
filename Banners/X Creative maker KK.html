@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banner – Creative</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #1a1f3a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Roboto Slab', serif;
+  }
+
+  .banner {
+    width: 450px;
+    height: 800px;
+    background: #1e2340;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 52px 44px;
+  }
+
+  /* Audience silhouettes — abstract crowd */
+  .crowd {
+    position: absolute;
+    bottom: 75px; right: 0;
+    width: 160px; height: 70px;
+    pointer-events: none;
+    opacity: 0.07;
+  }
+  .crowd-person {
+    position: absolute;
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+    background: #535da1;
+  }
+
+  .bg-circle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .bg-circle-1 {
+    width: 340px; height: 340px;
+    top: -70px; right: -90px;
+    border: 1px solid rgba(83,93,161,0.22);
+  }
+  .bg-circle-2 {
+    width: 190px; height: 190px;
+    top: 20px; right: -30px;
+    border: 1px solid rgba(20,183,137,0.18);
+  }
+  .bg-circle-3 {
+    width: 480px; height: 480px;
+    bottom: -190px; left: -150px;
+    border: 1px solid rgba(83,93,161,0.14);
+  }
+
+  .accent-dot {
+    position: absolute;
+    width: 6px; height: 6px;
+    border-radius: 50%; background: #14B789;
+    top: 54px; right: 44px;
+  }
+  .vertical-line {
+    position: absolute;
+    left: 44px; top: 0;
+    width: 1px; height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(83,93,161,0.4) 30%, rgba(20,183,137,0.3) 70%, transparent);
+  }
+  .corner-tr {
+    position: absolute; top: 0; right: 0;
+    width: 48px; height: 48px;
+    border-top: 1.5px solid rgba(83,93,161,0.5);
+    border-right: 1.5px solid rgba(83,93,161,0.5);
+  }
+  .corner-bl {
+    position: absolute; bottom: 0; left: 0;
+    width: 48px; height: 48px;
+    border-bottom: 1.5px solid rgba(20,183,137,0.4);
+    border-left: 1.5px solid rgba(20,183,137,0.4);
+  }
+
+  /* Top */
+  .top { position: relative; z-index: 2; }
+
+  .case-row {
+    display: flex; align-items: center;
+    gap: 10px; margin-bottom: 28px;
+  }
+  .case-num {
+    font-size: 9px; font-weight: 700;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: rgba(255,255,255,0.25); white-space: nowrap;
+  }
+  .case-divider { height: 1px; flex: 1; background: rgba(255,255,255,0.1); }
+
+  .tag {
+    display: inline-flex; align-items: center;
+    gap: 8px; padding: 6px 14px;
+    border: 1px solid rgba(20,183,137,0.4);
+    border-radius: 2px;
+  }
+  .tag-dot { width: 5px; height: 5px; border-radius: 50%; background: #14B789; }
+  .tag-text {
+    font-size: 10px; font-weight: 500;
+    letter-spacing: 2.5px; text-transform: uppercase;
+    color: #14B789;
+  }
+
+  .role-label {
+    margin-top: 28px;
+    font-size: 11px; font-weight: 300;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    color: rgba(255,255,255,0.3); margin-bottom: 8px;
+  }
+  .keyword {
+    font-size: 34px; font-weight: 700;
+    color: #ffffff; line-height: 1.15;
+    letter-spacing: -0.5px;
+  }
+  .keyword em { color: #14B789; font-style: normal; }
+  .keyword span { color: #535da1; }
+
+  /* Middle */
+  .middle {
+    position: relative; z-index: 2;
+    flex: 1; display: flex;
+    align-items: center;
+    padding: 24px 0;
+  }
+
+  .problem-block {
+    padding: 16px 20px;
+    border: 1px solid rgba(83,93,161,0.35);
+    border-radius: 2px;
+    margin-bottom: 18px;
+  }
+  .problem-label {
+    font-size: 9px; font-weight: 500;
+    letter-spacing: 2.5px; text-transform: uppercase;
+    color: #535da1; margin-bottom: 12px;
+  }
+
+  /* Work → waiting → reaction unknown */
+  .flow-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .flow-box {
+    padding: 7px 11px;
+    border-radius: 2px;
+    font-size: 11px; font-weight: 400;
+    white-space: nowrap;
+  }
+  .flow-box.work {
+    background: rgba(20,183,137,0.1);
+    border: 1px solid rgba(20,183,137,0.25);
+    color: rgba(255,255,255,0.7);
+  }
+  .flow-box.wait {
+    background: rgba(83,93,161,0.1);
+    border: 1px solid rgba(83,93,161,0.2);
+    color: rgba(255,255,255,0.4);
+  }
+  .flow-box.unknown {
+    background: transparent;
+    border: 1px dashed rgba(83,93,161,0.3);
+    color: rgba(255,255,255,0.25);
+  }
+  .flow-arrow { color: rgba(255,255,255,0.2); font-size: 12px; flex-shrink: 0; }
+
+  .wait-note {
+    font-size: 12px; font-weight: 300;
+    color: rgba(255,255,255,0.4); line-height: 1.6;
+  }
+
+  .separator {
+    display: flex; align-items: center;
+    gap: 12px; margin: 16px 0;
+  }
+  .sep-line {
+    height: 1px; flex: 1;
+    background: linear-gradient(to right, rgba(20,183,137,0.5), transparent);
+  }
+  .sep-diamond {
+    width: 5px; height: 5px;
+    background: #14B789;
+    transform: rotate(45deg); flex-shrink: 0;
+  }
+
+  .solution-block {
+    padding: 18px 22px;
+    border-left: 2px solid #14B789;
+    background: rgba(20,183,137,0.07);
+  }
+  .solution-label {
+    font-size: 9px; font-weight: 500;
+    letter-spacing: 2.5px; text-transform: uppercase;
+    color: #14B789; margin-bottom: 12px;
+  }
+
+  /* Audience feedback annotations */
+  .annotation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  .annotation {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+  }
+  .ann-icon {
+    width: 20px; height: 20px;
+    border-radius: 2px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 1px;
+    font-size: 11px;
+  }
+  .ann-boring  { background: rgba(83,93,161,0.18); }
+  .ann-unclear { background: rgba(255,160,80,0.12); border: 1px solid rgba(255,160,80,0.2); }
+  .ann-hook    { background: rgba(20,183,137,0.15); border: 1px solid rgba(20,183,137,0.25); }
+  .ann-text {
+    font-size: 12.5px; font-weight: 300;
+    line-height: 1.6; color: rgba(255,255,255,0.8);
+  }
+  .ann-text strong { color: #ffffff; font-weight: 500; }
+
+  .result-line {
+    margin-top: 16px;
+    font-size: 13px; font-weight: 300;
+    line-height: 1.8; color: rgba(255,255,255,0.7);
+  }
+  .result-line em { color: #14B789; font-style: normal; font-weight: 500; }
+
+  /* Bottom */
+  .bottom {
+    position: relative; z-index: 2;
+    display: flex; align-items: center;
+    justify-content: space-between;
+  }
+  .bottom-label {
+    font-size: 9px; font-weight: 500;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: rgba(255,255,255,0.25);
+  }
+  .bottom-accent { display: flex; gap: 6px; align-items: center; }
+  .b-dot { width: 6px; height: 6px; border-radius: 50%; }
+  .b-dot-1 { background: #535da1; }
+  .b-dot-2 { background: #14B789; opacity: 0.6; }
+  .b-dot-3 { background: #ffffff; opacity: 0.2; }
+</style>
+</head>
+<body>
+<div class="banner">
+  <div class="bg-circle bg-circle-1"></div>
+  <div class="bg-circle bg-circle-2"></div>
+  <div class="bg-circle bg-circle-3"></div>
+  <div class="accent-dot"></div>
+  <div class="vertical-line"></div>
+  <div class="corner-tr"></div>
+  <div class="corner-bl"></div>
+
+  <!-- Top -->
+  <div class="top">
+    <div class="case-row">
+      <span class="case-num">Кейс № 09</span>
+      <div class="case-divider"></div>
+    </div>
+    <div class="tag">
+      <div class="tag-dot"></div>
+      <span class="tag-text">Аудитория агенті</span>
+    </div>
+    <div class="role-label">Пайдаланушы</div>
+    <div class="keyword">
+      Шығармашылық<br><em>маман</em>
+    </div>
+  </div>
+
+  <!-- Middle -->
+  <div class="middle">
+    <div style="width:100%">
+
+      <div class="problem-block">
+        <div class="problem-label">Жасадың — және қараңғыда жауап күтесің</div>
+        <div class="flow-row">
+          <div class="flow-box work">Жұмыс ✓</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-box wait">Жариялау</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-box unknown">Реакция ?</div>
+        </div>
+        <p class="wait-note">Жариялағанша белгісіз — кеш. Өзгертуге уақыт жоқ.</p>
+      </div>
+
+      <div class="separator">
+        <div class="sep-line"></div>
+        <div class="sep-diamond"></div>
+      </div>
+
+      <div class="solution-block">
+        <div class="solution-label">Агент аудитория рөлін ойнайды</div>
+        <div class="annotation-list">
+          <div class="annotation">
+            <div class="ann-icon ann-boring">😐</div>
+            <span class="ann-text"><strong>Қызықсыз</strong> — 2-абзац тым ұзақ</span>
+          </div>
+          <div class="annotation">
+            <div class="ann-icon ann-unclear">🤔</div>
+            <span class="ann-text"><strong>Түсініксіз</strong> — негізгі ой жоғалған</span>
+          </div>
+          <div class="annotation">
+            <div class="ann-icon ann-hook">✦</div>
+            <span class="ann-text"><strong>Қызықты</strong> — басы күшті, ұстап тұр</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="result-line">
+        → Жариялауға дейін түзетесіз.<br>
+        Сенімді шығасыз — <em>сәттілікке емес, стратегияға сүйеніп.</em>
+      </p>
+
+    </div>
+  </div>
+
+  <!-- Bottom -->
+  <div class="bottom">
+    <span class="bottom-label">AI · Practical</span>
+    <div class="bottom-accent">
+      <div class="b-dot b-dot-1"></div>
+      <div class="b-dot b-dot-2"></div>
+      <div class="b-dot b-dot-3"></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banner</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #1a1f3a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Roboto Slab', serif;
+  }
+
+  .banner {
+    width: 450px;
+    height: 800px;
+    background: #1e2340;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 52px 44px;
+  }
+
+  /* Background geometry */
+  .bg-circle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .bg-circle-1 {
+    width: 380px;
+    height: 380px;
+    top: -80px;
+    right: -100px;
+    border: 1px solid rgba(83, 93, 161, 0.3);
+  }
+  .bg-circle-2 {
+    width: 240px;
+    height: 240px;
+    top: 20px;
+    right: -40px;
+    border: 1px solid rgba(20, 183, 137, 0.25);
+  }
+  .bg-circle-3 {
+    width: 500px;
+    height: 500px;
+    bottom: -200px;
+    left: -160px;
+    border: 1px solid rgba(83, 93, 161, 0.2);
+  }
+  .accent-dot {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #14B789;
+    top: 54px;
+    right: 44px;
+  }
+  .vertical-line {
+    position: absolute;
+    left: 44px;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(83,93,161,0.4) 30%, rgba(20,183,137,0.3) 70%, transparent);
+  }
+
+  /* Top section */
+  .top {
+    position: relative;
+    z-index: 2;
+  }
+
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border: 1px solid rgba(20, 183, 137, 0.4);
+    border-radius: 2px;
+    margin-bottom: 36px;
+  }
+  .tag-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #14B789;
+  }
+  .tag-text {
+    font-family: 'Roboto Slab', serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #14B789;
+  }
+
+  .headline {
+    font-family: 'Roboto Slab', serif;
+    font-size: 15px;
+    font-weight: 400;
+    
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+  }
+
+  .keyword {
+    font-family: 'Roboto Slab', serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+  }
+  .keyword span {
+    color: #535da1;
+  }
+  .keyword em {
+    color: #14B789;
+    font-style: normal;
+  }
+
+  /* Middle content */
+  .middle {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+  }
+
+  .main-text {
+    font-family: 'Roboto Slab', serif;
+    font-size: 14.5px;
+    font-weight: 300;
+    line-height: 1.85;
+    color: rgba(255, 255, 255, 0.72);
+    letter-spacing: 0.2px;
+  }
+
+  .separator {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 24px 0;
+  }
+  .sep-line {
+    height: 1px;
+    flex: 1;
+    background: linear-gradient(to right, rgba(83,93,161,0.6), transparent);
+  }
+  .sep-diamond {
+    width: 5px;
+    height: 5px;
+    background: #535da1;
+    transform: rotate(45deg);
+    flex-shrink: 0;
+  }
+
+  .highlight-block {
+    padding: 20px 22px;
+    border-left: 2px solid #14B789;
+    background: rgba(20, 183, 137, 0.08);
+    margin-top: 4px;
+  }
+  .highlight-block p {
+    font-family: 'Roboto Slab', serif;
+    font-size: 13.5px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.85);
+  }
+
+  /* Bottom */
+  .bottom {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .bottom-label {
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.25);
+  }
+  .bottom-accent {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+  .b-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+  .b-dot-1 { background: #535da1; }
+  .b-dot-2 { background: #14B789; opacity: 0.6; }
+  .b-dot-3 { background: #ffffff; opacity: 0.2; }
+
+  /* Corner decoration */
+  .corner-tr {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48px;
+    height: 48px;
+    border-top: 1.5px solid rgba(83,93,161,0.5);
+    border-right: 1.5px solid rgba(83,93,161,0.5);
+  }
+  .corner-bl {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 48px;
+    height: 48px;
+    border-bottom: 1.5px solid rgba(20,183,137,0.4);
+    border-left: 1.5px solid rgba(20,183,137,0.4);
+  }
+</style>
+</head>
+<body>
+<div class="banner">
+  <!-- bg geometry -->
+  <div class="bg-circle bg-circle-1"></div>
+  <div class="bg-circle bg-circle-2"></div>
+  <div class="bg-circle bg-circle-3"></div>
+  <div class="accent-dot"></div>
+  <div class="vertical-line"></div>
+  <div class="corner-tr"></div>
+  <div class="corner-bl"></div>
+
+  <!-- Top -->
+  <div class="top">
+    <div class="tag">
+      <div class="tag-dot"></div>
+      <span class="tag-text">AI · Agents · 2026</span>
+    </div>
+    <div class="headline">2026. Жаңа шындық</div>
+    <div class="keyword">
+      <span>AI</span>-<em>агент</em><br>рутина орнына
+    </div>
+  </div>
+
+  <!-- Middle -->
+  <div class="middle">
+    <div style="width:100%">
+      <p class="main-text">
+        AI-агенттер сіздің саласыңызда жұмыс істейді. Сұрақ — оларды сіз басқара ма?
+      </p>
+
+      <div class="separator">
+        <div class="sep-line"></div>
+        <div class="sep-diamond"></div>
+      </div>
+
+      <div class="highlight-block">
+        <p>Бұрын жеке көмекші, аналитик және зерттеуші — тек таңдаулылардың қолында болды. Енді бұл баршаға қолжетімді.</p>
+      </div>
+
+      <div class="separator" style="margin-top: 24px; margin-bottom: 0;">
+        <div class="sep-line" style="background: linear-gradient(to right, rgba(20,183,137,0.5), transparent)"></div>
+        <div class="sep-diamond" style="background: #14B789"></div>
+      </div>
+
+      <p class="main-text" style="margin-top: 24px; color: rgba(255,255,255,0.9); font-weight: 400;">
+        Енді <em style="color: #14B789; font-weight: 500;">сіз</em> өз агентіңізді жасайсыз — ол сіз үшін жұмыс істейді.
+      </p>
+    </div>
+  </div>
+
+  <!-- Bottom -->
+  <div class="bottom">
+    <span class="bottom-label">AI · Practical</span>
+    <div class="bottom-accent">
+      <div class="b-dot b-dot-1"></div>
+      <div class="b-dot b-dot-2"></div>
+      <div class="b-dot b-dot-3"></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+

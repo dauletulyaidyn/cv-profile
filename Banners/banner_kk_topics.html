@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banner – KK Topics</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1a1f3a; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: 'Roboto Slab', serif; }
+
+  .banner { width: 450px; height: 800px; background: #1e2340; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; padding: 48px 44px; }
+
+  .bg-circle { position: absolute; border-radius: 50%; pointer-events: none; }
+  .bg-circle-1 { width: 380px; height: 380px; top: -80px; right: -100px; border: 1px solid rgba(83,93,161,0.22); }
+  .bg-circle-2 { width: 240px; height: 240px; top: 20px; right: -40px; border: 1px solid rgba(20,183,137,0.16); }
+  .bg-circle-3 { width: 500px; height: 500px; bottom: -200px; left: -160px; border: 1px solid rgba(83,93,161,0.14); }
+
+  .accent-dot { position: absolute; width: 6px; height: 6px; border-radius: 50%; background: #14B789; top: 50px; right: 44px; }
+  .vertical-line { position: absolute; left: 44px; top: 0; width: 1px; height: 100%; background: linear-gradient(to bottom, transparent, rgba(83,93,161,0.4) 30%, rgba(20,183,137,0.3) 70%, transparent); }
+  .corner-tr { position: absolute; top: 0; right: 0; width: 48px; height: 48px; border-top: 1.5px solid rgba(83,93,161,0.5); border-right: 1.5px solid rgba(83,93,161,0.5); }
+  .corner-bl { position: absolute; bottom: 0; left: 0; width: 48px; height: 48px; border-bottom: 1.5px solid rgba(20,183,137,0.4); border-left: 1.5px solid rgba(20,183,137,0.4); }
+
+  .top { position: relative; z-index: 2; }
+  .case-row { display: flex; align-items: center; gap: 10px; margin-bottom: 22px; }
+  .case-label { font-size: 9px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.25); white-space: nowrap; }
+  .case-divider { height: 1px; flex: 1; background: rgba(255,255,255,0.1); }
+  .tag { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border: 1px solid rgba(20,183,137,0.4); border-radius: 2px; }
+  .tag-dot { width: 5px; height: 5px; border-radius: 50%; background: #14B789; }
+  .tag-text { font-size: 10px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase; color: #14B789; }
+  .section-label { margin-top: 22px; font-size: 11px; font-weight: 300; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 8px; }
+  .keyword { font-size: 38px; font-weight: 700; color: #ffffff; line-height: 1.1; letter-spacing: -0.5px; }
+  .keyword em { color: #14B789; font-style: normal; }
+
+  .middle { position: relative; z-index: 2; flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 22px 0; gap: 10px; }
+
+  .topic-block { padding: 14px 18px; border-radius: 2px; position: relative; }
+  .topic-block.t1 { background: rgba(83,93,161,0.07); border: 1px solid rgba(83,93,161,0.28); }
+  .topic-block.t2 { background: rgba(20,183,137,0.06); border: 1px solid rgba(20,183,137,0.22); }
+  .topic-block.t3 { background: rgba(83,93,161,0.05); border: 1px solid rgba(83,93,161,0.22); border-left: 2px solid #14B789; }
+
+  .topic-num-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .topic-num { font-size: 8px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+  .t1 .topic-num { color: rgba(83,93,161,0.9); }
+  .t2 .topic-num { color: #14B789; }
+  .t3 .topic-num { color: rgba(20,183,137,0.7); }
+  .topic-num-line { flex: 1; height: 1px; }
+  .t1 .topic-num-line { background: rgba(83,93,161,0.2); }
+  .t2 .topic-num-line { background: rgba(20,183,137,0.2); }
+  .t3 .topic-num-line { background: rgba(20,183,137,0.15); }
+
+  .topic-title { font-size: 13px; font-weight: 600; color: #ffffff; line-height: 1.35; margin-bottom: 8px; }
+
+  .topic-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+  .ttag { padding: 3px 8px; border-radius: 2px; font-size: 9.5px; font-weight: 300; white-space: nowrap; }
+  .t1 .ttag { background: rgba(83,93,161,0.15); border: 1px solid rgba(83,93,161,0.25); color: rgba(255,255,255,0.6); }
+  .t2 .ttag { background: rgba(20,183,137,0.1); border: 1px solid rgba(20,183,137,0.22); color: rgba(255,255,255,0.65); }
+  .t3 .ttag { background: rgba(83,93,161,0.12); border: 1px solid rgba(83,93,161,0.22); color: rgba(255,255,255,0.6); }
+  .ttag.hi { color: rgba(255,255,255,0.85); }
+
+  .bottom { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; }
+  .bottom-label { font-size: 9px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.25); }
+  .bottom-accent { display: flex; gap: 6px; }
+  .b-dot { width: 6px; height: 6px; border-radius: 50%; }
+  .b-dot-1 { background: #535da1; }
+  .b-dot-2 { background: #14B789; opacity: 0.6; }
+  .b-dot-3 { background: #ffffff; opacity: 0.2; }
+</style>
+</head>
+<body>
+<div class="banner">
+  <div class="bg-circle bg-circle-1"></div>
+  <div class="bg-circle bg-circle-2"></div>
+  <div class="bg-circle bg-circle-3"></div>
+  <div class="accent-dot"></div>
+  <div class="vertical-line"></div>
+  <div class="corner-tr"></div>
+  <div class="corner-bl"></div>
+
+  <div class="top">
+    <div class="case-row">
+      <span class="case-label">Курс бағдарламасы</span>
+      <div class="case-divider"></div>
+    </div>
+    <div class="tag"><div class="tag-dot"></div><span class="tag-text">AI · Practical</span></div>
+    <div class="section-label">Не оқимыз</div>
+    <div class="keyword"><em>Курс</em><br>тақырыптары</div>
+  </div>
+
+  <div class="middle">
+
+    <div class="topic-block t1">
+      <div class="topic-num-row">
+        <span class="topic-num">Блок 01</span>
+        <div class="topic-num-line"></div>
+      </div>
+      <div class="topic-title">ChatGPT-тен нақты агенттерге</div>
+      <div class="topic-tags">
+        <span class="ttag hi">Generative AI</span>
+        <span class="ttag hi">LLM архитектурасы</span>
+        <span class="ttag">API vs ChatGPT — айырмасы</span>
+        <span class="ttag">Агенттер қайда табыс әкеледі</span>
+      </div>
+    </div>
+
+    <div class="topic-block t2">
+      <div class="topic-num-row">
+        <span class="topic-num">Блок 02</span>
+        <div class="topic-num-line"></div>
+      </div>
+      <div class="topic-title">Промпттар, құралдар, оркестрация</div>
+      <div class="topic-tags">
+        <span class="ttag hi">Prompt engineering</span>
+        <span class="ttag hi">Промпт паттерндері</span>
+        <span class="ttag">Агент құралдары</span>
+        <span class="ttag">Multi-step workflows</span>
+      </div>
+    </div>
+
+    <div class="topic-block t3">
+      <div class="topic-num-row">
+        <span class="topic-num">Блок 03</span>
+        <div class="topic-num-line"></div>
+      </div>
+      <div class="topic-title">RAG, верификация, дайын өнім</div>
+      <div class="topic-tags">
+        <span class="ttag hi">RAG жүйелері</span>
+        <span class="ttag hi">Жауапты верификациялау</span>
+        <span class="ttag">Responsible AI</span>
+        <span class="ttag">Нәтижені — өмірге</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bottom">
+    <span class="bottom-label">AI · Practical</span>
+    <div class="bottom-accent">
+      <div class="b-dot b-dot-1"></div>
+      <div class="b-dot b-dot-2"></div>
+      <div class="b-dot b-dot-3"></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
