@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Banner – Модули курса</title>
+<title>Banner RU – Модули курса</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;500;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -111,6 +111,42 @@
   .module-label { color: rgba(255,255,255,0.65) !important; }
   .module-num { color: rgba(255,255,255,0.4) !important; }
   .vs-label { color: rgba(255,255,255,0.6) !important; }
+
+  /* contrast-fix-v2 */
+  .projects-label { color: rgba(255,255,255,0.65) !important; }
+  .project-item::before { background: rgba(255,255,255,0.25) !important; }
+  .project-num { color: rgba(255,255,255,0.55) !important; }
+  .progress-label { color: rgba(255,255,255,0.65) !important; }
+  .progress-block { background: rgba(0,0,0,0.15) !important; border-color: rgba(255,255,255,0.12) !important; }
+  .vs-card.bad .vs-card-label { color: rgba(255,255,255,0.5) !important; }
+  .vs-dot.bad { background: rgba(255,255,255,0.3) !important; }
+  .topic-num { color: rgba(255,255,255,0.65) !important; }
+  .topic-num-line { background: rgba(255,255,255,0.2) !important; }
+  .topic-block.t1 { background: rgba(0,0,0,0.15) !important; border-color: rgba(255,255,255,0.18) !important; }
+  .topic-block.t3 { border-color: rgba(255,255,255,0.18) !important; }
+  .t3 .ttag { background: rgba(0,0,0,0.2) !important; border-color: rgba(255,255,255,0.18) !important; }
+  .wfc-1 { background: rgba(0,0,0,0.2) !important; border-color: rgba(255,255,255,0.3) !important; color: rgba(255,255,255,0.85) !important; }
+  .wfc-2 { background: rgba(0,0,0,0.2) !important; border-color: rgba(255,255,255,0.2) !important; }
+  .chat-word::after { background: rgba(255,255,255,0.7) !important; }
+  .point-dash { background: rgba(255,255,255,0.45) !important; }
+  .node-line { background: rgba(255,255,255,0.25) !important; }
+  .bar-low  { background: rgba(255,255,255,0.25) !important; }
+  .bar-mid  { background: rgba(255,255,255,0.45) !important; }
+  .product-chip { border-color: rgba(255,255,255,0.2) !important; }
+  .report-bar-wrap { background: rgba(255,255,255,0.12) !important; }
+  .report-bar { background: rgba(255,255,255,0.4) !important; }
+  .pipe-box.a { border-color: rgba(255,255,255,0.2) !important; }
+  .pri-low { background: rgba(255,255,255,0.25) !important; }
+  .module-block { border-color: rgba(255,255,255,0.18) !important; }
+  .section-item { border-color: rgba(255,255,255,0.14) !important; }
+  .flow-box.unknown { border-color: rgba(255,255,255,0.25) !important; color: rgba(255,255,255,0.45) !important; }
+  .stat-box.sent { background: rgba(0,0,0,0.15) !important; border-color: rgba(255,255,255,0.1) !important; }
+  .post-card.miss .pb { background: rgba(255,255,255,0.3) !important; }
+  .pip-step.trigger { background: rgba(0,0,0,0.2) !important; border-color: rgba(255,255,255,0.18) !important; }
+  .hw-box.unclear { background: rgba(0,0,0,0.2) !important; border-color: rgba(255,255,255,0.1) !important; }
+  .tc-todo { background: rgba(0,0,0,0.2) !important; }
+  .info-card.breaks { background: rgba(0,0,0,0.15) !important; border-color: rgba(255,255,255,0.12) !important; }
+  .result-overline { color: rgba(0,0,0,0.45) !important; }
 </style>
 </head>
 <body>
@@ -132,22 +168,22 @@
       <span class="case-num">Программа курса</span>
       <div class="case-divider"></div>
     </div>
-    <div class="tag"><div class="tag-dot"></div><span class="tag-text">Практикалық модульдер</span></div>
-    <div class="role-label">Не жасаймыз</div>
+    <div class="tag"><div class="tag-dot"></div><span class="tag-text">Практические модули</span></div>
+    <div class="role-label">Что вы построите</div>
     <div class="keyword">
       Модули<br><em>курса</em>
     </div>
   </div>
 
   <div class="middle">
-    <div class="projects-label">3–4 нақты жоба — портфолиоға</div>
+    <div class="projects-label">Lite / General — 3 проекта &nbsp;·&nbsp; VIP — 4 проекта</div>
 
     <div class="project-item highlight">
       <span class="project-num">01</span>
       <div class="project-divider"></div>
       <div class="project-content">
         <div class="project-title">Profile-CV сайт</div>
-        <div class="project-sub">Өз бренді — шаблонсыз</div>
+        <div class="project-sub">Личный бренд — без шаблонов</div>
       </div>
       <span class="project-icon">👤</span>
     </div>
@@ -156,40 +192,30 @@
       <span class="project-num">02</span>
       <div class="project-divider"></div>
       <div class="project-content">
-        <div class="project-title">Сайт собственного решения</div>
-        <div class="project-sub">Идея → сатылатын өнім</div>
+        <div class="project-title">Task Manager</div>
+        <div class="project-sub">Планировщик + календарь</div>
       </div>
-      <span class="project-icon">💡</span>
+      <span class="project-icon">📋</span>
     </div>
 
     <div class="project-item">
       <span class="project-num">03</span>
       <div class="project-divider"></div>
       <div class="project-content">
-        <div class="project-title">Task manager</div>
-        <div class="project-sub">Управление задачами</div>
+        <div class="project-title">Собственное решение / работа</div>
+        <div class="project-sub">Бизнес или личный проект</div>
       </div>
-      <span class="project-icon">📋</span>
+      <span class="project-icon">💡</span>
     </div>
 
     <div class="separator"><div class="sep-line"></div><div class="sep-diamond"></div></div>
 
     <div class="project-item">
-      <span class="project-num">04</span>
+      <span class="project-num" style="color:#14B789 !important;">VIP</span>
       <div class="project-divider"></div>
       <div class="project-content">
-        <div class="project-title">Автоматизация работы</div>
-        <div class="project-sub">Сағаттар → минуттар</div>
-      </div>
-      <span class="project-icon">⚙️</span>
-    </div>
-
-    <div class="project-item">
-      <span class="project-num">05</span>
-      <div class="project-divider"></div>
-      <div class="project-content">
-        <div class="project-title">Исследование</div>
-        <div class="project-sub">Анализ и выводы</div>
+        <div class="project-title" style="color:#14B789;">Research-пайплайн</div>
+        <div class="project-sub">4-й проект — только в VIP формате</div>
       </div>
       <span class="project-icon">🔍</span>
     </div>
