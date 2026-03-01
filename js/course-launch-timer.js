@@ -47,10 +47,8 @@
     var statusEl = card.querySelector('.course-launch-status');
 
     if (diff <= 0) {
-      if (daysEl) daysEl.textContent = '0';
-      if (hoursEl) hoursEl.textContent = '00';
-      if (minutesEl) minutesEl.textContent = '00';
-      if (secondsEl) secondsEl.textContent = '00';
+      var gridEl = card.querySelector('.course-launch-grid');
+      if (gridEl) gridEl.classList.add('d-none');
       if (statusEl) statusEl.classList.remove('d-none');
       return true;
     }

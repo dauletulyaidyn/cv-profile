@@ -940,16 +940,68 @@ strong {
   padding: 10px 30px;
 }
 
+.profile-body-single p {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+
 .profile-body-single .profile-small-title {
   border-right: 0;
-  min-width: 0;
+  min-width: 72px;
+  flex-shrink: 0;
   margin-right: 0;
-  padding: 0 0 4px 0;
+  padding: 0;
   display: block;
 }
 
 .profile-body-single span:not(.profile-small-title) {
   display: block;
+}
+
+.profile-ext-links {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  margin-top: 0;
+}
+
+.profile-ext-link {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 5px;
+  height: 28px;
+  padding: 0 10px;
+  border-radius: 14px;
+  border: 1px solid var(--border-color);
+  color: var(--p-color);
+  font-size: 0.78rem;
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.profile-ext-link img,
+.profile-ext-link i {
+  flex-shrink: 0;
+  font-size: 0.85rem;
+}
+
+.profile-ext-link:hover {
+  background: var(--secondary-color);
+  border-color: transparent;
+  color: var(--white-color);
+}
+
+.profile-relocation {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--p-color);
+  margin-top: 3px;
+  opacity: 0.8;
 }
 
 .about-image {
@@ -3125,6 +3177,7 @@ h2[data-en="Group formats and pricing"] + .row .group-plan-accent {
 .publication-card .pub-doi a:hover {
   color: var(--secondary-color);
 }
+
 
 
 /*---------------------------------------
