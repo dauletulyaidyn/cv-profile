@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
-<html lang="kk">
+<!DOCTYPE html>
+<html lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Banner – KK Slogan</title>
+<title>Banner – RU Slogan</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;500;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -11,7 +11,16 @@
 
   .banner { width: 450px; height: 800px; background: #535da1; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; padding: 52px 44px; }
 
-  .diag { position: absolute; width: 2px; height: 320px; background: linear-gradient(to bottom, transparent, rgba(20,183,137,0.2), transparent); top: 100px; right: 120px; transform: rotate(20deg); pointer-events: none; }
+  /* Strong diagonal accent line */
+  .diag {
+    position: absolute;
+    width: 2px;
+    height: 320px;
+    background: linear-gradient(to bottom, transparent, rgba(20,183,137,0.2), transparent);
+    top: 100px; right: 120px;
+    transform: rotate(20deg);
+    pointer-events: none;
+  }
 
   .bg-circle { position: absolute; border-radius: 50%; pointer-events: none; }
   .bg-circle-1 { width: 380px; height: 380px; top: -80px; right: -100px; border: 1px solid rgba(83,93,161,0.28); }
@@ -30,15 +39,26 @@
 
   .eyebrow { font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.3); letter-spacing: 0.5px; margin-bottom: 14px; }
 
+  /* BIG contrast statement */
   .statement { position: relative; z-index: 2; }
-  .statement-line { display: block; font-size: 36px; font-weight: 700; line-height: 1.15; letter-spacing: -0.5px; }
+
+  .statement-line {
+    display: block;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+  }
   .line-i { color: rgba(255,255,255,0.9); }
   .line-show { color: #535da1; }
   .line-how { color: rgba(255,255,255,0.9); }
 
+  /* Middle */
   .middle { position: relative; z-index: 2; flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 36px 0; gap: 20px; }
 
+  /* VS comparison — the key contrast */
   .vs-block { display: flex; flex-direction: column; gap: 10px; }
+
   .vs-row { display: flex; align-items: stretch; gap: 12px; }
   .vs-label-col { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; width: 28px; flex-shrink: 0; }
   .vs-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
@@ -52,7 +72,7 @@
   .vs-card-label { font-size: 8px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 6px; }
   .vs-card.bad .vs-card-label { color: rgba(83,93,161,0.7); }
   .vs-card.good .vs-card-label { color: #14B789; }
-  .vs-card-text { font-size: 13.5px; font-weight: 400; line-height: 1.55; }
+  .vs-card-text { font-size: 13.5px; font-weight: 400; line-height: 1.55; color: rgba(255,255,255,0.75); }
   .vs-card.bad .vs-card-text { color: rgba(255,255,255,0.4); text-decoration: line-through; text-decoration-color: rgba(83,93,161,0.4); }
   .vs-card.good .vs-card-text { color: rgba(255,255,255,0.9); font-weight: 500; }
 
@@ -60,7 +80,13 @@
   .vs-line { flex: 1; height: 1px; background: rgba(255,255,255,0.07); }
   .vs-arrow { font-size: 14px; color: rgba(255,255,255,0.15); }
 
-  .bottom-statement { padding: 18px 20px; border: 1px solid rgba(20,183,137,0.3); border-radius: 2px; background: rgba(20,183,137,0.05); }
+  /* Bottom statement */
+  .bottom-statement {
+    padding: 18px 20px;
+    border: 1px solid rgba(20,183,137,0.3);
+    border-radius: 2px;
+    background: rgba(20,183,137,0.05);
+  }
   .bs-label { font-size: 9px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(20,183,137,0.7); margin-bottom: 8px; }
   .bs-text { font-size: 15px; font-weight: 700; line-height: 1.4; color: #ffffff; }
   .bs-text em { color: #14B789; font-style: normal; }
@@ -194,11 +220,11 @@
       <div class="tag-dot"></div>
       <span class="tag-text">AI · Practical</span>
     </div>
-    <div class="eyebrow">Барлық курс — бір идея</div>
+    <div class="eyebrow">Весь курс — одна идея</div>
     <div class="statement">
-      <span class="statement-line line-i">Барлығы AI туралы айтқанда —</span>
-      <span class="statement-line line-show">мен оны</span>
-      <span class="statement-line line-how">қолмен жасауды үйретемін.</span>
+      <span class="statement-line line-i">Пока все изучают AI —</span>
+      <span class="statement-line line-show">я учу его</span>
+      <span class="statement-line line-how">строить руками.</span>
     </div>
   </div>
 
@@ -210,8 +236,8 @@
           <div class="vs-connector"></div>
         </div>
         <div class="vs-card bad">
-          <div class="vs-card-label">Бұл емес</div>
-          <div class="vs-card-text">нәтижесіз құрал үйрену</div>
+          <div class="vs-card-label">Не это</div>
+          <div class="vs-card-text">изучать инструменты без результата</div>
         </div>
       </div>
 
@@ -227,16 +253,16 @@
           <div class="vs-dot good"></div>
         </div>
         <div class="vs-card good">
-          <div class="vs-card-label">Мынау</div>
-          <div class="vs-card-text">нәтиже беретін жүйелер жасай білу</div>
+          <div class="vs-card-label">А это</div>
+          <div class="vs-card-text">строить системы, которые работают и приносят результат</div>
         </div>
       </div>
     </div>
 
     <div class="bottom-statement">
-      <div class="bs-label">Курстан кейін</div>
+      <div class="bs-label">После курса</div>
       <div class="bs-text">
-        <s>Пайдаланушы</s> → <em>инженер.</em>
+        <s>Пользователь</s> → <em>инженер.</em>
       </div>
     </div>
   </div>

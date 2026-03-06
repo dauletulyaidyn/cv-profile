@@ -11,7 +11,7 @@
   }
 
   function resolveTarget(card) {
-    var targetDateRaw = card.getAttribute('data-target-date') || '2026-03-09T08:00:00';
+    var targetDateRaw = card.getAttribute('data-target-date') || '2026-03-30T08:00:00';
     var base = new Date(targetDateRaw);
     if (isNaN(base.getTime())) {
       return NaN;

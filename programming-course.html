@@ -62,7 +62,7 @@
                                 <li><a class="dropdown-item dropdown-subitem" href="faq.html" data-en="FAQ" data-ru="FAQ" data-kk="ЖҚС">FAQ</a></li>
                                 <li><a class="dropdown-item dropdown-subitem disabled" href="#" tabindex="-1" aria-disabled="true" data-en="List of students who completed this course" data-ru="Список слушателей, окончивших данный курс" data-kk="Осы курсты аяқтаған тыңдаушылар тізімі">List of students who completed this course</a></li>
                                 <li><a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true" data-en="Programming" data-ru="Программирование" data-kk="Бағдарламалау">Programming</a></li>
-                                <li><a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true" data-en="Non-standard math and logic" data-ru="Нестандартная математика и логика" data-kk="Стандарттан тыс математика және логика">Non-standard math and logic</a></li>
+                                <li><a class="dropdown-item" href="non-standard-math-logic.html" data-en="Non-standard math and logic" data-ru="Нестандартная математика и логика" data-kk="Стандарттан тыс математика және логика">Non-standard math and logic</a></li>
                                 <li><a class="dropdown-item" href="motivational-letter.html" data-en="Motivational letter" data-ru="Мотивационное письмо" data-kk="Мотивациялық хат">Motivational letter</a></li>
                             </ul>
                         </li>
@@ -223,8 +223,33 @@
         <script src="js/bootstrap.min.js"></script>
 
         <script>
+            var languageStorageKey = 'site_lang';
+            document.addEventListener('DOMContentLoaded', function() {
+                var activeLang = localStorage.getItem(languageStorageKey) || 'kk';
+                var availableLangs = Array.prototype.map.call(document.querySelectorAll('[data-lang-option]'), function(btn) {
+                    return btn.getAttribute('data-lang-option');
+                });
+                if (!availableLangs.length) {
+                    availableLangs = ['kk'];
+                }
+                if (availableLangs.indexOf(activeLang) === -1) {
+                    activeLang = availableLangs.indexOf('kk') !== -1 ? 'kk' : availableLangs[0];
+                }
+                changeLanguage(activeLang);
+            });
+
             function changeLanguage(lang) {
+                if (['en', 'ru', 'kk'].indexOf(lang) === -1) {
+                    lang = 'kk';
+                }
                 document.documentElement.lang = lang;
+                localStorage.setItem(languageStorageKey, lang);
+
+                document.querySelectorAll('[data-lang-option]').forEach(function(btn) {
+                    var isActive = btn.getAttribute('data-lang-option') === lang;
+                    btn.classList.toggle('active', isActive);
+                    btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+                });
 
                 document.querySelectorAll('[data-en][data-ru][data-kk]').forEach(function(el) {
                     var value = el.getAttribute('data-' + lang);
